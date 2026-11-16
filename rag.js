@@ -48,6 +48,7 @@ async function enableAI(){if(AI.state==='ready'||AI.state==='loading')return;
   try{const webllm=await import('https://esm.run/@mlc-ai/web-llm@0.2.88');
     AI.model=g.f16?MODEL_F16:MODEL_F32;
     AI.engine=await webllm.CreateMLCEngine(AI.model,{initProgressCallback:p=>{AI.progress=p.text||'';AI.pct=p.progress;emit()}});
+    try{AI.engine.setAppConfig&&0}catch(_){}
     AI.state='ready';localStorage.setItem('tr_ai','1');emit();
   }catch(e){AI.state='error';AI.error=String(e&&e.message||e);emit()}}
 function fmtPassages(list,prefix){return list.map((d,i)=>`[${prefix}${i+1}] (${d.c}) ${d.t.replace(/\{§\d+\}/g,'').split(' ').slice(0,170).join(' ')}`).join('\n\n')}
@@ -64,7 +65,7 @@ function generate(kind,q,cal,lut,onText){const key=kind+'|'+q;const c=cache.get(
   const ent={text:'',done:false,subs:new Set([onText])};cache.set(key,ent);
   AI.busy=AI.busy.then(async()=>{try{const chunks=await AI.engine.chat.completions.create({messages:prompts(kind,q,cal,lut),stream:true,temperature:0.2,max_tokens:kind==='simple'?160:380});
       for await(const ch of chunks){ent.text+=ch.choices[0]?.delta?.content||'';ent.subs.forEach(f=>f(ent.text,false))}}
-    catch(e){ent.text+=`\n[AI error: ${e.message}]`}
+    catch(e){const m=String(e&&e.message||e);ent.text+=`\n[AI stopped: ${m.slice(0,160)}]`;if(/lost|Instance|memory|GPU/i.test(m)){AI.state='error';AI.error='The AI model ran out of GPU memory on this device ('+m.slice(0,80)+').';cache.delete(key);setTimeout(emit,50)}}
     ent.done=true;ent.subs.forEach(f=>f(ent.text,true))});}
 window.RAG={load,search,verse,AI,enableAI,gpuInfo,generate,ready:()=>!!corpora,kjvReady:()=>!!kjv};
 })();
