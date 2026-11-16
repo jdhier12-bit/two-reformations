@@ -1,7 +1,7 @@
 // Two Reformations — curated topics + full-text search (rag.js) + optional on-device AI.
 (()=>{
 const $=s=>document.querySelector(s), out=$('#out'), qi=$('#q');
-let KB=[], tab='calvin', current=null, alts=[], lastQ='';
+let KB=[], tab='calvin', current=null, alts=[], lastQ='', curAI=null;
 const STOP=new Set('a an the of to in on is are was were be do does did what whats how why who which when where can could should would will i me my we our you your about and or for with as by it this that there their them they he his god s t vs versus difference between teach teaches believe believes view views think say says calvin calvinist calvinism calvinists reformed luther lutheran lutherans lutheranism doctrine christian christians bible biblical according mean meaning explain tell'.split(' '));
 const stem=w=>w.replace(/'s$/,'').replace(/(ies)$/,'y').replace(/(ing|edly|ed|es|s)$/,'');
 const toks=s=>s.toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9' -]/g,' ').split(/\s+/).filter(w=>w&&!STOP.has(w));
@@ -43,7 +43,7 @@ function head(t){return `<section class="card"><p class="kicker">${esc(t.categor
   ${alts.length?`<p class="also">Not quite? Also see: ${alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}
   ${lastQ?`<p class="also"><button data-full="1">Search the full texts for “${esc(lastQ)}”</button></p>`:''}</section>`}
 function syncTabs(){const sac=isSac(current);document.querySelectorAll('.tabs button').forEach(b=>{if(b.dataset.tab!=='compare')b.hidden=sac});if(sac)tab='compare';else if(tab==='compare'&&window.__forced)tab='calvin';window.__forced=sac;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab===tab));}
-function render(){syncTabs();if(!current)return home();if(current.src)return renderSrc();out.innerHTML=(tab==='compare'?(([sg,bd])=>sg+head(current)+bd)(compare(current).split('\u0000')):head(current)+side(current,tab));
+function render(){syncTabs();if(!current)return home();if(current.src)return renderSrc();const ak=tab==='compare'?(mode==='simple'?'simple':'advanced'):tab;const ac=(curAI&&curAI.t===current)?aiCard(ak,curAI):'';out.innerHTML=(tab==='compare'?(([sg,bd])=>sg+head(current)+bd+ac)(compare(current).split('\u0000')):head(current)+side(current,tab).replace(/(<\/section>)/,'$1'+ac));
   out.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render()});
   out.querySelectorAll('[data-full]').forEach(b=>b.onclick=()=>fullText(lastQ));
   out.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>show(KB.find(x=>x.id===b.dataset.id),[]));}
@@ -53,7 +53,7 @@ function home(msg){const pick=['predestination','lords-supper','baptism','justif
   `<section class="card"><h3>Try asking</h3>${chips(pick.length?pick:KB.slice(0,8))}</section>
   <section class="card"><h3>All ${KB.length} topics</h3><div class="chips">${KB.map(t=>`<button class="chip" data-id="${t.id}">${esc(t.title)}</button>`).join('')}</div></section>`;
   out.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{if(b.dataset.q)qi.value=b.dataset.q;show(KB.find(x=>x.id===b.dataset.id),[])});}
-function show(t,a){current=t;alts=a||[];render();history.replaceState(null,'','#'+t.id);window.scrollTo({top:0,behavior:'smooth'})}
+function show(t,a){current=t;alts=a||[];curAI=null;const q=lastQ||t.questions[0];RAG.load().then(()=>{if(current!==t)return;curAI={t,q,cal:RAG.search('calvin',q,6),lut:RAG.search('lutheran',q,6)};RAG.enableAI();render()}).catch(()=>{});render();history.replaceState(null,'','#'+t.id);window.scrollTo({top:0,behavior:'smooth'})}
 function ask(q){q=q.trim();lastQ=q;if(!q){current=null;return home()}const sc=score(q);const r=providers[0](q);const n=toks(q).length;
   const strong=sc[0].s>=4||(n<=1&&sc[0].s>=2);
   if(strong)show(sc[0].t,r.alts.filter(x=>x!==sc[0].t).slice(0,3));
@@ -65,12 +65,12 @@ function vlist(d){if(!d.r||!d.r.length)return '';if(!RAG.kjvReady())return `<p c
   return `<div class="pverses">${d.r.map(r=>RAG.verse(r)).filter(Boolean).map(v=>`<div class="verse"><b>${esc(v.ref)}</b> <span class="note">KJV</span><p>${v.vs.map(x=>(v.vs.length>1?`<sup>${x[0]}</sup>`:'')+esc(x[1])).join(' ')}</p></div>`).join('')}</div>`}
 function passages(list,label,cls,n){if(!list.length)return `<section class="card"><h3 class="${cls}">${label}</h3><p class="note">No relevant passages found. Try different wording.</p></section>`;
   return `<section class="card"><h3 class="${cls}">${label}</h3><p class="note">Exact text, ranked by relevance to your question. Each passage is followed by the KJV verses it cites.</p>${list.slice(0,n||list.length).map((d,i)=>`<div class="passage"><blockquote><span class="pn">${i+1}</span> ${ptext(d.t)}<cite>${d.u?`<a href="${esc(d.u)}" target="_blank" rel="noopener">${esc(d.c)}</a>`:esc(d.c)} — ${esc(d.w||'')}</cite></blockquote>${vlist(d)}</div>`).join('')}</section>`}
-function aiCard(kind){const A=RAG.AI;const id='ai-'+kind;
-  if(A.state==='ready'){setTimeout(()=>{const el=document.getElementById(id);if(!el)return;RAG.generate(kind,current.q,current.cal,current.lut,(txt,done)=>{const e=document.getElementById(id);if(!e)return;e.textContent=txt||'Thinking…';e.classList.toggle('streaming',!done)})},0);
+function aiCard(kind,ctx){ctx=ctx||current;const A=RAG.AI;const id='ai-'+kind;if(!ctx||!ctx.cal)return '';
+  if(A.state==='ready'){setTimeout(()=>{const el=document.getElementById(id);if(!el)return;RAG.generate(kind,ctx.q,ctx.cal,ctx.lut,(txt,done)=>{const e=document.getElementById(id);if(!e)return;e.textContent=txt||'Thinking…';e.classList.toggle('streaming',!done)})},0);
     return `<section class="card ai"><h3>✦ ${AIL}</h3><div id="${id}" class="aitext streaming">Reading the passages…</div><p class="note">Generated on your device by ${esc(A.model||'')} from the numbered passages below. Small models can misread; the passages are the authority. On phones the first answer can take a minute or more.</p></section>`}
-  if(A.state==='loading')return `<section class="card ai"><h3>✦ Loading the AI model…</h3><div class="bar"><i style="width:${Math.round((A.pct||0)*100)}%"></i></div><p class="note">${esc(A.progress||'')}</p><p class="note">One-time download; it’s cached for next time. The source passages are below meanwhile.</p></section>`;
-  if(A.state==='unsupported'||A.state==='error')return `<section class="card ai"><h3>AI answers aren’t available on this device</h3><p class="note">${esc(A.error)} You still get the exact source passages and KJV verses below. AI answers need WebGPU (recent Chrome or Edge on a computer or Android phone; Safari 26 on newer iPhones/Macs may work).</p></section>`;
-  return `<section class="card ai"><h3>✦ Want a written answer?</h3><p class="note">Turn on <b>AI answers</b> to have a free, open-source AI (Llama 3.2 1B) read these passages and summarize them with citations. It runs privately on your device: no account, no cost. One-time download of about 0.9 GB (use Wi-Fi). Needs WebGPU, so it may not work on older phones.</p><button class="btn" data-ai="1">Enable AI answers</button></section>`}
+  if(A.state==='loading')return `<section class="card ai"><h3>✦ Loading the AI model…</h3><div class="bar"><i style="width:${Math.round((A.pct||0)*100)}%"></i></div><p class="note" id="aiprog">${esc(A.progress||'')}</p><p class="note">One-time download (~0.7 GB, use Wi-Fi); it’s cached so it only happens once. The source passages are below meanwhile.</p></section>`;
+  if(A.state==='unsupported'||A.state==='error')return `<p class="note ainote">AI summary isn’t available on this device (${esc(A.error)}). Showing the exact source passages instead.</p>`;
+  return `<section class="card ai"><h3>✦ Loading the AI model…</h3><div class="bar"><i style="width:0%"></i></div><p class="note" id="aiprog">Starting…</p><p class="note">Preparing a free open-source AI (Llama 3.2 1B) that runs on your device. The source passages are below meanwhile.</p></section>`}
 function srcHead(){const c=current;return `<section class="card"><p class="kicker">Searched the full texts</p><h2 class="topic">${esc(c.q)}</h2><p class="summary">Searched every section of Calvin’s <i>Institutes</i>, the Book of Concord, and Luther’s public-domain works for your question.</p>
   ${c.alts&&c.alts.length?`<p class="also">Related curated topics: ${c.alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}</section>`}
 function renderSrc(){const c=current;let h='';
@@ -89,8 +89,9 @@ async function fullText(q,relAlts){alts=[];current=null;syncTabs();
   catch(e){out.innerHTML=`<section class="card"><h2 class="topic">Couldn’t load the texts</h2><p class="summary">${esc(e.message)} — check your connection and try again.</p></section>`;return}
   const r=providers[0](q);
   current={src:true,q,sac:SACRX.test(q),cal:RAG.search('calvin',q,6),lut:RAG.search('lutheran',q,6),alts:relAlts||r.alts.slice(0,3)};
+  RAG.enableAI();
   history.replaceState(null,'','#q='+encodeURIComponent(q));render();window.scrollTo({top:0,behavior:'smooth'})}
-RAG.AI.listeners.add(()=>{if(current&&current.src&&!document.querySelector('.aitext.streaming'))render();else if(current&&current.src){const b=document.querySelector('.bar i');if(b)b.style.width=Math.round((RAG.AI.pct||0)*100)+'%'}});
+RAG.AI.listeners.add(()=>{if(current&&!document.querySelector('.aitext.streaming')&&(RAG.AI.state!=='loading'||!document.querySelector('.bar')))render();else if(current){const b=document.querySelector('.bar i');if(b)b.style.width=Math.round((RAG.AI.pct||0)*100)+'%';const pg=document.getElementById('aiprog');if(pg)pg.textContent=(RAG.AI.progress||'').replace(/ It can take a while.*$/,'')}});
 document.addEventListener('kjv-ready',()=>{if(current&&current.src)render()});
 
 $('#f').onsubmit=e=>{e.preventDefault();qi.blur();ask(qi.value)};
