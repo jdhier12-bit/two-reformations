@@ -10,13 +10,13 @@ const toks=s=>s.toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9' -]/g,' '
 function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]===b[j-1]?0:1));p=t}}return d[b.length]}
 function index(){KB.forEach(t=>{t._phr=[t.title,...t.keywords].map(k=>k.toLowerCase());t._w=new Map();
   const add=(w,s)=>{w=stem(w);if(w.length<2||STOP.has(w))return;t._w.set(w,Math.max(t._w.get(w)||0,s))};
-  t.keywords.forEach(k=>toks(k).forEach(w=>add(w,3)));toks(t.title).forEach(w=>add(w,3));
+  t.keywords.forEach(k=>{const w=toks(k);w.forEach(x=>add(x,w.length>1?2:3))});toks(t.title).forEach(w=>add(w,3));
   t.questions.forEach(q=>toks(q).forEach(w=>add(w,1)));toks(t.summary).forEach(w=>add(w,.5));});}
 function score(q){const ql=' '+q.toLowerCase().replace(/[’]/g,"'")+' ';const qt=toks(q).map(stem).filter(w=>w.length>1);
   return KB.map(t=>{let s=0;t._phr.forEach(p=>{if(p.includes(' ')&&ql.includes(p))s+=6+p.length/6;});
     qt.forEach(w=>{if(t._w.has(w))s+=t._w.get(w);else if(w.length>=5){for(const [k,v] of t._w){if(k.length>=5&&lev(w,k)<=1){s+=v*.7;break}}}});
     return {t,s}}).sort((a,b)=>b.s-a.s);}
-const providers=[q=>{const r=score(q);return {best:r[0].s>=3?r[0].t:null,alts:r.filter(x=>x.s>0).slice(0,5).map(x=>x.t)}}];
+const providers=[q=>{const r=score(q);return {best:r[0].s>=2?r[0].t:null,alts:r.filter(x=>x.s>0&&x.s>=r[0].s*0.4).slice(0,5).map(x=>x.t)}}];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function verses(vs){return vs.map(v=>`<div class="verse"><b>${esc(v.ref)}</b> <span class="note">KJV</span><p>${v.v.map(x=>(v.v.length>1?`<sup>${x[1]}</sup>`:'')+esc(x[2])).join(' ')}</p></div>`).join('')}
 function quotes(qs){return qs.map(q=>`<blockquote>“${esc(q.text)}”<cite>${q.url?`<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.cite)}</a>`:esc(q.cite)} — <span>${esc(q.work)}</span></cite></blockquote>`).join('')}

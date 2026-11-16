@@ -6662,6 +6662,737 @@
 ]
 ]
 }
+},
+{
+"id": "ministry-papacy",
+"title": "Ministry, Ordination & the Papacy",
+"category": "Church",
+"keywords": [
+"ministry",
+"minister",
+"pastor",
+"pastors",
+"ordination",
+"ordained",
+"priest",
+"priesthood",
+"bishop",
+"bishops",
+"elders",
+"deacons",
+"call",
+"called",
+"pope",
+"papacy",
+"antichrist",
+"apostolic succession",
+"women pastors",
+"church office",
+"who can preach"
+],
+"questions": [
+"Who may preach and administer the sacraments?",
+"Is the pope the Antichrist?",
+"What is the pastoral office?"
+],
+"summary": "Both require a regular call to the public ministry and reject papal supremacy; they differ on church order.",
+"calvin": {
+"answer": "Calvin teaches that God rules his Church through the ministry of men, and despising that ministry is despising God’s own instruction (IV.1.5; IV.3). He identifies four offices from Scripture — pastors, teachers (doctors), elders, and deacons — and treats bishops, presbyters and pastors as the same office in the New Testament. No one should take the office without a lawful call. Calvin rejects papal primacy and, following Paul and Daniel, saw the Roman papacy as the seat of Antichrist (IV.2.12; IV.7).",
+"points": [
+"Ministry of men is God’s ordinary way of teaching His Church.",
+"Fourfold office: pastors, teachers, elders, deacons.",
+"Papal supremacy rejected."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "whose perverseness cannot submit to the yoke of being taught by the lips and ministry of men.",
+"cite": "Institutes IV.1.5",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Ephesians 4:11-12",
+"v": [
+[
+4,
+11,
+"And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers;"
+],
+[
+4,
+12,
+"For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ:"
+]
+]
+},
+{
+"ref": "Romans 10:14-15",
+"v": [
+[
+10,
+14,
+"How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?"
+],
+[
+10,
+15,
+"And how shall they preach, except they be sent? as it is written, How beautiful are the feet of them that preach the gospel of peace, and bring glad tidings of good things!"
+]
+]
+},
+{
+"ref": "1 Timothy 3:1-2",
+"v": [
+[
+3,
+1,
+"This is a true saying, If a man desire the office of a bishop, he desireth a good work."
+],
+[
+3,
+2,
+"A bishop then must be blameless, the husband of one wife, vigilant, sober, of good behaviour, given to hospitality, apt to teach;"
+]
+]
+},
+{
+"ref": "Titus 1:5",
+"v": [
+[
+1,
+5,
+"For this cause left I thee in Crete, that thou shouldest set in order the things that are wanting, and ordain elders in every city, as I had appointed thee:"
+]
+]
+},
+{
+"ref": "Hebrews 5:4",
+"v": [
+[
+5,
+4,
+"And no man taketh this honour unto himself, but he that is called of God, as was Aaron."
+]
+]
+},
+{
+"ref": "2 Thessalonians 2:3-4",
+"v": [
+[
+2,
+3,
+"Let no man deceive you by any means: for that day shall not come , except there come a falling away first, and that man of sin be revealed, the son of perdition;"
+],
+[
+2,
+4,
+"Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God."
+]
+]
+}
+],
+"refs": [
+"Institutes IV.3.8: bishops, presbyters, pastors and ministers are used by the apostles as one and the same; elders and deacons are retained.",
+"Institutes IV.2.12 and IV.7: the papacy as the kingdom of Antichrist foretold by Daniel and Paul."
+]
+},
+"lutheran": {
+"answer": "Augsburg Confession V: the ministry of teaching the Gospel and administering the sacraments was instituted so that we may obtain faith. AC XIV: “no one should publicly teach in the Church or administer the Sacraments unless he be regularly called.” Lutherans are flexible on church order (they would have kept bishops if bishops allowed the Gospel). The Smalcald Articles reject papal supremacy by divine right, stating “that the Pope is the very Antichrist.”",
+"points": [
+"Office of preaching and sacraments instituted by God.",
+"A regular call is required (rite vocatus).",
+"Papal supremacy rejected; SA calls the Pope “the very Antichrist.”"
+],
+"quotes": [
+{
+"src": "boc",
+"text": "Of Ecclesiastical Order they teach that no one should publicly teach in the Church or administer the Sacraments unless he be regularly called.",
+"cite": "Augsburg Confession, Article XIV - Of Ecclesiastical Order",
+"url": "https://bookofconcord.org/augsburg-confession/of-ecclesiastical-order/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "That we may obtain this faith, the Ministry of Teaching the Gospel and administering the Sacraments was instituted.",
+"cite": "Augsburg Confession, Article V. Of the Ministry, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-the-ministry/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "This teaching shows forcefully that the Pope is the very Antichrist, who has exalted himself above, and opposed himself against Christ",
+"cite": "Smalcald Articles, Part II, Article IV - Of the Papacy, §10",
+"url": "https://bookofconcord.org/smalcald-articles/ii/of-the-papacy/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Romans 10:14-17",
+"v": [
+[
+10,
+14,
+"How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?"
+],
+[
+10,
+15,
+"And how shall they preach, except they be sent? as it is written, How beautiful are the feet of them that preach the gospel of peace, and bring glad tidings of good things!"
+],
+[
+10,
+16,
+"But they have not all obeyed the gospel. For Esaias saith, Lord, who hath believed our report?"
+],
+[
+10,
+17,
+"So then faith cometh by hearing, and hearing by the word of God."
+]
+]
+},
+{
+"ref": "Acts 20:28",
+"v": [
+[
+20,
+28,
+"Take heed therefore unto yourselves, and to all the flock, over the which the Holy Ghost hath made you overseers, to feed the church of God, which he hath purchased with his own blood."
+]
+]
+},
+{
+"ref": "2 Corinthians 5:20",
+"v": [
+[
+5,
+20,
+"Now then we are ambassadors for Christ, as though God did beseech you by us: we pray you in Christ’s stead, be ye reconciled to God."
+]
+]
+},
+{
+"ref": "1 Timothy 4:13-16",
+"v": [
+[
+4,
+13,
+"Till I come, give attendance to reading, to exhortation, to doctrine."
+],
+[
+4,
+14,
+"Neglect not the gift that is in thee, which was given thee by prophecy, with the laying on of the hands of the presbytery."
+],
+[
+4,
+15,
+"Meditate upon these things; give thyself wholly to them; that thy profiting may appear to all."
+],
+[
+4,
+16,
+"Take heed unto thyself, and unto the doctrine; continue in them: for in doing this thou shalt both save thyself, and them that hear thee."
+]
+]
+},
+{
+"ref": "2 Thessalonians 2:3-4",
+"v": [
+[
+2,
+3,
+"Let no man deceive you by any means: for that day shall not come , except there come a falling away first, and that man of sin be revealed, the son of perdition;"
+],
+[
+2,
+4,
+"Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both require a properly called ministry of Word and Sacrament and both rejected papal supremacy (both even identified the papacy with Antichrist). The difference is polity: Calvin finds a specific fourfold order in Scripture (with ruling elders); Lutherans treat church structure as largely free so long as the Gospel is served.",
+"agree": [
+"Public ministry requires a regular call.",
+"Ministry serves Word and Sacrament.",
+"Papal supremacy by divine right is rejected."
+],
+"differ": [
+"Calvin: fourfold office (pastors, teachers, elders, deacons) from Scripture. Lutheran: one office of the ministry; polity flexible (bishops allowed).",
+"Reformed churches give ruling elders a share in governance and discipline."
+],
+"table": [
+[
+"Office",
+"Pastors, teachers, elders, deacons",
+"Pastoral office of Word & Sacrament"
+],
+[
+"Call",
+"Lawful call required",
+"“Regularly called” (AC XIV)"
+],
+[
+"Papacy",
+"Rejected; seat of Antichrist",
+"Rejected; “the very Antichrist” (SA)"
+]
+]
+}
+},
+{
+"id": "descent-hell",
+"title": "Christ’s Descent into Hell",
+"category": "Christ",
+"keywords": [
+"descent into hell",
+"descended into hell",
+"hell",
+"harrowing of hell",
+"apostles creed",
+"hades",
+"spirits in prison",
+"what did jesus do after he died",
+"holy saturday",
+"1 peter 3:19"
+],
+"questions": [
+"What does “He descended into hell” mean?",
+"Did Jesus go to hell after he died?"
+],
+"summary": "Both keep the creedal article but interpret it differently: Calvin as Christ’s soul-suffering on the cross, Lutherans as His victorious proclamation.",
+"calvin": {
+"answer": "Calvin argues that the creed’s “descended into hell” is not a mere repetition of “buried.” He interprets it as the invisible, spiritual agony Christ endured before God in our place: “not only was the body of Christ given up as the price of redemption, but… he bore in his soul the tortures of condemned and ruined man.” The descent is part of Christ’s humiliation and satisfaction.",
+"points": [
+"Not a repeat of “buried.”",
+"Christ endured God’s wrath in His soul for us.",
+"Part of His humiliation and atoning work."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "not only was the body of Christ given up as the price of redemption, but that there was a greater and more excellent price--that he bore in his soul the tortures of condemned and ruined man.",
+"cite": "Institutes II.16.10",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Matthew 27:46",
+"v": [
+[
+27,
+46,
+"And about the ninth hour Jesus cried with a loud voice, saying, Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me?"
+]
+]
+},
+{
+"ref": "Isaiah 53:10-11",
+"v": [
+[
+53,
+10,
+"Yet it pleased the LORD to bruise him; he hath put him to grief: when thou shalt make his soul an offering for sin, he shall see his seed, he shall prolong his days, and the pleasure of the LORD shall prosper in his hand."
+],
+[
+53,
+11,
+"He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities."
+]
+]
+},
+{
+"ref": "Acts 2:24",
+"v": [
+[
+2,
+24,
+"Whom God hath raised up, having loosed the pains of death: because it was not possible that he should be holden of it."
+]
+]
+},
+{
+"ref": "Hebrews 5:7",
+"v": [
+[
+5,
+7,
+"Who in the days of his flesh, when he had offered up prayers and supplications with strong crying and tears unto him that was able to save him from death, and was heard in that he feared;"
+]
+]
+},
+{
+"ref": "1 Peter 3:18-19",
+"v": [
+[
+3,
+18,
+"For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit:"
+],
+[
+3,
+19,
+"By which also he went and preached unto the spirits in prison;"
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "The Formula of Concord (IX) confesses simply that the whole person of Christ, God and man, descended into hell after His burial, conquered the devil, destroyed hell’s power, and took from the devil all his might. It is part of His exaltation, not His suffering. The Formula counsels believing this article simply, without curious speculation about how it happened.",
+"points": [
+"The whole Christ (God and man) descended after burial.",
+"A victory, part of His exaltation, not suffering.",
+"Believe it simply; don’t speculate."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "Hence we also believe, teach, and confess that it was not a mere man who suffered, died, was buried, descended to hell, arose from the dead",
+"cite": "Formula of Concord, Epitome, VIII. The Person of Christ, §13",
+"url": "https://bookofconcord.org/epitome/person-of-christ/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "1 Peter 3:18-19",
+"v": [
+[
+3,
+18,
+"For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit:"
+],
+[
+3,
+19,
+"By which also he went and preached unto the spirits in prison;"
+]
+]
+},
+{
+"ref": "Colossians 2:15",
+"v": [
+[
+2,
+15,
+"And having spoiled principalities and powers, he made a shew of them openly, triumphing over them in it."
+]
+]
+},
+{
+"ref": "Ephesians 4:8-10",
+"v": [
+[
+4,
+8,
+"Wherefore he saith, When he ascended up on high, he led captivity captive, and gave gifts unto men."
+],
+[
+4,
+9,
+"(Now that he ascended, what is it but that he also descended first into the lower parts of the earth?"
+],
+[
+4,
+10,
+"He that descended is the same also that ascended up far above all heavens, that he might fill all things.)"
+]
+]
+},
+{
+"ref": "Revelation 1:18",
+"v": [
+[
+1,
+18,
+"I am he that liveth, and was dead; and, behold, I am alive for evermore, Amen; and have the keys of hell and of death."
+]
+]
+},
+{
+"ref": "Acts 2:27",
+"v": [
+[
+2,
+27,
+"Because thou wilt not leave my soul in hell, neither wilt thou suffer thine Holy One to see corruption."
+]
+]
+}
+],
+"refs": [
+"Formula of Concord, Epitome & Solid Declaration IX: after His burial the entire person descended into hell, conquered the devil, and destroyed hell’s power; this is to be believed simply."
+]
+},
+"compare": {
+"summary": "Both confess the Apostles’ Creed article. Calvin places the descent in Christ’s humiliation (His soul-agony under God’s wrath before death); Lutherans place it in His exaltation (a triumphant descent after death proclaiming victory over the devil).",
+"agree": [
+"The creedal article is to be confessed.",
+"Christ conquered sin, death, and the devil for us."
+],
+"differ": [
+"Timing: Calvin — the cross (before death). Lutheran — after burial.",
+"Meaning: Calvin — suffering God’s wrath. Lutheran — victory proclamation.",
+"State: Calvin — humiliation. Lutheran — exaltation."
+],
+"table": [
+[
+"When",
+"On the cross (spiritually)",
+"After burial"
+],
+[
+"What",
+"Bore the torments of the condemned",
+"Conquered the devil, destroyed hell’s power"
+],
+[
+"State",
+"Humiliation",
+"Exaltation"
+]
+]
+}
+},
+{
+"id": "sabbath",
+"title": "Sabbath & the Lord’s Day",
+"category": "Worship",
+"keywords": [
+"sabbath",
+"lords day",
+"lord's day",
+"sunday",
+"rest",
+"day of rest",
+"fourth commandment",
+"third commandment",
+"holy day",
+"keep the sabbath holy",
+"work on sunday",
+"saturday",
+"sabbatarian"
+],
+"questions": [
+"Must Christians keep the Sabbath?",
+"Is Sunday the Christian Sabbath?",
+"Can I work on Sunday?"
+],
+"summary": "Both see the ceremonial Sabbath fulfilled in Christ while keeping a day for hearing God’s Word; later Reformed Puritans became stricter.",
+"calvin": {
+"answer": "Calvin (II.8.28–34) teaches that the Sabbath’s ceremonial aspect was abolished by Christ, but its purposes endure: spiritual rest from our works so God may work in us, gathering to hear the Word and worship, and rest for servants and workers. The Lord’s Day is observed “without Judaism,” as a matter of good order rather than superstitious necessity. (Later English Puritans adopted a stricter Sabbatarian view than Calvin’s.)",
+"points": [
+"Ceremonial Sabbath fulfilled in Christ.",
+"Enduring purposes: spiritual rest, public worship, rest for workers.",
+"Lord’s Day kept for order, “without Judaism.”"
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "My reply is, That those days are observed by us without Judaism",
+"cite": "Institutes II.8.33",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Exodus 20:8-11",
+"v": [
+[
+20,
+8,
+"Remember the sabbath day, to keep it holy."
+],
+[
+20,
+9,
+"Six days shalt thou labour, and do all thy work:"
+],
+[
+20,
+10,
+"But the seventh day is the sabbath of the LORD thy God: in it thou shalt not do any work, thou, nor thy son, nor thy daughter, thy manservant, nor thy maidservant, nor thy cattle, nor thy stranger that is within thy gates:"
+],
+[
+20,
+11,
+"For in six days the LORD made heaven and earth, the sea, and all that in them is , and rested the seventh day: wherefore the LORD blessed the sabbath day, and hallowed it."
+]
+]
+},
+{
+"ref": "Colossians 2:16-17",
+"v": [
+[
+2,
+16,
+"Let no man therefore judge you in meat, or in drink, or in respect of an holyday, or of the new moon, or of the sabbath days :"
+],
+[
+2,
+17,
+"Which are a shadow of things to come; but the body is of Christ."
+]
+]
+},
+{
+"ref": "Hebrews 4:9-10",
+"v": [
+[
+4,
+9,
+"There remaineth therefore a rest to the people of God."
+],
+[
+4,
+10,
+"For he that is entered into his rest, he also hath ceased from his own works, as God did from his."
+]
+]
+},
+{
+"ref": "Acts 20:7",
+"v": [
+[
+20,
+7,
+"And upon the first day of the week, when the disciples came together to break bread, Paul preached unto them, ready to depart on the morrow; and continued his speech until midnight."
+]
+]
+},
+{
+"ref": "Mark 2:27-28",
+"v": [
+[
+2,
+27,
+"And he said unto them, The sabbath was made for man, and not man for the sabbath:"
+],
+[
+2,
+28,
+"Therefore the Son of man is Lord also of the sabbath."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Luther’s Large Catechism explains that the Sabbath commandment “according to its gross sense, does not concern us Christians,” since the external day-observance was a Jewish ordinance. Its Christian meaning is that we sanctify the day of rest by occupying ourselves with God’s Word; Sunday is kept for that purpose and for bodily rest, not as a binding ceremonial law. AC XXVIII adds that the Church did not make Sunday necessary by divine law.",
+"points": [
+"The literal Sabbath law does not bind Christians.",
+"Keep the day holy by hearing and learning God’s Word.",
+"Sunday observed for order and rest, not as ceremonial necessity."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "This commandment, therefore, according to its gross sense, does not concern us Christians; for it is altogether an external matter",
+"cite": "Large Catechism, The Ten Commandments, §82",
+"url": "https://bookofconcord.org/large-catechism/ten-commandments/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Exodus 20:8",
+"v": [
+[
+20,
+8,
+"Remember the sabbath day, to keep it holy."
+]
+]
+},
+{
+"ref": "Colossians 2:16-17",
+"v": [
+[
+2,
+16,
+"Let no man therefore judge you in meat, or in drink, or in respect of an holyday, or of the new moon, or of the sabbath days :"
+],
+[
+2,
+17,
+"Which are a shadow of things to come; but the body is of Christ."
+]
+]
+},
+{
+"ref": "Romans 14:5",
+"v": [
+[
+14,
+5,
+"One man esteemeth one day above another: another esteemeth every day alike . Let every man be fully persuaded in his own mind."
+]
+]
+},
+{
+"ref": "Hebrews 4:9-10",
+"v": [
+[
+4,
+9,
+"There remaineth therefore a rest to the people of God."
+],
+[
+4,
+10,
+"For he that is entered into his rest, he also hath ceased from his own works, as God did from his."
+]
+]
+},
+{
+"ref": "Acts 20:7",
+"v": [
+[
+20,
+7,
+"And upon the first day of the week, when the disciples came together to break bread, Paul preached unto them, ready to depart on the morrow; and continued his speech until midnight."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Calvin and Luther are close: neither binds Christians to the Jewish Sabbath, both keep the Lord’s Day for the Word and rest. The later strict “Christian Sabbath” of Puritan and Westminster theology goes beyond Calvin himself.",
+"agree": [
+"The ceremonial Sabbath is fulfilled in Christ.",
+"A day for public worship and rest is good and needful.",
+"No superstitious day-keeping."
+],
+"differ": [
+"Calvin emphasizes enduring moral purposes of the commandment; Luther more sharply calls the external Sabbath not binding on Christians.",
+"Later Reformed (Westminster) Sabbatarianism is stricter than either."
+],
+"table": [
+[
+"Literal Sabbath",
+"Ceremony abolished in Christ",
+"“Does not concern us Christians”"
+],
+[
+"Sunday",
+"Kept for order and worship",
+"Kept for the Word and rest"
+],
+[
+"Purpose",
+"Spiritual rest, worship, rest for workers",
+"Hearing God’s Word"
+]
+]
+}
 }
 ]
 }
