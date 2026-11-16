@@ -1,0 +1,1978 @@
+{
+"version": 1,
+"generated": "2026-11-16",
+"topics": [
+{
+"id": "predestination",
+"title": "Predestination & Election",
+"category": "Salvation",
+"keywords": [
+"predestination",
+"predestined",
+"predestinate",
+"election",
+"elect",
+"chosen",
+"choose",
+"reprobation",
+"reprobate",
+"double predestination",
+"decree",
+"foreordained",
+"foreknowledge",
+"book of life",
+"tulip",
+"unconditional election",
+"why are some saved",
+"who will be saved",
+"damned",
+"destiny",
+"fate"
+],
+"questions": [
+"Does God choose who will be saved?",
+"What is double predestination?",
+"Is election based on foreseen faith?"
+],
+"summary": "Both traditions confess that salvation rests on God’s gracious, eternal election in Christ — but they part ways over reprobation.",
+"calvin": {
+"answer": "Calvin teaches that God, by an eternal and unchangeable decree, chose some to eternal life and passed over others, leaving them to the just condemnation their sin deserves (“double predestination”). The cause of election is not foreseen faith or works but God’s “good pleasure” alone (III.22). Calvin insists the doctrine is humbling and comforting: it shows salvation flows entirely from free mercy. Yet he warns against curious speculation and directs believers to look for their election in Christ, “the mirror” of election, rather than in God’s hidden counsel.",
+"points": [
+"Election is unconditional — grounded in God’s will, not foreseen merit.",
+"Reprobation is also part of God’s decree, though the reprobate perish by their own guilt.",
+"Assurance comes by looking to Christ, not by prying into the decree."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "By predestination we mean the eternal decree of God, by which he determined with himself whatever he wished to happen with regard to every man. All are not created on equal terms, but some are preordained to eternal life, others to eternal damnation",
+"cite": "Institutes III.21.5",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "We shall never feel persuaded as we ought that our salvation flows from the free mercy of God as its fountain, until we are made acquainted with his eternal election",
+"cite": "Institutes III.21.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "Christ, then, is the mirror in which we ought, and in which, without deception, we may contemplate our election.",
+"cite": "Institutes III.24.5",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Ephesians 1:4-5",
+"v": [
+[
+1,
+4,
+"According as he hath chosen us in him before the foundation of the world, that we should be holy and without blame before him in love:"
+],
+[
+1,
+5,
+"Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will,"
+]
+]
+},
+{
+"ref": "Romans 9:11-13",
+"v": [
+[
+9,
+11,
+"(For the children being not yet born, neither having done any good or evil, that the purpose of God according to election might stand, not of works, but of him that calleth;)"
+],
+[
+9,
+12,
+"It was said unto her, The elder shall serve the younger."
+],
+[
+9,
+13,
+"As it is written, Jacob have I loved, but Esau have I hated."
+]
+]
+},
+{
+"ref": "Romans 9:18",
+"v": [
+[
+9,
+18,
+"Therefore hath he mercy on whom he will have mercy , and whom he will he hardeneth."
+]
+]
+},
+{
+"ref": "Romans 8:29-30",
+"v": [
+[
+8,
+29,
+"For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren."
+],
+[
+8,
+30,
+"Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."
+]
+]
+},
+{
+"ref": "John 6:37",
+"v": [
+[
+6,
+37,
+"All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."
+]
+]
+},
+{
+"ref": "John 6:44",
+"v": [
+[
+6,
+44,
+"No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day."
+]
+]
+},
+{
+"ref": "Acts 13:48",
+"v": [
+[
+13,
+48,
+"And when the Gentiles heard this, they were glad, and glorified the word of the Lord: and as many as were ordained to eternal life believed."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "The Formula of Concord (Art. XI) teaches that God’s eternal election “extends only over the godly, beloved children of God” and is a cause of their salvation, so firmly founded that “the gates of hell cannot overcome it.” But Lutherans reject any decree of reprobation: God does not will the damnation of anyone, and those who perish do so by their own rejection of the Word. Election is not to be searched out in God’s secret counsel but sought in Christ, the Book of Life, through the Gospel and the sacraments. Why some are converted and others not is left as a mystery Scripture does not resolve.",
+"points": [
+"Single predestination: election to salvation only, no decree of damnation.",
+"The Gospel promise is meant seriously for all people.",
+"Look for your election in Christ, the Word, and your Baptism — not in God’s hidden will."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "The predestination or eternal election of God, however, extends only over the godly, beloved children of God, being a cause of their salvation",
+"cite": "Formula of Concord, Epitome, XI. Election, §5",
+"url": "https://bookofconcord.org/epitome/election/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "This [predestination of God] is not to be investigated in the secret counsel of God, but to be sought in the Word of God, where it is also revealed.",
+"cite": "Formula of Concord, Epitome, XI. Election, §6",
+"url": "https://bookofconcord.org/epitome/election/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "But the Word of God leads us to Christ, who is the Book of Life, in whom all are written and elected that are to be saved in eternity",
+"cite": "Formula of Concord, Epitome, XI. Election, §7",
+"url": "https://bookofconcord.org/epitome/election/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Ephesians 1:4-5",
+"v": [
+[
+1,
+4,
+"According as he hath chosen us in him before the foundation of the world, that we should be holy and without blame before him in love:"
+],
+[
+1,
+5,
+"Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will,"
+]
+]
+},
+{
+"ref": "Romans 8:28-30",
+"v": [
+[
+8,
+28,
+"And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+],
+[
+8,
+29,
+"For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren."
+],
+[
+8,
+30,
+"Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."
+]
+]
+},
+{
+"ref": "John 10:27-28",
+"v": [
+[
+10,
+27,
+"My sheep hear my voice, and I know them, and they follow me:"
+],
+[
+10,
+28,
+"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."
+]
+]
+},
+{
+"ref": "1 Timothy 2:4",
+"v": [
+[
+2,
+4,
+"Who will have all men to be saved, and to come unto the knowledge of the truth."
+]
+]
+},
+{
+"ref": "Ezekiel 33:11",
+"v": [
+[
+33,
+11,
+"Say unto them, As I live, saith the Lord GOD , I have no pleasure in the death of the wicked; but that the wicked turn from his way and live: turn ye, turn ye from your evil ways; for why will ye die, O house of Israel?"
+]
+]
+},
+{
+"ref": "Matthew 11:28",
+"v": [
+[
+11,
+28,
+"Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both traditions confess an eternal election by grace in Christ that is the cause of salvation and gives believers comfort. Calvinism follows the logic of the decree to include reprobation (God passes over the non-elect); Lutheranism stops at the biblical tension — God elects to salvation, yet sincerely wills all to be saved, and unbelief alone damns.",
+"agree": [
+"Salvation is entirely by grace, not by foreseen merit.",
+"Election is in Christ and is meant to comfort, not terrify.",
+"Do not speculate about God’s hidden counsel; look to Christ."
+],
+"differ": [
+"Calvin: double predestination (election and reprobation). Lutheran: single predestination only.",
+"Calvin: God’s saving will is effectual for the elect. Lutheran: God’s saving will is universal and serious toward all.",
+"Lutherans leave “why some and not others?” unanswered as a mystery."
+],
+"table": [
+[
+"Basis of election",
+"God’s good pleasure alone",
+"God’s grace in Christ alone"
+],
+[
+"Reprobation",
+"Decreed (passing over the non-elect)",
+"No decree of damnation; unbelief is man’s fault"
+],
+[
+"God’s will to save",
+"Effectually for the elect",
+"Seriously for all (1 Tim 2:4)"
+],
+[
+"Where to find assurance",
+"Christ, the mirror of election",
+"Christ, the Word, and Baptism"
+]
+]
+}
+},
+{
+"id": "free-will",
+"title": "Free Will & the Bondage of the Will",
+"category": "Humanity & Sin",
+"keywords": [
+"free will",
+"freewill",
+"free-will",
+"bondage of the will",
+"bound will",
+"choice",
+"choose god",
+"decision",
+"libero arbitrio",
+"erasmus",
+"human ability",
+"can man choose god",
+"accept jesus",
+"decide for christ",
+"will",
+"monergism",
+"synergism",
+"cooperate"
+],
+"questions": [
+"Do humans have free will?",
+"Can a person choose to follow God?",
+"What did Luther say to Erasmus?"
+],
+"summary": "Both deny that fallen humans can turn to God by their own power; both grant freedom in earthly matters.",
+"calvin": {
+"answer": "Calvin grants that fallen man acts voluntarily, without compulsion — but denies that he has any power to choose spiritual good. The will is “bound” by sin, so that man sins necessarily yet willingly. Calvin thinks the label “free will” is too proud a title for so small a liberty and prefers to avoid it. Conversion is wholly God’s work: grace does not merely assist a neutral will but creates a new heart.",
+"points": [
+"Man sins necessarily, but not by compulsion — willingly.",
+"The term “free will” is misleading and best avoided.",
+"Grace renews the will; it does not merely help it."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "In this way, then, man is said to have free will, not because he has a free choice of good and evil, but because he acts voluntarily, and not by compulsion.",
+"cite": "Institutes II.2.7",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "This is perfectly true: but why should so small a matter have been dignified with so proud a title?",
+"cite": "Institutes II.2.7",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Jeremiah 13:23",
+"v": [
+[
+13,
+23,
+"Can the Ethiopian change his skin, or the leopard his spots? then may ye also do good, that are accustomed to do evil."
+]
+]
+},
+{
+"ref": "John 8:34",
+"v": [
+[
+8,
+34,
+"Jesus answered them, Verily, verily, I say unto you, Whosoever committeth sin is the servant of sin."
+]
+]
+},
+{
+"ref": "Romans 8:7-8",
+"v": [
+[
+8,
+7,
+"Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be."
+],
+[
+8,
+8,
+"So then they that are in the flesh cannot please God."
+]
+]
+},
+{
+"ref": "Ephesians 2:1",
+"v": [
+[
+2,
+1,
+"And you hath he quickened , who were dead in trespasses and sins;"
+]
+]
+},
+{
+"ref": "Ezekiel 36:26",
+"v": [
+[
+36,
+26,
+"A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you an heart of flesh."
+]
+]
+},
+{
+"ref": "Philippians 2:13",
+"v": [
+[
+2,
+13,
+"For it is God which worketh in you both to will and to do of his good pleasure."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Augsburg Confession XVIII teaches that the will has “some liberty to choose civil righteousness” but no power, without the Holy Ghost, for spiritual righteousness. The Formula of Concord (II) is blunt: in spiritual things fallen man is “like a pillar of salt… like a log and a stone,” and conversion is solely the Spirit’s work through Word and Sacrament. Luther’s Bondage of the Will (1525), against Erasmus, pictures the will as a beast ridden either by God or by Satan. After conversion, the renewed will does cooperate, by the Spirit’s power.",
+"points": [
+"Civil freedom: yes. Spiritual freedom before conversion: none.",
+"Conversion is monergistic — God alone works it through the means of grace.",
+"The renewed believer cooperates by the Spirit’s power, not his own."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "Of Free Will they teach that man's will has some liberty to choose civil righteousness, and to work things subject to reason. But it has no power, without the Holy Ghost, to work the righteousness of God, that is, spiritual righteousness",
+"cite": "Augsburg Confession, Article XVIII. Of Free Will, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-free-will/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "but in spiritual and divine things, which pertain to the salvation of the soul, man is like a pillar of salt, like Lot's wife, yea, like a log and a stone, like a lifeless statue",
+"cite": "Formula of Concord, Solid Declaration, II. Free Will, §20",
+"url": "https://bookofconcord.org/solid-declaration/free-will/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "luther",
+"text": "Thus the human will is, as it were, a beast between the two. If God sit thereon, it wills and goes where God will",
+"cite": "The Bondage of the Will (1525), Sect. XXIV",
+"work": "Luther, The Bondage of the Will (Henry Cole tr.)"
+}
+],
+"verses": [
+{
+"ref": "1 Corinthians 2:14",
+"v": [
+[
+2,
+14,
+"But the natural man receiveth not the things of the Spirit of God: for they are foolishness unto him: neither can he know them , because they are spiritually discerned."
+]
+]
+},
+{
+"ref": "John 15:5",
+"v": [
+[
+15,
+5,
+"I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing."
+]
+]
+},
+{
+"ref": "Romans 8:7",
+"v": [
+[
+8,
+7,
+"Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be."
+]
+]
+},
+{
+"ref": "Ephesians 2:1-5",
+"v": [
+[
+2,
+1,
+"And you hath he quickened , who were dead in trespasses and sins;"
+],
+[
+2,
+2,
+"Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:"
+],
+[
+2,
+3,
+"Among whom also we all had our conversation in times past in the lusts of our flesh, fulfilling the desires of the flesh and of the mind; and were by nature the children of wrath, even as others."
+],
+[
+2,
+4,
+"But God, who is rich in mercy, for his great love wherewith he loved us,"
+],
+[
+2,
+5,
+"Even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;)"
+]
+]
+},
+{
+"ref": "Philippians 2:13",
+"v": [
+[
+2,
+13,
+"For it is God which worketh in you both to will and to do of his good pleasure."
+]
+]
+},
+{
+"ref": "2 Corinthians 3:5",
+"v": [
+[
+3,
+5,
+"Not that we are sufficient of ourselves to think any thing as of ourselves; but our sufficiency is of God;"
+]
+]
+}
+]
+},
+"compare": {
+"summary": "On the will itself Calvin and Luther are remarkably close: both reject Erasmus-style free will in spiritual matters and teach that conversion is entirely God’s work. The difference shows up downstream — in how that conviction connects to predestination and to the universality of grace.",
+"agree": [
+"Fallen humans cannot choose God by their own power.",
+"There is real freedom in civil and everyday matters.",
+"Conversion is the work of God alone (monergism)."
+],
+"differ": [
+"Calvin ties the bound will closely to the eternal decree; Lutherans tie conversion to the means of grace (Word and Sacrament).",
+"Lutherans teach that those who resist grace can and do reject it; Calvin’s system holds grace is effectual for the elect."
+],
+"table": [
+[
+"Civil freedom",
+"Yes, voluntary action",
+"Yes, “civil righteousness”"
+],
+[
+"Spiritual ability",
+"None — will bound by sin",
+"None — “like a log and a stone”"
+],
+[
+"Conversion",
+"God alone, by the Spirit",
+"God alone, through Word & Sacrament"
+],
+[
+"Key text",
+"Institutes II.2–3",
+"AC XVIII; FC II; Bondage of the Will"
+]
+]
+}
+},
+{
+"id": "original-sin",
+"title": "Original Sin & Total Depravity",
+"category": "Humanity & Sin",
+"keywords": [
+"original sin",
+"sin",
+"depravity",
+"total depravity",
+"fall",
+"adam",
+"corruption",
+"sinful nature",
+"born sinful",
+"concupiscence",
+"inherited sin",
+"human nature",
+"are babies sinners",
+"imago dei",
+"image of god"
+],
+"questions": [
+"What is original sin?",
+"Are people born sinful?",
+"What does total depravity mean?"
+],
+"summary": "Both teach that Adam’s fall corrupted the whole human nature, so that everyone is born guilty and in need of rebirth.",
+"calvin": {
+"answer": "Calvin defines original sin as “a hereditary corruption and depravity of our nature, extending to all the parts of the soul,” which makes us liable to God’s wrath and produces sinful works. This does not mean humans are as wicked as possible, but that no part of us — mind, will, or affections — is untouched. Later Reformed theology called this “total depravity.”",
+"points": [
+"Corruption extends to every faculty of the soul.",
+"It brings guilt as well as corruption.",
+"Remnants of the image of God and natural gifts remain, but spiritual gifts are lost."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Original sin, then, may be defined a hereditary corruption and depravity of our nature, extending to all the parts of the soul, which first makes us obnoxious to the wrath of God, and then produces in us works which in Scripture are termed works of the flesh.",
+"cite": "Institutes II.1.8",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Psalms 51:5",
+"v": [
+[
+51,
+5,
+"Behold, I was shapen in iniquity; and in sin did my mother conceive me."
+]
+]
+},
+{
+"ref": "Romans 5:12",
+"v": [
+[
+5,
+12,
+"Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:"
+]
+]
+},
+{
+"ref": "Romans 5:19",
+"v": [
+[
+5,
+19,
+"For as by one man’s disobedience many were made sinners, so by the obedience of one shall many be made righteous."
+]
+]
+},
+{
+"ref": "Ephesians 2:3",
+"v": [
+[
+2,
+3,
+"Among whom also we all had our conversation in times past in the lusts of our flesh, fulfilling the desires of the flesh and of the mind; and were by nature the children of wrath, even as others."
+]
+]
+},
+{
+"ref": "Jeremiah 17:9",
+"v": [
+[
+17,
+9,
+"The heart is deceitful above all things , and desperately wicked: who can know it?"
+]
+]
+},
+{
+"ref": "Genesis 6:5",
+"v": [
+[
+6,
+5,
+"And GOD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Augsburg Confession II confesses that since the fall all born in the natural way “are born with sin, that is, without the fear of God, without trust in God, and with concupiscence,” and that this disease is truly sin, condemning those not born again through Baptism and the Spirit. The Formula of Concord (I) adds an important distinction: original sin is a deep corruption of human nature, but not the very substance of human nature itself — otherwise God would be the creator of sin (against Flacius).",
+"points": [
+"Original sin = lack of fear and trust in God + concupiscence.",
+"It truly damns apart from rebirth through Baptism and the Spirit.",
+"Sin corrupts human nature but is not identical with it (FC I)."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence",
+"cite": "Augsburg Confession, Article II. Of Original Sin, §1",
+"url": "https://bookofconcord.org/augsburg-confession/original-sin/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Psalms 51:5",
+"v": [
+[
+51,
+5,
+"Behold, I was shapen in iniquity; and in sin did my mother conceive me."
+]
+]
+},
+{
+"ref": "Romans 5:12",
+"v": [
+[
+5,
+12,
+"Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:"
+]
+]
+},
+{
+"ref": "John 3:5-6",
+"v": [
+[
+3,
+5,
+"Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God."
+],
+[
+3,
+6,
+"That which is born of the flesh is flesh; and that which is born of the Spirit is spirit."
+]
+]
+},
+{
+"ref": "Ephesians 2:3",
+"v": [
+[
+2,
+3,
+"Among whom also we all had our conversation in times past in the lusts of our flesh, fulfilling the desires of the flesh and of the mind; and were by nature the children of wrath, even as others."
+]
+]
+},
+{
+"ref": "Romans 7:18",
+"v": [
+[
+7,
+18,
+"For I know that in me (that is, in my flesh,) dwelleth no good thing: for to will is present with me; but how to perform that which is good I find not."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "This is an area of strong agreement. Both traditions reject Pelagian and semi-Pelagian views and see humanity as radically fallen. Lutherans add the careful FC I distinction that sin is not the substance of human nature.",
+"agree": [
+"Adam’s sin brought guilt and corruption on all.",
+"Original sin affects the whole person.",
+"Only God’s grace can heal it."
+],
+"differ": [
+"Lutherans explicitly tie deliverance to Baptism and the Spirit (AC II).",
+"Lutheran FC I formally rejects the Flacian view that sin is man’s substance; Calvin does not address that later controversy."
+],
+"table": [
+[
+"Definition",
+"Hereditary corruption of all parts of the soul",
+"Lack of fear/trust in God + concupiscence"
+],
+[
+"Extent",
+"Every faculty affected",
+"Whole nature corrupted, not substance"
+],
+[
+"Remedy",
+"Regeneration by the Spirit",
+"Baptism and the Holy Spirit"
+]
+]
+}
+},
+{
+"id": "grace-conversion",
+"title": "Grace, Conversion & Irresistible Grace",
+"category": "Salvation",
+"keywords": [
+"grace",
+"irresistible grace",
+"resistible",
+"resist grace",
+"effectual calling",
+"calling",
+"conversion",
+"converted",
+"regeneration",
+"born again",
+"new birth",
+"monergism",
+"prevenient grace",
+"can grace be resisted",
+"holy spirit works",
+"means of grace"
+],
+"questions": [
+"Can God’s grace be resisted?",
+"How does a person get converted?",
+"What is effectual calling?"
+],
+"summary": "Both say conversion is God’s work alone; they differ on whether grace can be successfully resisted.",
+"calvin": {
+"answer": "Calvin teaches that God’s grace does not offer a mere possibility the will can accept or reject; it effectively renews the heart of the elect. In Institutes II.3 he argues that God “corrects” and “renews” the will, and that what is good in it is entirely God’s work. Later Reformed theology (Dort, 1619) summarized this as “irresistible” or effectual grace — not that people never resist, but that God’s saving purpose for the elect is never ultimately defeated.",
+"points": [
+"Grace effectively renews the will of the elect.",
+"The outward call goes to many; the inward, effectual call to the elect.",
+"The term “irresistible grace” is later (Dort), but the idea is in Calvin."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "so long as we are without Christ and separated from him, nothing which he suffered and did for the salvation of the human race is of the least benefit to us",
+"cite": "Institutes III.1.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Ezekiel 36:26-27",
+"v": [
+[
+36,
+26,
+"A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you an heart of flesh."
+],
+[
+36,
+27,
+"And I will put my spirit within you, and cause you to walk in my statutes, and ye shall keep my judgments, and do them ."
+]
+]
+},
+{
+"ref": "John 6:44",
+"v": [
+[
+6,
+44,
+"No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day."
+]
+]
+},
+{
+"ref": "Philippians 2:13",
+"v": [
+[
+2,
+13,
+"For it is God which worketh in you both to will and to do of his good pleasure."
+]
+]
+},
+{
+"ref": "Romans 8:30",
+"v": [
+[
+8,
+30,
+"Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."
+]
+]
+},
+{
+"ref": "Acts 16:14",
+"v": [
+[
+16,
+14,
+"And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us : whose heart the Lord opened, that she attended unto the things which were spoken of Paul."
+]
+]
+}
+],
+"refs": [
+"Institutes II.3.6–10: God creates a new heart and will; the good will is wholly God’s work.",
+"Institutes III.24.8: the general call by preaching vs. the special call that renews."
+]
+},
+"lutheran": {
+"answer": "Lutherans equally confess that conversion is the work of the Holy Spirit alone: “I believe that I cannot by my own reason or strength believe in Jesus Christ… but the Holy Ghost has called me by the Gospel” (Small Catechism). The Spirit works through means — the Word and the Sacraments — as instruments. Yet Lutherans teach that grace is resistible: those who perish do so because they stubbornly resist the Spirit, not because God withheld grace from them.",
+"points": [
+"Conversion is solely the Spirit’s work (monergism).",
+"The Spirit works through Word and Sacraments, not apart from them.",
+"Grace can be resisted — the cause of unbelief lies in man, not God."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "I believe that I cannot by my own reason or strength believe in Jesus Christ, my Lord, or come to Him; but the Holy Ghost has called me by the Gospel, enlightened me with His gifts, sanctified and kept me in the true faith",
+"cite": "Small Catechism, II. The Creed, §3",
+"url": "https://bookofconcord.org/small-catechism/the-creed/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "For through the Word and Sacraments, as through instruments, the Holy Ghost is given, who works faith",
+"cite": "Augsburg Confession, Article V. Of the Ministry, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-the-ministry/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Romans 10:17",
+"v": [
+[
+10,
+17,
+"So then faith cometh by hearing, and hearing by the word of God."
+]
+]
+},
+{
+"ref": "Acts 7:51",
+"v": [
+[
+7,
+51,
+"Ye stiffnecked and uncircumcised in heart and ears, ye do always resist the Holy Ghost: as your fathers did , so do ye."
+]
+]
+},
+{
+"ref": "Matthew 23:37",
+"v": [
+[
+23,
+37,
+"O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not!"
+]
+]
+},
+{
+"ref": "Titus 3:5",
+"v": [
+[
+3,
+5,
+"Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;"
+]
+]
+},
+{
+"ref": "1 Corinthians 12:3",
+"v": [
+[
+12,
+3,
+"Wherefore I give you to understand, that no man speaking by the Spirit of God calleth Jesus accursed: and that no man can say that Jesus is the Lord, but by the Holy Ghost."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Here lies a famous asymmetry: both are monergists in conversion, but Calvinism says God’s grace infallibly saves the elect, while Lutheranism says salvation is all God’s doing and damnation is all man’s fault — even if that cannot be logically reconciled.",
+"agree": [
+"Humans contribute nothing to their conversion.",
+"The Holy Spirit is the sole author of faith.",
+"The preached Word is the ordinary instrument."
+],
+"differ": [
+"Calvinism: grace is effectual (“irresistible”) for the elect. Lutheranism: grace can be resisted and rejected.",
+"Lutherans bind the Spirit’s work tightly to the means of grace, including Baptism."
+],
+"table": [
+[
+"Who converts?",
+"God alone",
+"God alone"
+],
+[
+"Can grace be resisted to the end?",
+"Not by the elect",
+"Yes — unbelief resists the Spirit"
+],
+[
+"Means",
+"Word, with the Spirit’s inner work",
+"Word and Sacraments as instruments"
+]
+]
+}
+},
+{
+"id": "justification",
+"title": "Justification by Faith",
+"category": "Salvation",
+"keywords": [
+"justification",
+"justified",
+"justify",
+"righteous",
+"righteousness",
+"imputed",
+"imputation",
+"faith alone",
+"sola fide",
+"declared righteous",
+"forgiveness",
+"how am i saved",
+"how to be saved",
+"saved",
+"salvation",
+"works righteousness",
+"grace alone",
+"article on which the church stands",
+"merit"
+],
+"questions": [
+"How is a sinner made right with God?",
+"What does “faith alone” mean?",
+"Is justification imputed or infused?"
+],
+"summary": "Near-total agreement: sinners are declared righteous for Christ’s sake, through faith alone, by imputation.",
+"calvin": {
+"answer": "Calvin calls justification “the principal hinge” of religion (III.11.1). It is a legal declaration: God accepts us “into his favor as if we were righteous,” consisting in forgiveness of sins and the imputation of Christ’s righteousness. Calvin stresses union with Christ: justification and sanctification are distinct but inseparable gifts received together in Christ — “Christ, therefore, justifies no man without also sanctifying him.”",
+"points": [
+"Forensic: God declares, rather than infuses, righteousness.",
+"Grounded in Christ’s imputed righteousness alone.",
+"Inseparable from (but not the same as) sanctification."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Thus we simply interpret justification, as the acceptance with which God receives us into his favor as if we were righteous; and we say that this justification consists in the forgiveness of sins and the imputation of the righteousness of Christ",
+"cite": "Institutes III.11.2",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "Christ, therefore, justifies no man without also sanctifying him.",
+"cite": "Institutes III.16.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Romans 3:23-26",
+"v": [
+[
+3,
+23,
+"For all have sinned, and come short of the glory of God;"
+],
+[
+3,
+24,
+"Being justified freely by his grace through the redemption that is in Christ Jesus:"
+],
+[
+3,
+25,
+"Whom God hath set forth to be a propitiation through faith in his blood, to declare his righteousness for the remission of sins that are past, through the forbearance of God;"
+],
+[
+3,
+26,
+"To declare, I say , at this time his righteousness: that he might be just, and the justifier of him which believeth in Jesus."
+]
+]
+},
+{
+"ref": "Romans 3:28",
+"v": [
+[
+3,
+28,
+"Therefore we conclude that a man is justified by faith without the deeds of the law."
+]
+]
+},
+{
+"ref": "Romans 4:5",
+"v": [
+[
+4,
+5,
+"But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness."
+]
+]
+},
+{
+"ref": "2 Corinthians 5:21",
+"v": [
+[
+5,
+21,
+"For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him."
+]
+]
+},
+{
+"ref": "Galatians 2:16",
+"v": [
+[
+2,
+16,
+"Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified."
+]
+]
+},
+{
+"ref": "Philippians 3:9",
+"v": [
+[
+3,
+9,
+"And be found in him, not having mine own righteousness, which is of the law, but that which is through the faith of Christ, the righteousness which is of God by faith:"
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "For Lutherans this is the chief article. Augsburg Confession IV: we “cannot be justified before God by [our] own strength, merits, or works, but are freely justified for Christ’s sake, through faith.” The Smalcald Articles declare that of this article “nothing can be yielded or surrendered… even though heaven and earth… should sink to ruin.” The Apology defends “faith alone” as Pauline (Rom 3:28). Justification is forensic — the forgiveness of sins and Christ’s righteousness reckoned to the believer.",
+"points": [
+"The chief article — all doctrine is measured by it.",
+"Faith receives; it is not a meritorious work.",
+"Forensic declaration; good works follow as fruit."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "Also they teach that men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor, and that their sins are forgiven for Christ's sake",
+"cite": "Augsburg Confession, Article IV. Of Justification, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-justification/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "Of this article nothing can be yielded or surrendered [nor can anything be granted or permitted contrary to the same], even though heaven and earth, and whatever will not abide, should sink to ruin.",
+"cite": "Smalcald Articles, Part II, Article I - First and Chief Article, §5",
+"url": "https://bookofconcord.org/smalcald-articles/ii/first-and-chief-article/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "Accordingly we wish first to show this, that faith alone makes of an unjust, a just man, i.e., receives remission of sins.",
+"cite": "Apology of the Augsburg Confession, Article IV (II). Of Justification, §72",
+"url": "https://bookofconcord.org/defense/of-justification/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Romans 3:28",
+"v": [
+[
+3,
+28,
+"Therefore we conclude that a man is justified by faith without the deeds of the law."
+]
+]
+},
+{
+"ref": "Romans 4:5",
+"v": [
+[
+4,
+5,
+"But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness."
+]
+]
+},
+{
+"ref": "Ephesians 2:8-9",
+"v": [
+[
+2,
+8,
+"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"
+],
+[
+2,
+9,
+"Not of works, lest any man should boast."
+]
+]
+},
+{
+"ref": "Galatians 2:16",
+"v": [
+[
+2,
+16,
+"Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified."
+]
+]
+},
+{
+"ref": "Romans 3:24-25",
+"v": [
+[
+3,
+24,
+"Being justified freely by his grace through the redemption that is in Christ Jesus:"
+],
+[
+3,
+25,
+"Whom God hath set forth to be a propitiation through faith in his blood, to declare his righteousness for the remission of sins that are past, through the forbearance of God;"
+]
+]
+},
+{
+"ref": "Acts 4:12",
+"v": [
+[
+4,
+12,
+"Neither is there salvation in any other: for there is none other name under heaven given among men, whereby we must be saved."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Justification is the Reformation’s common ground. Both reject Rome’s infused-righteousness model and teach forensic justification by faith alone. The emphasis differs: Lutherans treat it as the central article that organizes all theology; Calvin frames it within union with Christ alongside sanctification (the “double grace”).",
+"agree": [
+"Justification is a legal declaration, not infused righteousness.",
+"Faith alone receives Christ’s righteousness.",
+"Good works are fruits, never the ground."
+],
+"differ": [
+"Lutheran: justification is the chief article organizing all doctrine. Calvin: a “principal hinge,” framed within union with Christ and the “double grace.”",
+"Lutheran preaching is structured by Law/Gospel around justification; Reformed theology often frames it within covenant and union."
+],
+"table": [
+[
+"Nature",
+"Forensic declaration",
+"Forensic declaration"
+],
+[
+"Ground",
+"Christ’s imputed righteousness",
+"Christ’s righteousness, for His sake"
+],
+[
+"Instrument",
+"Faith alone",
+"Faith alone"
+],
+[
+"Place in system",
+"Principal hinge; with sanctification in union",
+"The chief article"
+]
+]
+}
+},
+{
+"id": "faith",
+"title": "What Is Faith?",
+"category": "Salvation",
+"keywords": [
+"faith",
+"believe",
+"belief",
+"trust",
+"assent",
+"knowledge",
+"fiducia",
+"what is faith",
+"definition of faith",
+"saving faith",
+"doubt",
+"confidence"
+],
+"questions": [
+"What is saving faith?",
+"Is faith just believing facts?",
+"How does Calvin define faith?"
+],
+"summary": "For both, faith is not mere intellectual assent but confident trust in God’s promise of mercy in Christ.",
+"calvin": {
+"answer": "Calvin gives one of the Reformation’s most famous definitions: faith is “a firm and sure knowledge of the divine favor toward us, founded on the truth of a free promise in Christ, and revealed to our minds, and sealed on our hearts, by the Holy Spirit.” Faith involves both mind and heart; it rests on the promise and is the gift of the Spirit. Calvin rejects the scholastic idea of merely “implicit” faith.",
+"points": [
+"Knowledge and heartfelt assurance together.",
+"Rests on God’s free promise in Christ.",
+"Created and sealed by the Holy Spirit."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "it is a firm and sure knowledge of the divine favor toward us, founded on the truth of a free promise in Christ, and revealed to our minds, and sealed on our hearts, by the Holy Spirit.",
+"cite": "Institutes III.2.7",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "the word itself, whatever be the way in which it is conveyed to us, is a kind of mirror in which faith beholds God.",
+"cite": "Institutes III.2.6",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Hebrews 11:1",
+"v": [
+[
+11,
+1,
+"Now faith is the substance of things hoped for, the evidence of things not seen."
+]
+]
+},
+{
+"ref": "Hebrews 11:6",
+"v": [
+[
+11,
+6,
+"But without faith it is impossible to please him : for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him."
+]
+]
+},
+{
+"ref": "Romans 10:17",
+"v": [
+[
+10,
+17,
+"So then faith cometh by hearing, and hearing by the word of God."
+]
+]
+},
+{
+"ref": "Ephesians 2:8",
+"v": [
+[
+2,
+8,
+"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"
+]
+]
+},
+{
+"ref": "Romans 4:20-21",
+"v": [
+[
+4,
+20,
+"He staggered not at the promise of God through unbelief; but was strong in faith, giving glory to God;"
+],
+[
+4,
+21,
+"And being fully persuaded that, what he had promised, he was able also to perform."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Lutherans distinguish mere historical knowledge from saving faith, which is trust in the promise of mercy for Christ’s sake. The Apology says this faith “brings to God not confidence in one’s own merits, but only confidence in the promise.” Luther’s Large Catechism explains the First Commandment in terms of faith: “that now… upon which you set your heart and put your trust is properly your god.” Faith is created by the Spirit through the Word and Sacraments.",
+"points": [
+"Faith = trust (fiducia) in the promise, not just facts.",
+"Faith receives; it does not merit.",
+"Created by the Holy Spirit through Word and Sacrament."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "This faith brings to God not confidence in one's own merits, but only confidence in the promise, or the mercy promised in Christ.",
+"cite": "Apology of the Augsburg Confession, Article IV (II). Of Justification, §44",
+"url": "https://bookofconcord.org/defense/of-justification/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "That now, I say, upon which you set your heart and put your trust is properly your god.",
+"cite": "Large Catechism, The Ten Commandments, §3",
+"url": "https://bookofconcord.org/large-catechism/ten-commandments/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Hebrews 11:1",
+"v": [
+[
+11,
+1,
+"Now faith is the substance of things hoped for, the evidence of things not seen."
+]
+]
+},
+{
+"ref": "Romans 10:17",
+"v": [
+[
+10,
+17,
+"So then faith cometh by hearing, and hearing by the word of God."
+]
+]
+},
+{
+"ref": "Romans 4:5",
+"v": [
+[
+4,
+5,
+"But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness."
+]
+]
+},
+{
+"ref": "John 20:31",
+"v": [
+[
+20,
+31,
+"But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name."
+]
+]
+},
+{
+"ref": "Galatians 3:26",
+"v": [
+[
+3,
+26,
+"For ye are all the children of God by faith in Christ Jesus."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Strong agreement: faith is personal trust in God’s gracious promise, created by the Spirit through the Word. Lutherans more explicitly connect faith to the sacraments as means that create and strengthen it; Calvin stresses the Spirit’s inner sealing.",
+"agree": [
+"Faith is trust, not mere assent.",
+"Faith is God’s gift, not a work.",
+"The Word is the ordinary source of faith."
+],
+"differ": [
+"Calvin emphasizes the Spirit’s inner testimony sealing the promise; Lutherans emphasize the external Word and Sacraments as the Spirit’s instruments.",
+"Lutherans affirm that infants can have faith through Baptism."
+],
+"table": [
+[
+"Definition",
+"Firm and sure knowledge of God’s favor",
+"Trust in the promise of mercy in Christ"
+],
+[
+"Source",
+"Holy Spirit, through the Word",
+"Holy Spirit, through Word & Sacraments"
+],
+[
+"Infant faith",
+"Not emphasized",
+"Affirmed (via Baptism)"
+]
+]
+}
+},
+{
+"id": "sanctification",
+"title": "Sanctification & the Christian Life",
+"category": "Christian Life",
+"keywords": [
+"sanctification",
+"sanctified",
+"holiness",
+"holy living",
+"christian life",
+"growth",
+"regeneration",
+"mortification",
+"self-denial",
+"new obedience",
+"becoming holy",
+"spiritual growth",
+"discipleship",
+"simul justus et peccator",
+"saint and sinner"
+],
+"questions": [
+"How does a Christian grow in holiness?",
+"What is sanctification?",
+"Are Christians saints and sinners at the same time?"
+],
+"summary": "Both see holiness as the Spirit’s fruit of justification; Calvin gives it more structural weight, Lutherans guard against making it a ground of assurance.",
+"calvin": {
+"answer": "For Calvin, union with Christ brings a “double grace”: justification and sanctification. Repentance, which he equates with regeneration, aims “to form in us anew the image of God.” The Christian life is summed up in self-denial: “We are not our own” (III.7.1). Sanctification is progressive and never complete in this life, but it is inseparable from true faith.",
+"points": [
+"Repentance = lifelong regeneration restoring God’s image.",
+"Self-denial: we belong to God, not ourselves.",
+"Progressive and imperfect, but real and necessary as fruit."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "In one word, then, by repentance I understand regeneration, the only aim of which is to form in us anew the image of God",
+"cite": "Institutes III.3.9",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "Christ, therefore, justifies no man without also sanctifying him. These blessings are conjoined by a perpetual and inseparable tie.",
+"cite": "Institutes III.16.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Romans 12:1-2",
+"v": [
+[
+12,
+1,
+"I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service."
+],
+[
+12,
+2,
+"And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God."
+]
+]
+},
+{
+"ref": "2 Corinthians 3:18",
+"v": [
+[
+3,
+18,
+"But we all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory, even as by the Spirit of the Lord."
+]
+]
+},
+{
+"ref": "1 Corinthians 6:19-20",
+"v": [
+[
+6,
+19,
+"What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own?"
+],
+[
+6,
+20,
+"For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God’s."
+]
+]
+},
+{
+"ref": "1 Thessalonians 4:3",
+"v": [
+[
+4,
+3,
+"For this is the will of God, even your sanctification, that ye should abstain from fornication:"
+]
+]
+},
+{
+"ref": "Hebrews 12:14",
+"v": [
+[
+12,
+14,
+"Follow peace with all men , and holiness, without which no man shall see the Lord:"
+]
+]
+},
+{
+"ref": "Philippians 1:6",
+"v": [
+[
+1,
+6,
+"Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:"
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Augsburg Confession VI teaches that faith “is bound to bring forth good fruits,” done because God commands them, not to merit justification. The Christian is simultaneously righteous and a sinner (simul justus et peccator): wholly righteous in Christ, while the old Adam still clings. Sanctification is the Spirit’s work through Word and Sacraments, and daily return to Baptism (Large Catechism) shapes the Christian life of repentance.",
+"points": [
+"Good works necessarily follow faith but do not justify.",
+"Simul justus et peccator — saint and sinner at once.",
+"Daily repentance as a return to Baptism."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "Also they teach that this faith is bound to bring forth good fruits, and that it is necessary to do good works commanded by God, because of God's will, but that we should not rely on those works to merit justification before God.",
+"cite": "Augsburg Confession, Article VI. Of New Obedience, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-new-obedience/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Galatians 5:22-23",
+"v": [
+[
+5,
+22,
+"But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,"
+],
+[
+5,
+23,
+"Meekness, temperance: against such there is no law."
+]
+]
+},
+{
+"ref": "Romans 7:18-25",
+"v": [
+[
+7,
+18,
+"For I know that in me (that is, in my flesh,) dwelleth no good thing: for to will is present with me; but how to perform that which is good I find not."
+],
+[
+7,
+19,
+"For the good that I would I do not: but the evil which I would not, that I do."
+],
+[
+7,
+20,
+"Now if I do that I would not, it is no more I that do it, but sin that dwelleth in me."
+],
+[
+7,
+21,
+"I find then a law, that, when I would do good, evil is present with me."
+],
+[
+7,
+22,
+"For I delight in the law of God after the inward man:"
+],
+[
+7,
+23,
+"But I see another law in my members, warring against the law of my mind, and bringing me into captivity to the law of sin which is in my members."
+],
+[
+7,
+24,
+"O wretched man that I am! who shall deliver me from the body of this death?"
+],
+[
+7,
+25,
+"I thank God through Jesus Christ our Lord. So then with the mind I myself serve the law of God; but with the flesh the law of sin."
+]
+]
+},
+{
+"ref": "Ephesians 2:10",
+"v": [
+[
+2,
+10,
+"For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them."
+]
+]
+},
+{
+"ref": "Romans 6:4",
+"v": [
+[
+6,
+4,
+"Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life."
+]
+]
+},
+{
+"ref": "1 Thessalonians 4:3",
+"v": [
+[
+4,
+3,
+"For this is the will of God, even your sanctification, that ye should abstain from fornication:"
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both insist that true faith produces holiness and that sanctification never grounds our standing before God. Calvin builds a fuller doctrine of the Christian life (self-denial, the law as guide); Lutherans keep the accent on the believer as simultaneously saint and sinner, living from Baptism and the Gospel.",
+"agree": [
+"Holiness is the Spirit’s fruit, not the root of salvation.",
+"Sanctification is never complete in this life.",
+"Faith and good works cannot be separated."
+],
+"differ": [
+"Calvin: sanctification as a co-equal benefit of union with Christ, with strong use of the Law as guide. Lutheran: sanctification flows from justification; fear of re-introducing works-righteousness is sharper.",
+"Lutherans emphasize daily return to Baptism; Reformed emphasize progress in godliness and self-denial."
+],
+"table": [
+[
+"Relation to justification",
+"Distinct, inseparable “double grace”",
+"Fruit that flows from justification"
+],
+[
+"Key motif",
+"Self-denial; restoring God’s image",
+"Simul justus et peccator; daily repentance"
+],
+[
+"Means",
+"Word, Spirit, discipline",
+"Word, Sacraments, Baptismal life"
+]
+]
+}
+},
+{
+"id": "good-works",
+"title": "Good Works",
+"category": "Christian Life",
+"keywords": [
+"good works",
+"works",
+"deeds",
+"merit",
+"reward",
+"obedience",
+"are works necessary",
+"faith without works",
+"james",
+"fruits",
+"charity",
+"love",
+"rewards in heaven"
+],
+"questions": [
+"Are good works necessary for salvation?",
+"How do Paul and James fit together?",
+"Do good works earn rewards?"
+],
+"summary": "Both teach that good works follow faith but contribute nothing to justification.",
+"calvin": {
+"answer": "Calvin teaches that believers are justified apart from works, yet faith is never without works — Christ justifies no one without also sanctifying him. Good works are accepted by God not because they are perfect but because the believer is first accepted in Christ, and God graciously rewards what he himself works in us. James, Calvin argues, speaks of justification as the demonstration of genuine faith before others.",
+"points": [
+"Works are excluded from justification but follow faith.",
+"Our works are accepted only because our persons are accepted in Christ.",
+"Rewards are of grace, not merit."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Christ, therefore, justifies no man without also sanctifying him.",
+"cite": "Institutes III.16.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Ephesians 2:8-10",
+"v": [
+[
+2,
+8,
+"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"
+],
+[
+2,
+9,
+"Not of works, lest any man should boast."
+],
+[
+2,
+10,
+"For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them."
+]
+]
+},
+{
+"ref": "Titus 3:5",
+"v": [
+[
+3,
+5,
+"Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;"
+]
+]
+},
+{
+"ref": "Titus 3:8",
+"v": [
+[
+3,
+8,
+"This is a faithful saying, and these things I will that thou affirm constantly, that they which have believed in God might be careful to maintain good works. These things are good and profitable unto men."
+]
+]
+},
+{
+"ref": "James 2:17",
+"v": [
+[
+2,
+17,
+"Even so faith, if it hath not works, is dead, being alone."
+]
+]
+},
+{
+"ref": "Matthew 5:16",
+"v": [
+[
+5,
+16,
+"Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."
+]
+]
+}
+],
+"refs": [
+"Institutes III.17.8–12 on the free acceptance of believers’ imperfect works; III.17.11–12 on James 2."
+]
+},
+"lutheran": {
+"answer": "Augsburg Confession XX defends Lutheran preaching on good works against the charge of forbidding them. The Formula of Concord (IV) affirms good works are necessary as fruits of faith, yet rejects the formula “good works are necessary to salvation,” because it obscures grace and troubles consciences. Luther’s Large Catechism praises everyday duties of one’s calling as “truly golden works,” better than self-chosen religious works.",
+"points": [
+"Works are necessary as fruits — not for salvation.",
+"Rejects “good works are necessary to salvation” (FC IV).",
+"God-commanded works in daily vocation are the truly good works."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "we reject and condemn the following modes of speaking: when it is taught and written that good works are necessary to salvation; also, that no one ever has been saved without good works",
+"cite": "Formula of Concord, Epitome, IV. Good Works, §16",
+"url": "https://bookofconcord.org/epitome/good-works/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "to know how they may do truly golden works",
+"cite": "Large Catechism, The Ten Commandments, §144",
+"url": "https://bookofconcord.org/large-catechism/ten-commandments/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Ephesians 2:8-10",
+"v": [
+[
+2,
+8,
+"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"
+],
+[
+2,
+9,
+"Not of works, lest any man should boast."
+],
+[
+2,
+10,
+"For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them."
+]
+]
+},
+{
+"ref": "Romans 3:28",
+"v": [
+[
+3,
+28,
+"Therefore we conclude that a man is justified by faith without the deeds of the law."
+]
+]
+},
+{
+"ref": "Galatians 5:6",
+"v": [
+[
+5,
+6,
+"For in Jesus Christ neither circumcision availeth any thing, nor uncircumcision; but faith which worketh by love."
+]
+]
+},
+{
+"ref": "Matthew 25:35-40",
+"v": [
+[
+25,
+35,
+"For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in:"
+],
+[
+25,
+36,
+"Naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me."
+],
+[
+25,
+37,
+"Then shall the righteous answer him, saying, Lord, when saw we thee an hungred, and fed thee ? or thirsty, and gave thee drink?"
+],
+[
+25,
+38,
+"When saw we thee a stranger, and took thee in? or naked, and clothed thee ?"
+],
+[
+25,
+39,
+"Or when saw we thee sick, or in prison, and came unto thee?"
+],
+[
+25,
+40,
+"And the King shall answer and say unto them, Verily I say unto you, Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me."
+]
+]
+},
+{
+"ref": "James 2:26",
+"v": [
+[
+2,
+26,
+"For as the body without the spirit is dead, so faith without works is dead also."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Agreement in substance: works follow faith and never justify. Lutherans police the language more sharply (FC IV rejects “necessary to salvation”), while Calvin speaks more readily of the inseparable bond between faith and works within union with Christ.",
+"agree": [
+"Works add nothing to justification.",
+"True faith inevitably produces good works.",
+"God graciously rewards works He Himself produces."
+],
+"differ": [
+"Lutherans formally reject “good works are necessary to salvation”; Calvin’s idiom stresses works as inseparable evidence.",
+"Lutherans highlight vocation-works; Reformed highlight obedience to the Law as rule of life."
+],
+"table": [
+[
+"Role in justification",
+"None",
+"None"
+],
+[
+"Necessity",
+"Inseparable from true faith",
+"Necessary as fruits, not for salvation"
+],
+[
+"Emphasis",
+"Union with Christ, obedience",
+"Vocation, freedom from works-anxiety"
+]
+]
+}
+}
+]
+}
