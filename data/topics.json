@@ -1973,6 +1973,2634 @@
 ]
 ]
 }
+},
+{
+"id": "law-gospel",
+"title": "Law and Gospel (and the Third Use of the Law)",
+"category": "Word of God",
+"keywords": [
+"law",
+"gospel",
+"law and gospel",
+"third use",
+"uses of the law",
+"ten commandments",
+"moral law",
+"commandments",
+"mirror",
+"curb",
+"guide",
+"rule of life",
+"antinomian",
+"antinomianism",
+"legalism",
+"do christians keep the law"
+],
+"questions": [
+"What is the difference between Law and Gospel?",
+"What is the third use of the law?",
+"Are Christians still under the Ten Commandments?"
+],
+"summary": "Both teach three uses of the Law; Calvin calls the third (guide for believers) the principal use, Lutherans keep the Law–Gospel distinction central.",
+"calvin": {
+"answer": "Calvin describes three uses of the moral Law: it exposes sin like a mirror, restrains the wicked by fear, and — its “principal use” — instructs and exhorts believers in whose hearts the Spirit already reigns. For Calvin the Law is not abolished for Christians as a rule of life; it is freed from its curse. The Law and the Gospel are distinguished, yet both serve the one covenant of grace fulfilled in Christ.",
+"points": [
+"Three uses: mirror, curb, guide.",
+"The third use (guide for believers) is the principal one.",
+"Christ removes the Law’s curse, not its authority as a rule of life."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "The third use of the Law (being also the principal use, and more closely connected with its proper end) has respect to believers in whose hearts the Spirit of God already flourishes and reigns.",
+"cite": "Institutes II.7.12",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "let us take a succinct view of the office and use of the Moral Law. Now this office and use seems to me to consist of three parts.",
+"cite": "Institutes II.7.6",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Romans 3:20",
+"v": [
+[
+3,
+20,
+"Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin."
+]
+]
+},
+{
+"ref": "Galatians 3:24",
+"v": [
+[
+3,
+24,
+"Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith."
+]
+]
+},
+{
+"ref": "Psalms 119:105",
+"v": [
+[
+119,
+105,
+"Thy word is a lamp unto my feet, and a light unto my path."
+]
+]
+},
+{
+"ref": "Romans 7:12",
+"v": [
+[
+7,
+12,
+"Wherefore the law is holy, and the commandment holy, and just, and good."
+]
+]
+},
+{
+"ref": "Matthew 5:17-18",
+"v": [
+[
+5,
+17,
+"Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil."
+],
+[
+5,
+18,
+"For verily I say unto you, Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled."
+]
+]
+},
+{
+"ref": "1 Timothy 1:9",
+"v": [
+[
+1,
+9,
+"Knowing this, that the law is not made for a righteous man, but for the lawless and disobedient, for the ungodly and for sinners, for unholy and profane, for murderers of fathers and murderers of mothers, for manslayers,"
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "The proper distinction between Law and Gospel is, for Lutherans, “an especially brilliant light” (FC V). The Law “is properly a divine doctrine, which teaches what is right and pleasing to God, and reproves everything that is sin”; the Gospel proclaims forgiveness for Christ’s sake. Mixing them either breeds despair or false security. Formula of Concord VI also affirms a third use: the Law should be “diligently urged” upon believers as a mirror of God’s will, because the old Adam still clings to them — yet only the Gospel gives power to obey.",
+"points": [
+"Law accuses and shows sin; Gospel forgives and gives life.",
+"Confusing the two is a chief danger in preaching.",
+"A third use is affirmed (FC VI), always subordinate to the Gospel."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "We believe, teach, and confess that the Law is properly a divine doctrine, which teaches what is right and pleasing to God, and reproves everything that is sin and contrary to God's will.",
+"cite": "Formula of Concord, Epitome, V. Law and Gospel, §3",
+"url": "https://bookofconcord.org/epitome/law-and-gospel/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "which should [therefore] be constantly held up to the believers and be diligently urged upon them without ceasing.",
+"cite": "Formula of Concord, Solid Declaration, VI. The Third Use of the Law, §4",
+"url": "https://bookofconcord.org/solid-declaration/third-use-of-the-law/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Romans 3:20",
+"v": [
+[
+3,
+20,
+"Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin."
+]
+]
+},
+{
+"ref": "Romans 1:16",
+"v": [
+[
+1,
+16,
+"For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek."
+]
+]
+},
+{
+"ref": "2 Corinthians 3:6",
+"v": [
+[
+3,
+6,
+"Who also hath made us able ministers of the new testament; not of the letter, but of the spirit: for the letter killeth, but the spirit giveth life."
+]
+]
+},
+{
+"ref": "Galatians 3:24",
+"v": [
+[
+3,
+24,
+"Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith."
+]
+]
+},
+{
+"ref": "2 Timothy 3:16-17",
+"v": [
+[
+3,
+16,
+"All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"
+],
+[
+3,
+17,
+"That the man of God may be perfect, throughly furnished unto all good works."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both affirm the Law’s three uses and reject antinomianism. The difference is tone and center: Calvin treats the Law’s guiding role for believers as its principal use; Lutherans make the Law–Gospel distinction the hermeneutical key and stress that “the Law always accuses” even believers.",
+"agree": [
+"Three uses of the Law.",
+"The Law cannot justify; only the Gospel saves.",
+"Believers still need the Law’s instruction."
+],
+"differ": [
+"Calvin: the third use is principal. Lutheran: the second (accusing) use dominates; the third is affirmed but guarded.",
+"Lutherans make Law/Gospel the master key to Scripture; Reformed theology tends to frame Law and Gospel within one covenant of grace."
+],
+"table": [
+[
+"Uses of the Law",
+"Mirror, curb, guide",
+"Curb, mirror, rule (FC VI)"
+],
+[
+"Principal use",
+"Third — guide for believers",
+"Second — shows sin, drives to Christ"
+],
+[
+"Key danger",
+"Antinomian neglect of the Law",
+"Confusing Law and Gospel"
+]
+]
+}
+},
+{
+"id": "assurance",
+"title": "Assurance of Salvation",
+"category": "Salvation",
+"keywords": [
+"assurance",
+"assured",
+"certainty",
+"sure",
+"know i am saved",
+"doubt",
+"doubts",
+"am i elect",
+"how can i know",
+"confidence",
+"anxiety",
+"comfort",
+"troubled conscience",
+"am i saved"
+],
+"questions": [
+"How can I know I am saved?",
+"Can a Christian have assurance?",
+"What if I doubt my election?"
+],
+"summary": "Both point the troubled conscience away from itself to Christ; Lutherans add the objective anchors of Baptism and the Supper.",
+"calvin": {
+"answer": "Calvin teaches that assurance belongs to the nature of faith: faith is a “firm and sure knowledge of the divine favor.” Believers still struggle with doubt, but true faith is never extinguished. Against anxious speculation about the decree, Calvin points to Christ: he is the mirror in which we may contemplate our election without deception. Good works can confirm assurance as signs of God’s grace, but never as its foundation.",
+"points": [
+"Assurance is of the essence of faith, though often assailed.",
+"Look to Christ, not into the secret decree.",
+"Works are secondary confirmations, not the ground."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Christ, then, is the mirror in which we ought, and in which, without deception, we may contemplate our election.",
+"cite": "Institutes III.24.5",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "a firm and sure knowledge of the divine favor toward us, founded on the truth of a free promise in Christ",
+"cite": "Institutes III.2.7",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Romans 8:16",
+"v": [
+[
+8,
+16,
+"The Spirit itself beareth witness with our spirit, that we are the children of God:"
+]
+]
+},
+{
+"ref": "Romans 8:38-39",
+"v": [
+[
+8,
+38,
+"For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,"
+],
+[
+8,
+39,
+"Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."
+]
+]
+},
+{
+"ref": "1 John 5:13",
+"v": [
+[
+5,
+13,
+"These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life, and that ye may believe on the name of the Son of God."
+]
+]
+},
+{
+"ref": "John 10:27-29",
+"v": [
+[
+10,
+27,
+"My sheep hear my voice, and I know them, and they follow me:"
+],
+[
+10,
+28,
+"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."
+],
+[
+10,
+29,
+"My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand."
+]
+]
+},
+{
+"ref": "2 Timothy 1:12",
+"v": [
+[
+1,
+12,
+"For the which cause I also suffer these things: nevertheless I am not ashamed: for I know whom I have believed, and am persuaded that he is able to keep that which I have committed unto him against that day."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Lutherans direct anxious consciences to external, objective promises: the preached Word, Holy Absolution, Baptism, and the Lord’s Supper. The Formula of Concord (XI) warns against harassing oneself with thoughts about God’s secret counsel; instead one should “hear Christ,” who is the Book of Life. Because Baptism is God’s own work, the Christian can cling to it in every temptation.",
+"points": [
+"Assurance rests on God’s external promises, not inner feelings.",
+"Baptism, Absolution and the Supper are concrete pledges.",
+"Don’t search the hidden will of God; hear Christ."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "Therefore, whoever would be saved should not trouble or harass himself with thoughts concerning the secret counsel of God, as to whether he also is elected and ordained to eternal life",
+"cite": "Formula of Concord, Solid Declaration, XI. Election, §70",
+"url": "https://bookofconcord.org/solid-declaration/election/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "For to be baptized in the name of God is to be baptized not by men, but by God Himself.",
+"cite": "Large Catechism, Holy Baptism, §10",
+"url": "https://bookofconcord.org/large-catechism/holy-baptism/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Mark 16:16",
+"v": [
+[
+16,
+16,
+"He that believeth and is baptized shall be saved; but he that believeth not shall be damned."
+]
+]
+},
+{
+"ref": "Titus 3:5",
+"v": [
+[
+3,
+5,
+"Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;"
+]
+]
+},
+{
+"ref": "Romans 6:3-4",
+"v": [
+[
+6,
+3,
+"Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?"
+],
+[
+6,
+4,
+"Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life."
+]
+]
+},
+{
+"ref": "John 6:37",
+"v": [
+[
+6,
+37,
+"All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."
+]
+]
+},
+{
+"ref": "1 John 5:13",
+"v": [
+[
+5,
+13,
+"These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life, and that ye may believe on the name of the Son of God."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both offer real assurance and both point to Christ rather than to the hidden decree or our performance. Calvin locates assurance in faith’s grasp of the promise, sealed by the Spirit; Lutherans especially anchor it in the external sacraments and absolution.",
+"agree": [
+"Assurance is possible and is God’s will for believers.",
+"Look to Christ, not God’s hidden counsel.",
+"Works are never the foundation of assurance."
+],
+"differ": [
+"Calvin: assurance rooted in faith and the Spirit’s inner seal, with works as secondary signs. Lutheran: rooted in external means — Baptism, Absolution, Supper.",
+"Lutheran assurance is assurance of present grace; it can be lost through unbelief (see Perseverance)."
+],
+"table": [
+[
+"Primary anchor",
+"Christ, mirror of election; the promise",
+"Christ given in Word & Sacraments"
+],
+[
+"Role of works",
+"Secondary confirmation",
+"Not a ground of assurance"
+],
+[
+"Can it be lost?",
+"The elect persevere",
+"Faith can be lost through unbelief"
+]
+]
+}
+},
+{
+"id": "perseverance",
+"title": "Perseverance — Can a Christian Fall Away?",
+"category": "Salvation",
+"keywords": [
+"perseverance",
+"persevere",
+"once saved always saved",
+"osas",
+"fall away",
+"falling away",
+"apostasy",
+"apostate",
+"lose salvation",
+"lose my salvation",
+"eternal security",
+"backslide",
+"backsliding",
+"preservation of the saints"
+],
+"questions": [
+"Can a Christian lose their salvation?",
+"Is it “once saved, always saved”?",
+"What does the perseverance of the saints mean?"
+],
+"summary": "A clear difference: Calvin teaches the elect cannot finally fall; Lutherans confess that true believers can fall from grace.",
+"calvin": {
+"answer": "Calvin teaches that those whom God has truly elected and united to Christ will persevere to the end, because perseverance is God’s gift and his purpose cannot fail (III.24.6–7; II.3.11). Apparent believers who fall away were never truly ingrafted into Christ, though they may have shown signs of grace. This became the “P” of later Reformed teaching (Dort).",
+"points": [
+"The elect are kept by God to the end.",
+"Perseverance is a gift of grace, not human strength.",
+"Those who finally fall away were never truly united to Christ."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Christ, then, is the mirror in which we ought, and in which, without deception, we may contemplate our election.",
+"cite": "Institutes III.24.5",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "John 10:27-29",
+"v": [
+[
+10,
+27,
+"My sheep hear my voice, and I know them, and they follow me:"
+],
+[
+10,
+28,
+"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."
+],
+[
+10,
+29,
+"My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand."
+]
+]
+},
+{
+"ref": "Philippians 1:6",
+"v": [
+[
+1,
+6,
+"Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:"
+]
+]
+},
+{
+"ref": "Romans 8:30",
+"v": [
+[
+8,
+30,
+"Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."
+]
+]
+},
+{
+"ref": "1 John 2:19",
+"v": [
+[
+2,
+19,
+"They went out from us, but they were not of us; for if they had been of us, they would no doubt have continued with us: but they went out , that they might be made manifest that they were not all of us."
+]
+]
+},
+{
+"ref": "John 6:39",
+"v": [
+[
+6,
+39,
+"And this is the Father’s will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day."
+]
+]
+}
+],
+"refs": [
+"Institutes III.24.6–7: Christ promises that none of those the Father gave him will be lost; temporary believers never had the Spirit of adoption.",
+"Institutes II.3.11: perseverance is a free gift of God."
+]
+},
+"lutheran": {
+"answer": "Lutherans teach both God’s faithful preservation of the elect and the real possibility that believers can fall from grace through unbelief or impenitent sin. Augsburg Confession XII condemns those “who deny that those once justified can lose the Holy Ghost.” Yet the fallen can be restored through repentance. The Formula of Concord also confesses that the salvation of the elect is founded so firmly “that the gates of hell cannot overcome it.” Lutherans hold both truths without resolving them rationally.",
+"points": [
+"True believers can fall away (AC XII).",
+"The fallen may be restored by repentance.",
+"God’s election of His children is nevertheless certain."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "They condemn the Anabaptists, who deny that those once justified can lose the Holy Ghost.",
+"cite": "Augsburg Confession, Article XII. Of Repentance, §7",
+"url": "https://bookofconcord.org/augsburg-confession/of-repentance/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "Upon this [predestination of God] our salvation is founded so firmly that the gates of hell cannot overcome it.",
+"cite": "Formula of Concord, Epitome, XI. Election, §5",
+"url": "https://bookofconcord.org/epitome/election/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "1 Corinthians 10:12",
+"v": [
+[
+10,
+12,
+"Wherefore let him that thinketh he standeth take heed lest he fall."
+]
+]
+},
+{
+"ref": "Hebrews 6:4-6",
+"v": [
+[
+6,
+4,
+"For it is impossible for those who were once enlightened, and have tasted of the heavenly gift, and were made partakers of the Holy Ghost,"
+],
+[
+6,
+5,
+"And have tasted the good word of God, and the powers of the world to come,"
+],
+[
+6,
+6,
+"If they shall fall away, to renew them again unto repentance; seeing they crucify to themselves the Son of God afresh, and put him to an open shame."
+]
+]
+},
+{
+"ref": "Galatians 5:4",
+"v": [
+[
+5,
+4,
+"Christ is become of no effect unto you, whosoever of you are justified by the law; ye are fallen from grace."
+]
+]
+},
+{
+"ref": "John 10:28",
+"v": [
+[
+10,
+28,
+"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."
+]
+]
+},
+{
+"ref": "Luke 8:13",
+"v": [
+[
+8,
+13,
+"They on the rock are they , which, when they hear, receive the word with joy; and these have no root, which for a while believe, and in time of temptation fall away."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both affirm that God preserves His elect and that perseverance is by grace. Calvin concludes that a truly regenerate person can never finally fall; Lutherans insist that genuine believers can lose faith, while also affirming the certainty of election — a tension they deliberately leave unresolved.",
+"agree": [
+"Perseverance is God’s gift, not our achievement.",
+"God’s elect will be saved.",
+"Believers should not presume or grow careless."
+],
+"differ": [
+"Calvin: a truly regenerate person cannot finally fall. Lutheran: a true believer can fall from grace (AC XII).",
+"Calvinists interpret warning passages (Heb 6) as describing false or temporary faith; Lutherans read them as real dangers to true believers."
+],
+"table": [
+[
+"Can a true believer fall away?",
+"No — the elect persevere",
+"Yes — through unbelief"
+],
+[
+"Those who fall away",
+"Were never truly regenerate",
+"Lost faith; may be restored"
+],
+[
+"Warning passages",
+"Address false/temporary faith",
+"Real warnings to believers"
+]
+]
+}
+},
+{
+"id": "atonement",
+"title": "Atonement & Its Extent",
+"category": "Christ",
+"keywords": [
+"atonement",
+"limited atonement",
+"unlimited atonement",
+"universal atonement",
+"particular redemption",
+"definite atonement",
+"did christ die for everyone",
+"died for all",
+"died for whom",
+"cross",
+"satisfaction",
+"substitution",
+"penal substitution",
+"expiation",
+"propitiation",
+"sacrifice",
+"redemption",
+"blood"
+],
+"questions": [
+"Did Christ die for everyone?",
+"What is limited atonement?",
+"What did Christ accomplish on the cross?"
+],
+"summary": "Both teach Christ’s substitutionary satisfaction for sin; they differ over for whom it was intended.",
+"calvin": {
+"answer": "Calvin teaches that Christ, as our substitute, bore the curse and the wrath of God, expiating our sins by his sacrifice; in his descent into hell “he bore in his soul the tortures of condemned and ruined man.” But Christ’s benefits profit us only through union with him by the Spirit and faith. The formal doctrine of “limited” or definite atonement was articulated later (Synod of Dort, 1619); scholars debate how exactly Calvin himself would have stated the extent question, since he also speaks freely of Christ offered to the whole world.",
+"points": [
+"Penal substitution: Christ bore our curse and God’s wrath.",
+"The benefits are applied only through Spirit-wrought union with Christ.",
+"“Limited atonement” as a formula comes from Dort; Calvin’s own view is debated."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Christ died that he might bear our curse upon the tree, that he might expiate our sins by the sacrifice of his body, wash them in his blood, and, in short, reconcile us to God the Father",
+"cite": "Institutes I.11.7",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "he bore in his soul the tortures of condemned and ruined man.",
+"cite": "Institutes II.16.10",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "so long as we are without Christ and separated from him, nothing which he suffered and did for the salvation of the human race is of the least benefit to us",
+"cite": "Institutes III.1.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Isaiah 53:5-6",
+"v": [
+[
+53,
+5,
+"But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."
+],
+[
+53,
+6,
+"All we like sheep have gone astray; we have turned every one to his own way; and the LORD hath laid on him the iniquity of us all."
+]
+]
+},
+{
+"ref": "Galatians 3:13",
+"v": [
+[
+3,
+13,
+"Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:"
+]
+]
+},
+{
+"ref": "2 Corinthians 5:21",
+"v": [
+[
+5,
+21,
+"For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him."
+]
+]
+},
+{
+"ref": "John 10:11",
+"v": [
+[
+10,
+11,
+"I am the good shepherd: the good shepherd giveth his life for the sheep."
+]
+]
+},
+{
+"ref": "Ephesians 5:25",
+"v": [
+[
+5,
+25,
+"Husbands, love your wives, even as Christ also loved the church, and gave himself for it;"
+]
+]
+},
+{
+"ref": "Matthew 1:21",
+"v": [
+[
+1,
+21,
+"And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Lutherans confess that Christ “by His death, has made satisfaction for our sins” (AC IV) and that this satisfaction is universal: Christ died for all people, and the Gospel promise is meant seriously for everyone. The Formula of Concord (XI) teaches that God earnestly calls all sinners to himself. Those who are lost are lost not because Christ did not die for them but because they reject the grace offered.",
+"points": [
+"Satisfaction: Christ paid for sin by His death.",
+"Universal: Christ died for all people.",
+"Unbelief, not a limited atonement, is why some perish."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "who, by His death, has made satisfaction for our sins.",
+"cite": "Augsburg Confession, Article IV. Of Justification, §2",
+"url": "https://bookofconcord.org/augsburg-confession/of-justification/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "1 John 2:2",
+"v": [
+[
+2,
+2,
+"And he is the propitiation for our sins: and not for ours only, but also for the sins of the whole world."
+]
+]
+},
+{
+"ref": "John 3:16",
+"v": [
+[
+3,
+16,
+"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+]
+]
+},
+{
+"ref": "1 Timothy 2:5-6",
+"v": [
+[
+2,
+5,
+"For there is one God, and one mediator between God and men, the man Christ Jesus;"
+],
+[
+2,
+6,
+"Who gave himself a ransom for all, to be testified in due time."
+]
+]
+},
+{
+"ref": "2 Corinthians 5:14-15",
+"v": [
+[
+5,
+14,
+"For the love of Christ constraineth us; because we thus judge, that if one died for all, then were all dead:"
+],
+[
+5,
+15,
+"And that he died for all, that they which live should not henceforth live unto themselves, but unto him which died for them, and rose again."
+]
+]
+},
+{
+"ref": "Isaiah 53:6",
+"v": [
+[
+53,
+6,
+"All we like sheep have gone astray; we have turned every one to his own way; and the LORD hath laid on him the iniquity of us all."
+]
+]
+},
+{
+"ref": "Hebrews 2:9",
+"v": [
+[
+2,
+9,
+"But we see Jesus, who was made a little lower than the angels for the suffering of death, crowned with glory and honour; that he by the grace of God should taste death for every man."
+]
+]
+}
+],
+"refs": [
+"Formula of Concord SD XI (Election): the call of the Gospel is serious and is meant for all; God wills that all be saved."
+]
+},
+"compare": {
+"summary": "Both proclaim Christ’s substitutionary satisfaction. The fault line is extent: the Reformed tradition (classically at Dort) teaches that Christ died effectually for the elect; Lutherans teach universal atonement — Christ died for every person, though only believers receive the benefit.",
+"agree": [
+"Christ made full satisfaction for sin as our substitute.",
+"Salvation is received only through faith in Christ.",
+"The Gospel is to be preached to all."
+],
+"differ": [
+"Reformed (Dort): definite/limited atonement, intended effectually for the elect. Lutheran: universal atonement for all people.",
+"Calvin’s personal view of extent is debated; the Lutheran position is explicit."
+],
+"table": [
+[
+"Nature",
+"Penal substitution, satisfaction",
+"Satisfaction for sin"
+],
+[
+"Intended for",
+"The elect (classically, Dort)",
+"All people"
+],
+[
+"Why some perish",
+"Not elect; their own sin",
+"Rejection of grace offered to them"
+]
+]
+}
+},
+{
+"id": "sacraments",
+"title": "The Sacraments (What They Are & How Many)",
+"category": "Sacraments",
+"keywords": [
+"sacrament",
+"sacraments",
+"means of grace",
+"how many sacraments",
+"seven sacraments",
+"two sacraments",
+"sign",
+"seal",
+"ordinance",
+"ex opere operato",
+"absolution sacrament",
+"confirmation",
+"marriage sacrament"
+],
+"questions": [
+"What is a sacrament?",
+"How many sacraments are there?",
+"Do sacraments actually give grace?"
+],
+"summary": "Both count Baptism and the Supper (Lutherans sometimes Absolution) and reject Rome’s seven; they differ on how sacraments convey grace.",
+"calvin": {
+"answer": "Calvin defines a sacrament as “an external sign, by which the Lord seals on our consciences his promises of good-will toward us, in order to sustain the weakness of our faith.” Sacraments are attached to the Word; they truly offer Christ, but “duly perform their office only when accompanied by the Spirit.” Calvin recognizes two sacraments, Baptism and the Lord’s Supper, and rejects the five additional Roman sacraments (IV.19).",
+"points": [
+"Sign and seal of God’s promise, joined to the Word.",
+"Effective only by the Spirit’s inner working, received by faith.",
+"Two sacraments: Baptism and the Lord’s Supper."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "it is an external sign, by which the Lord seals on our consciences his promises of good-will toward us, in order to sustain the weakness of our faith",
+"cite": "Institutes IV.14.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "The sacraments duly perform their office only when accompanied by the Spirit, the internal Master",
+"cite": "Institutes IV.14.9",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Romans 4:11",
+"v": [
+[
+4,
+11,
+"And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:"
+]
+]
+},
+{
+"ref": "Matthew 28:19",
+"v": [
+[
+28,
+19,
+"Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"
+]
+]
+},
+{
+"ref": "1 Corinthians 11:23-26",
+"v": [
+[
+11,
+23,
+"For I have received of the Lord that which also I delivered unto you, That the Lord Jesus the same night in which he was betrayed took bread:"
+],
+[
+11,
+24,
+"And when he had given thanks, he brake it , and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me."
+],
+[
+11,
+25,
+"After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it , in remembrance of me."
+],
+[
+11,
+26,
+"For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."
+]
+]
+},
+{
+"ref": "Acts 2:38",
+"v": [
+[
+2,
+38,
+"Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost."
+]
+]
+},
+{
+"ref": "1 Corinthians 10:16",
+"v": [
+[
+10,
+16,
+"The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?"
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Augsburg Confession XIII teaches that sacraments are not merely marks of profession among men but “signs and testimonies of the will of God toward us,” instituted to awaken and confirm faith. Through Word and Sacraments “as through instruments” the Holy Spirit is given (AC V). The Apology counts Baptism, the Lord’s Supper, and Absolution as true sacraments, while not quarrelling over the number. The sacraments give what they promise because of Christ’s word, received by faith.",
+"points": [
+"Means of grace through which the Spirit works.",
+"Baptism, Lord’s Supper, and (per the Apology) Absolution.",
+"Efficacy rests on Christ’s Word and institution, received by faith."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "For through the Word and Sacraments, as through instruments, the Holy Ghost is given, who works faith",
+"cite": "Augsburg Confession, Article V. Of the Ministry, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-the-ministry/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Matthew 28:19",
+"v": [
+[
+28,
+19,
+"Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"
+]
+]
+},
+{
+"ref": "Acts 2:38",
+"v": [
+[
+2,
+38,
+"Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost."
+]
+]
+},
+{
+"ref": "1 Corinthians 11:23-26",
+"v": [
+[
+11,
+23,
+"For I have received of the Lord that which also I delivered unto you, That the Lord Jesus the same night in which he was betrayed took bread:"
+],
+[
+11,
+24,
+"And when he had given thanks, he brake it , and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me."
+],
+[
+11,
+25,
+"After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it , in remembrance of me."
+],
+[
+11,
+26,
+"For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."
+]
+]
+},
+{
+"ref": "John 20:22-23",
+"v": [
+[
+20,
+22,
+"And when he had said this, he breathed on them , and saith unto them, Receive ye the Holy Ghost:"
+],
+[
+20,
+23,
+"Whose soever sins ye remit, they are remitted unto them; and whose soever sins ye retain, they are retained."
+]
+]
+},
+{
+"ref": "Titus 3:5",
+"v": [
+[
+3,
+5,
+"Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;"
+]
+]
+}
+],
+"refs": [
+"Augsburg Confession XIII (Of the Use of the Sacraments): sacraments are signs and testimonies of God’s will toward us, to awaken and confirm faith.",
+"Apology XIII: Baptism, the Lord’s Supper, and Absolution are truly sacraments."
+]
+},
+"compare": {
+"summary": "Both reject the Roman seven and ex opere operato apart from faith. Lutherans see the sacraments as instruments through which God actually delivers forgiveness and the Spirit; Calvin sees them as signs and seals truly offering Christ, made effective by the Spirit’s sovereign working.",
+"agree": [
+"Sacraments are tied to God’s Word and promise.",
+"They must be received in faith.",
+"Rome’s seven sacraments are not all true sacraments."
+],
+"differ": [
+"Calvin: signs and seals made effective by the Spirit. Lutheran: instruments through which the Spirit is given.",
+"Lutherans sometimes count Absolution as a third sacrament."
+],
+"table": [
+[
+"Definition",
+"Outward sign sealing God’s promise",
+"Word-joined means of grace"
+],
+[
+"How many",
+"Two",
+"Two (or three with Absolution)"
+],
+[
+"How effective",
+"By the Spirit, through faith",
+"By Christ’s Word, through faith"
+]
+]
+}
+},
+{
+"id": "baptism",
+"title": "Baptism & Infant Baptism",
+"category": "Sacraments",
+"keywords": [
+"baptism",
+"baptize",
+"baptized",
+"baptise",
+"infant baptism",
+"paedobaptism",
+"pedobaptism",
+"baptismal regeneration",
+"regeneration",
+"christening",
+"water",
+"born of water",
+"babies",
+"children baptized",
+"rebaptism",
+"anabaptist",
+"credobaptism",
+"believers baptism"
+],
+"questions": [
+"Should infants be baptized?",
+"Does baptism save?",
+"What is baptismal regeneration?"
+],
+"summary": "Both baptize infants; Lutherans teach Baptism regenerates and works forgiveness, Calvin teaches it signs and seals ingrafting into Christ.",
+"calvin": {
+"answer": "For Calvin, “Baptism is the initiatory sign by which we are admitted to the fellowship of the Church, that being ingrafted into Christ we may be accounted children of God.” It seals the covenant promise of forgiveness and new life. Infants of believers should be baptized because they belong to the covenant, as Israel’s children received circumcision (IV.16). Children of believers are not baptized to become God’s children for the first time; they are received into the Church because they already belong to the covenant promise.",
+"points": [
+"Sign and seal of ingrafting into Christ and forgiveness.",
+"Infants of believers receive the covenant sign, like circumcision.",
+"Baptism does not automatically regenerate; the Spirit works when and as He wills."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Baptism is the initiatory sign by which we are admitted to the fellowship of the Church, that being ingrafted into Christ we may be accounted children of God.",
+"cite": "Institutes IV.15.1",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "If the children of believers, without the help of understanding, are partakers of the covenant, there is no reason why they should be denied the sign",
+"cite": "Institutes IV.16.24",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Matthew 28:19",
+"v": [
+[
+28,
+19,
+"Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"
+]
+]
+},
+{
+"ref": "Acts 2:38-39",
+"v": [
+[
+2,
+38,
+"Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost."
+],
+[
+2,
+39,
+"For the promise is unto you, and to your children, and to all that are afar off, even as many as the Lord our God shall call."
+]
+]
+},
+{
+"ref": "Colossians 2:11-12",
+"v": [
+[
+2,
+11,
+"In whom also ye are circumcised with the circumcision made without hands, in putting off the body of the sins of the flesh by the circumcision of Christ:"
+],
+[
+2,
+12,
+"Buried with him in baptism, wherein also ye are risen with him through the faith of the operation of God, who hath raised him from the dead."
+]
+]
+},
+{
+"ref": "Genesis 17:7",
+"v": [
+[
+17,
+7,
+"And I will establish my covenant between me and thee and thy seed after thee in their generations for an everlasting covenant, to be a God unto thee, and to thy seed after thee."
+]
+]
+},
+{
+"ref": "Mark 10:14",
+"v": [
+[
+10,
+14,
+"But when Jesus saw it , he was much displeased, and said unto them, Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God."
+]
+]
+},
+{
+"ref": "1 Corinthians 7:14",
+"v": [
+[
+7,
+14,
+"For the unbelieving husband is sanctified by the wife, and the unbelieving wife is sanctified by the husband: else were your children unclean; but now are they holy."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Luther’s Small Catechism: Baptism “works forgiveness of sins, delivers from death and the devil, and gives eternal salvation to all who believe this.” It is God’s own work: “to be baptized in the name of God is to be baptized not by men, but by God Himself.” Baptism is necessary to salvation (AC IX; Apology IX), and infants should be baptized because they are included in God’s promise and receive faith through it. The water alone does nothing; it is the Word of God in and with the water.",
+"points": [
+"Baptism regenerates and forgives sins (baptismal regeneration).",
+"It is God’s work, not ours.",
+"Infants are baptized and receive faith; daily life returns to Baptism."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "It works forgiveness of sins, delivers from death and the devil, and gives eternal salvation to all who believe this, as the words and promises of God declare.",
+"cite": "Small Catechism, The Sacrament of Holy Baptism, §3",
+"url": "https://bookofconcord.org/small-catechism/the-sacrament-of-holy-baptism/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "For to be baptized in the name of God is to be baptized not by men, but by God Himself.",
+"cite": "Large Catechism, Holy Baptism, §10",
+"url": "https://bookofconcord.org/large-catechism/holy-baptism/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "we confess that Baptism is necessary to salvation, and that children are to be baptized, and that the baptism of children is not in vain, but is necessary and effectual to salvation.",
+"cite": "Apology of the Augsburg Confession, Article IX. Of Baptism, §51",
+"url": "https://bookofconcord.org/defense/of-baptism/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Mark 16:16",
+"v": [
+[
+16,
+16,
+"He that believeth and is baptized shall be saved; but he that believeth not shall be damned."
+]
+]
+},
+{
+"ref": "Titus 3:5",
+"v": [
+[
+3,
+5,
+"Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;"
+]
+]
+},
+{
+"ref": "Acts 2:38-39",
+"v": [
+[
+2,
+38,
+"Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost."
+],
+[
+2,
+39,
+"For the promise is unto you, and to your children, and to all that are afar off, even as many as the Lord our God shall call."
+]
+]
+},
+{
+"ref": "Romans 6:3-4",
+"v": [
+[
+6,
+3,
+"Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?"
+],
+[
+6,
+4,
+"Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life."
+]
+]
+},
+{
+"ref": "1 Peter 3:21",
+"v": [
+[
+3,
+21,
+"The like figure whereunto even baptism doth also now save us (not the putting away of the filth of the flesh, but the answer of a good conscience toward God,) by the resurrection of Jesus Christ:"
+]
+]
+},
+{
+"ref": "John 3:5",
+"v": [
+[
+3,
+5,
+"Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both baptize infants and reject Anabaptist rebaptism. The difference is efficacy: Lutherans confess Baptism actually regenerates and gives forgiveness (God’s Word in the water); Calvin treats it as the covenant sign and seal of ingrafting into Christ, effective by the Spirit for the elect.",
+"agree": [
+"Infants should be baptized.",
+"Baptism is God’s ordinance, not mere human profession.",
+"Anabaptist rejection of infant baptism is wrong."
+],
+"differ": [
+"Lutheran: baptismal regeneration — Baptism works forgiveness and new birth. Calvin: sign and seal; regeneration is the Spirit’s work, not tied to the moment.",
+"Lutherans: Baptism necessary to salvation (ordinarily). Calvin: unbaptized children of believers who die are not excluded from heaven if baptism wasn’t neglected out of contempt.",
+"Ground for infant baptism: Lutheran — God’s promise and command, infant faith; Calvin — covenant continuity with circumcision."
+],
+"table": [
+[
+"What it does",
+"Signs and seals ingrafting into Christ",
+"Works forgiveness, rescues from death and devil"
+],
+[
+"Infants",
+"Covenant children receive the sign",
+"Receive faith and new birth"
+],
+[
+"Necessity",
+"Commanded, but not absolutely necessary",
+"Necessary to salvation (ordinarily)"
+]
+]
+}
+},
+{
+"id": "lords-supper",
+"title": "The Lord’s Supper & Real Presence",
+"category": "Sacraments",
+"keywords": [
+"lords supper",
+"lord's supper",
+"supper",
+"communion",
+"holy communion",
+"eucharist",
+"sacrament of the altar",
+"real presence",
+"body and blood",
+"bread and wine",
+"spiritual presence",
+"transubstantiation",
+"consubstantiation",
+"sacramental union",
+"in with and under",
+"this is my body",
+"memorial",
+"mass",
+"marburg",
+"zwingli",
+"manducation",
+"unworthy"
+],
+"questions": [
+"Is Christ really present in the Lord’s Supper?",
+"What is the difference between Calvin and Luther on communion?",
+"Do unbelievers receive Christ’s body?"
+],
+"summary": "The classic dividing line: Lutherans confess Christ’s true body and blood in, with, and under the bread and wine; Calvin teaches a real but spiritual feeding by the Spirit.",
+"calvin": {
+"answer": "Calvin rejects both transubstantiation and a mere memorial (Zwingli). In the Supper believers truly feed on Christ’s flesh and blood — but Christ’s body remains in heaven, and “the Spirit truly unites things separated by space.” The bread and wine are signs that truly exhibit what they signify, and the faithful are lifted up to Christ. Calvin admits the mystery is beyond him: “I rather feel than understand it.” Unbelievers receive only the signs, not Christ.",
+"points": [
+"Real, spiritual presence: true communion with Christ’s body by the Spirit.",
+"Christ’s body is local in heaven, not enclosed in the elements.",
+"Only believers receive Christ; unbelievers receive bare signs."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "what our mind does not comprehend let faith conceive--viz. that the Spirit truly unites things separated by space.",
+"cite": "Institutes IV.17.10",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "I will not be ashamed to confess that it is too high a mystery either for my mind to comprehend or my words to express; and to speak more plainly, I rather feel than understand it.",
+"cite": "Institutes IV.17.32",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Matthew 26:26-28",
+"v": [
+[
+26,
+26,
+"And as they were eating, Jesus took bread, and blessed it , and brake it , and gave it to the disciples, and said, Take, eat; this is my body."
+],
+[
+26,
+27,
+"And he took the cup, and gave thanks, and gave it to them, saying, Drink ye all of it;"
+],
+[
+26,
+28,
+"For this is my blood of the new testament, which is shed for many for the remission of sins."
+]
+]
+},
+{
+"ref": "1 Corinthians 10:16",
+"v": [
+[
+10,
+16,
+"The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?"
+]
+]
+},
+{
+"ref": "1 Corinthians 11:23-26",
+"v": [
+[
+11,
+23,
+"For I have received of the Lord that which also I delivered unto you, That the Lord Jesus the same night in which he was betrayed took bread:"
+],
+[
+11,
+24,
+"And when he had given thanks, he brake it , and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me."
+],
+[
+11,
+25,
+"After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it , in remembrance of me."
+],
+[
+11,
+26,
+"For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."
+]
+]
+},
+{
+"ref": "John 6:53-56",
+"v": [
+[
+6,
+53,
+"Then Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you."
+],
+[
+6,
+54,
+"Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day."
+],
+[
+6,
+55,
+"For my flesh is meat indeed, and my blood is drink indeed."
+],
+[
+6,
+56,
+"He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him."
+]
+]
+},
+{
+"ref": "Colossians 3:1",
+"v": [
+[
+3,
+1,
+"If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God."
+]
+]
+},
+{
+"ref": "Acts 3:21",
+"v": [
+[
+3,
+21,
+"Whom the heaven must receive until the times of restitution of all things, which God hath spoken by the mouth of all his holy prophets since the world began."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Small Catechism: the Sacrament of the Altar “is the true body and blood of our Lord Jesus Christ, under the bread and wine, for us Christians to eat and to drink.” Augsburg Confession X: Christ’s body and blood “are truly present, and are distributed to those who eat.” The Formula of Concord (VII) adds that they are received “not only spiritually by faith, but also orally” — in a supernatural, not crude, way — and that even unworthy communicants receive them, to their judgment. Lutherans reject transubstantiation; “consubstantiation” is a label they generally refuse, preferring “sacramental union.”",
+"points": [
+"Christ’s true body and blood are present in, with, and under bread and wine.",
+"Received orally by all communicants, worthy and unworthy (FC VII).",
+"Rests on Christ’s plain words “This is my body.”"
+],
+"quotes": [
+{
+"src": "boc",
+"text": "It is the true body and blood of our Lord Jesus Christ, under the bread and wine, for us Christians to eat and to drink, instituted by Christ Himself.",
+"cite": "Small Catechism, The Sacrament of the Altar, §1",
+"url": "https://bookofconcord.org/small-catechism/the-sacrament-of-the-altar/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "Of the Supper of the Lord they teach that the Body and Blood of Christ are truly present, and are distributed to those who eat the Supper of the Lord; and they reject those that teach otherwise.",
+"cite": "Augsburg Confession, Article X. Of the Lord's Supper, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-the-lords-supper/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "the body and blood of Christ are received with the bread and wine, not only spiritually by faith, but also orally; yet not in a Capernaitic, but in a supernatural, heavenly mode, because of the sacramental union",
+"cite": "Formula of Concord, Epitome, VII. The Lord's Supper, §15",
+"url": "https://bookofconcord.org/epitome/the-lords-supper/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Matthew 26:26-28",
+"v": [
+[
+26,
+26,
+"And as they were eating, Jesus took bread, and blessed it , and brake it , and gave it to the disciples, and said, Take, eat; this is my body."
+],
+[
+26,
+27,
+"And he took the cup, and gave thanks, and gave it to them, saying, Drink ye all of it;"
+],
+[
+26,
+28,
+"For this is my blood of the new testament, which is shed for many for the remission of sins."
+]
+]
+},
+{
+"ref": "1 Corinthians 10:16",
+"v": [
+[
+10,
+16,
+"The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?"
+]
+]
+},
+{
+"ref": "1 Corinthians 11:27-29",
+"v": [
+[
+11,
+27,
+"Wherefore whosoever shall eat this bread, and drink this cup of the Lord, unworthily, shall be guilty of the body and blood of the Lord."
+],
+[
+11,
+28,
+"But let a man examine himself, and so let him eat of that bread, and drink of that cup."
+],
+[
+11,
+29,
+"For he that eateth and drinketh unworthily, eateth and drinketh damnation to himself, not discerning the Lord’s body."
+]
+]
+},
+{
+"ref": "Luke 22:19-20",
+"v": [
+[
+22,
+19,
+"And he took bread, and gave thanks, and brake it , and gave unto them, saying, This is my body which is given for you: this do in remembrance of me."
+],
+[
+22,
+20,
+"Likewise also the cup after supper, saying, This cup is the new testament in my blood, which is shed for you."
+]
+]
+},
+{
+"ref": "Mark 14:22-24",
+"v": [
+[
+14,
+22,
+"And as they did eat, Jesus took bread, and blessed, and brake it , and gave to them, and said, Take, eat: this is my body."
+],
+[
+14,
+23,
+"And he took the cup, and when he had given thanks, he gave it to them: and they all drank of it."
+],
+[
+14,
+24,
+"And he said unto them, This is my blood of the new testament, which is shed for many."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "This is the issue that most divided the two Reformations (Marburg, 1529; FC VII). Both reject transubstantiation and a mere memorial, and both say believers truly receive Christ. Lutherans: Christ’s body is present in the bread and received by mouth by all. Calvin: Christ’s body stays in heaven; believers feed on Him spiritually by the Spirit through faith.",
+"agree": [
+"Not a mere memorial — believers truly receive Christ.",
+"Transubstantiation and the sacrifice of the Mass are rejected.",
+"The Supper strengthens faith and assures of forgiveness."
+],
+"differ": [
+"Mode: Lutheran sacramental union (in, with, under bread) vs. Calvin’s spiritual presence by the Spirit.",
+"Oral eating: Lutherans affirm; Calvin denies.",
+"Unbelievers: Lutherans say they receive Christ’s body to judgment; Calvin says they receive only the signs.",
+"Christology: Lutherans ground presence in Christ’s majesty; Calvin insists Christ’s body is locally in heaven."
+],
+"table": [
+[
+"Presence",
+"True body & blood under bread and wine",
+"Real spiritual communion by the Spirit"
+],
+[
+"Where is Christ’s body?",
+"Present in the Sacrament",
+"In heaven; we are lifted up to Him"
+],
+[
+"How received",
+"Orally and by faith",
+"By faith alone (spiritually)"
+],
+[
+"Unbelievers receive",
+"Christ’s body, to judgment",
+"Only bread and wine"
+]
+]
+}
+},
+{
+"id": "christology",
+"title": "Christ’s Person: Two Natures & Communication of Attributes",
+"category": "Christ",
+"keywords": [
+"christ",
+"jesus",
+"person of christ",
+"two natures",
+"christology",
+"communicatio idiomatum",
+"communication of attributes",
+"communication of properties",
+"extra calvinisticum",
+"ubiquity",
+"omnipresence",
+"human nature",
+"divine nature",
+"incarnation",
+"hypostatic union",
+"is jesus god",
+"divinity of christ"
+],
+"questions": [
+"How are Christ’s divine and human natures related?",
+"What is the extra calvinisticum?",
+"Is Christ’s human body everywhere?"
+],
+"summary": "Both confess Chalcedon; they differ on how far Christ’s divine attributes are shared with His human nature.",
+"calvin": {
+"answer": "Calvin affirms Chalcedon: one person, two natures, without confusion or division. The “communication of properties” is a real way of speaking — Scripture attributes to the one person what belongs to either nature. But Calvin denies that the human nature acquires divine attributes like omnipresence. The eternal Son “descended miraculously from heaven, yet without abandoning heaven,” filling the world even while incarnate — later called the extra calvinisticum.",
+"points": [
+"One person, two distinct natures (Chalcedon).",
+"Communication of properties applies to the person, not a transfer between natures.",
+"The Word is not confined to the flesh (“extra calvinisticum”)."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "The Son of God descended miraculously from heaven, yet without abandoning heaven; was pleased to be conceived miraculously in the Virgin's womb, to live on the earth, and hang upon the cross, and yet always filled the world as from the beginning.",
+"cite": "Institutes II.13.4",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "John 1:14",
+"v": [
+[
+1,
+14,
+"And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth."
+]
+]
+},
+{
+"ref": "Colossians 2:9",
+"v": [
+[
+2,
+9,
+"For in him dwelleth all the fulness of the Godhead bodily."
+]
+]
+},
+{
+"ref": "Philippians 2:6-7",
+"v": [
+[
+2,
+6,
+"Who, being in the form of God, thought it not robbery to be equal with God:"
+],
+[
+2,
+7,
+"But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men:"
+]
+]
+},
+{
+"ref": "John 3:13",
+"v": [
+[
+3,
+13,
+"And no man hath ascended up to heaven, but he that came down from heaven, even the Son of man which is in heaven."
+]
+]
+},
+{
+"ref": "1 Timothy 2:5",
+"v": [
+[
+2,
+5,
+"For there is one God, and one mediator between God and men, the man Christ Jesus;"
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "The Formula of Concord (VIII) teaches a real communication of attributes: because of the personal union, the human nature of Christ shares in the divine majesty (the “genus majestaticum”), so that Christ according to His human nature can be present wherever He wills — which undergirds the real presence in the Supper. Mary “is rightly called and truly is the mother of God,” and it was not a mere man who suffered and died for us.",
+"points": [
+"Real communication of attributes, including divine majesty to the human nature.",
+"Christ’s human nature can be present where He promises (the Supper).",
+"Mary is truly Theotokos, mother of God."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "Hence we believe, teach, and confess that Mary conceived and bore not a mere man and no more, but the true Son of God; therefore she also is rightly called and truly is the mother of God.",
+"cite": "Formula of Concord, Epitome, VIII. The Person of Christ, §12",
+"url": "https://bookofconcord.org/epitome/person-of-christ/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+},
+{
+"src": "boc",
+"text": "Hence we also believe, teach, and confess that it was not a mere man who suffered, died, was buried, descended to hell, arose from the dead, ascended into heaven",
+"cite": "Formula of Concord, Epitome, VIII. The Person of Christ, §13",
+"url": "https://bookofconcord.org/epitome/person-of-christ/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Colossians 2:9",
+"v": [
+[
+2,
+9,
+"For in him dwelleth all the fulness of the Godhead bodily."
+]
+]
+},
+{
+"ref": "Matthew 28:18-20",
+"v": [
+[
+28,
+18,
+"And Jesus came and spake unto them, saying, All power is given unto me in heaven and in earth."
+],
+[
+28,
+19,
+"Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"
+],
+[
+28,
+20,
+"Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen."
+]
+]
+},
+{
+"ref": "Ephesians 4:10",
+"v": [
+[
+4,
+10,
+"He that descended is the same also that ascended up far above all heavens, that he might fill all things.)"
+]
+]
+},
+{
+"ref": "John 1:14",
+"v": [
+[
+1,
+14,
+"And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth."
+]
+]
+},
+{
+"ref": "Acts 20:28",
+"v": [
+[
+20,
+28,
+"Take heed therefore unto yourselves, and to all the flock, over the which the Holy Ghost hath made you overseers, to feed the church of God, which he hath purchased with his own blood."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Both are orthodox Chalcedonians, but the Supper controversy drove their Christologies apart. Lutherans teach that the human nature truly shares divine majesty (enabling Christ’s bodily presence anywhere He wills); Calvin insists each nature keeps its properties, so Christ’s body is finite and in heaven, while the Word is also “outside” the flesh.",
+"agree": [
+"One person, two natures, true God and true man.",
+"Nestorianism and Eutychianism are rejected.",
+"Mary truly bore the Son of God according to the flesh."
+],
+"differ": [
+"Communication of attributes: real sharing of divine majesty (Lutheran) vs. attribution to the person (Calvin).",
+"Christ’s body: present wherever He wills (Lutheran) vs. local in heaven (Calvin).",
+"Extra calvinisticum: affirmed by Calvin; rejected by Lutherans as dividing the person."
+],
+"table": [
+[
+"Chalcedon",
+"Affirmed",
+"Affirmed"
+],
+[
+"Communication of attributes",
+"Verbal/personal",
+"Real (incl. divine majesty)"
+],
+[
+"Christ’s human body",
+"Finite, in heaven",
+"Can be present where He wills"
+]
+]
+}
+},
+{
+"id": "scripture",
+"title": "The Authority of Scripture",
+"category": "Word of God",
+"keywords": [
+"scripture",
+"scriptures",
+"bible",
+"word of god",
+"sola scriptura",
+"authority",
+"inspiration",
+"inspired",
+"inerrancy",
+"canon",
+"tradition",
+"rule and norm",
+"how do we know the bible is true",
+"testimony of the spirit",
+"apocrypha"
+],
+"questions": [
+"Why is the Bible authoritative?",
+"What does sola scriptura mean?",
+"How do we know Scripture is God’s Word?"
+],
+"summary": "Both confess Scripture as the sole infallible rule of faith; Calvin grounds certainty in the Spirit’s inner witness.",
+"calvin": {
+"answer": "Calvin teaches that Scripture is God’s own Word and that its certainty does not depend on the Church’s approval. Arguments can support it, but “the testimony of the Spirit is superior to reason”: the same Spirit who spoke through the prophets persuades our hearts. Scripture also acts like spectacles, bringing into focus the knowledge of God dimly seen in creation.",
+"points": [
+"Scripture’s authority comes from God, not the Church.",
+"Certainty comes from the inner testimony of the Holy Spirit.",
+"Scripture is necessary to know God truly as Creator and Redeemer."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "But I answer, that the testimony of the Spirit is superior to reason. For as God alone can properly bear witness to his own words, so these words will not obtain full credit in the hearts of men, until they are sealed by the inward testimony of the Spirit.",
+"cite": "Institutes I.7.4",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "2 Timothy 3:16-17",
+"v": [
+[
+3,
+16,
+"All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"
+],
+[
+3,
+17,
+"That the man of God may be perfect, throughly furnished unto all good works."
+]
+]
+},
+{
+"ref": "2 Peter 1:20-21",
+"v": [
+[
+1,
+20,
+"Knowing this first, that no prophecy of the scripture is of any private interpretation."
+],
+[
+1,
+21,
+"For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost."
+]
+]
+},
+{
+"ref": "Psalms 19:7",
+"v": [
+[
+19,
+7,
+"The law of the LORD is perfect, converting the soul: the testimony of the LORD is sure, making wise the simple."
+]
+]
+},
+{
+"ref": "John 17:17",
+"v": [
+[
+17,
+17,
+"Sanctify them through thy truth: thy word is truth."
+]
+]
+},
+{
+"ref": "Isaiah 8:20",
+"v": [
+[
+8,
+20,
+"To the law and to the testimony: if they speak not according to this word, it is because there is no light in them."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "The Formula of Concord opens: “the sole rule and standard according to which all dogmas together with [all] teachers should be estimated and judged are the prophetic and apostolic Scriptures of the Old and of the New Testament alone.” The creeds and confessions are accepted as faithful witnesses and expositions, but are subordinate to Scripture (norma normata vs. norma normans).",
+"points": [
+"Scripture alone is the norming norm.",
+"Creeds and confessions are normed norms — binding because they agree with Scripture.",
+"Scripture centers on Christ and the Gospel."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "We believe, teach, and confess that the sole rule and standard according to which all dogmas together with [all] teachers should be estimated and judged are the prophetic and apostolic Scriptures of the Old and of the New Testament alone",
+"cite": "Formula of Concord, Epitome, Comprehensive Summary, Rule and Norm, §1",
+"url": "https://bookofconcord.org/epitome/rule-and-norm/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "2 Timothy 3:15-17",
+"v": [
+[
+3,
+15,
+"And that from a child thou hast known the holy scriptures, which are able to make thee wise unto salvation through faith which is in Christ Jesus."
+],
+[
+3,
+16,
+"All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"
+],
+[
+3,
+17,
+"That the man of God may be perfect, throughly furnished unto all good works."
+]
+]
+},
+{
+"ref": "Psalms 119:105",
+"v": [
+[
+119,
+105,
+"Thy word is a lamp unto my feet, and a light unto my path."
+]
+]
+},
+{
+"ref": "Galatians 1:8",
+"v": [
+[
+1,
+8,
+"But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed."
+]
+]
+},
+{
+"ref": "John 5:39",
+"v": [
+[
+5,
+39,
+"Search the scriptures; for in them ye think ye have eternal life: and they are they which testify of me."
+]
+]
+},
+{
+"ref": "Isaiah 8:20",
+"v": [
+[
+8,
+20,
+"To the law and to the testimony: if they speak not according to this word, it is because there is no light in them."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Full agreement on sola scriptura. Calvin emphasizes the Spirit’s inner witness as the ground of certainty; Lutherans emphasize Scripture as the rule that judges all teachers and the creeds as subordinate witnesses — and read Scripture through the Law/Gospel lens.",
+"agree": [
+"Scripture alone is the final authority.",
+"Church tradition is subordinate to Scripture.",
+"Scripture is God-breathed."
+],
+"differ": [
+"Calvin: certainty by the Spirit’s inner testimony. Lutheran: the external Word’s own power, read as Law and Gospel.",
+"Lutheran confessions formally bind pastors as a normed norm; Reformed churches have many national confessions."
+],
+"table": [
+[
+"Final authority",
+"Scripture",
+"Scripture"
+],
+[
+"Ground of certainty",
+"Inner testimony of the Spirit",
+"The Word’s own power; Christ-centered"
+],
+[
+"Role of confessions",
+"Subordinate standards",
+"Normed norm (norma normata)"
+]
+]
+}
+},
+{
+"id": "church",
+"title": "The Church & Its Marks",
+"category": "Church",
+"keywords": [
+"church",
+"marks of the church",
+"true church",
+"visible church",
+"invisible church",
+"congregation",
+"unity",
+"catholic",
+"body of christ",
+"denomination",
+"church discipline",
+"what is the church",
+"ecclesiology"
+],
+"questions": [
+"What makes a true church?",
+"What are the marks of the church?",
+"Is the church visible or invisible?"
+],
+"summary": "Same two marks — pure Word and right sacraments; Reformed churches often add discipline.",
+"calvin": {
+"answer": "Calvin: “Wherever we see the word of God sincerely preached and heard, wherever we see the sacraments administered according to the institution of Christ, there we cannot have any doubt that the Church of God has some existence.” He calls the visible Church our Mother, outside of which there is no ordinary way into life. Church discipline is the Church’s “sinews” (IV.12), though Calvin keeps the two marks.",
+"points": [
+"Two marks: Word preached and sacraments rightly administered.",
+"The visible Church as Mother.",
+"Discipline is vital (later Reformed confessions make it a third mark)."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Wherever we see the word of God sincerely preached and heard, wherever we see the sacraments administered according to the institution of Christ, there we cannot have any doubt that the Church of God has some existence",
+"cite": "Institutes IV.1.9",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "there is no other means of entering into life unless she conceive us in the womb and give us birth, unless she nourish us at her breasts",
+"cite": "Institutes IV.1.4",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Matthew 18:20",
+"v": [
+[
+18,
+20,
+"For where two or three are gathered together in my name, there am I in the midst of them."
+]
+]
+},
+{
+"ref": "Ephesians 4:11-13",
+"v": [
+[
+4,
+11,
+"And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers;"
+],
+[
+4,
+12,
+"For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ:"
+],
+[
+4,
+13,
+"Till we all come in the unity of the faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the stature of the fulness of Christ:"
+]
+]
+},
+{
+"ref": "Acts 2:42",
+"v": [
+[
+2,
+42,
+"And they continued stedfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers."
+]
+]
+},
+{
+"ref": "1 Timothy 3:15",
+"v": [
+[
+3,
+15,
+"But if I tarry long, that thou mayest know how thou oughtest to behave thyself in the house of God, which is the church of the living God, the pillar and ground of the truth."
+]
+]
+},
+{
+"ref": "Ephesians 5:25-27",
+"v": [
+[
+5,
+25,
+"Husbands, love your wives, even as Christ also loved the church, and gave himself for it;"
+],
+[
+5,
+26,
+"That he might sanctify and cleanse it with the washing of water by the word,"
+],
+[
+5,
+27,
+"That he might present it to himself a glorious church, not having spot, or wrinkle, or any such thing; but that it should be holy and without blemish."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Augsburg Confession VII: “The Church is the congregation of saints, in which the Gospel is rightly taught and the Sacraments are rightly administered.” For true unity it is enough to agree on the Gospel and the sacraments; human ceremonies need not be uniform. AC VIII adds that hypocrites are mingled in the visible Church, yet sacraments administered by evil men remain valid.",
+"points": [
+"Church = congregation of saints/believers.",
+"Marks: Gospel rightly taught, sacraments rightly administered.",
+"Unity requires agreement in doctrine, not identical ceremonies."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "The Church is the congregation of saints, in which the Gospel is rightly taught and the Sacraments are rightly administered.",
+"cite": "Augsburg Confession, Article VII. Of the Church, §1",
+"url": "https://bookofconcord.org/augsburg-confession/of-the-church/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Ephesians 4:4-6",
+"v": [
+[
+4,
+4,
+"There is one body, and one Spirit, even as ye are called in one hope of your calling;"
+],
+[
+4,
+5,
+"One Lord, one faith, one baptism,"
+],
+[
+4,
+6,
+"One God and Father of all, who is above all, and through all, and in you all."
+]
+]
+},
+{
+"ref": "Matthew 16:18",
+"v": [
+[
+16,
+18,
+"And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it."
+]
+]
+},
+{
+"ref": "Matthew 13:47-48",
+"v": [
+[
+13,
+47,
+"Again, the kingdom of heaven is like unto a net, that was cast into the sea, and gathered of every kind:"
+],
+[
+13,
+48,
+"Which, when it was full, they drew to shore, and sat down, and gathered the good into vessels, but cast the bad away."
+]
+]
+},
+{
+"ref": "John 10:27",
+"v": [
+[
+10,
+27,
+"My sheep hear my voice, and I know them, and they follow me:"
+]
+]
+},
+{
+"ref": "Acts 2:42",
+"v": [
+[
+2,
+42,
+"And they continued stedfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers."
+]
+]
+}
+]
+},
+"compare": {
+"summary": "Nearly identical definitions: the Church exists where the Word is purely preached and the sacraments rightly administered. Differences come from what each counts as “rightly” (especially on the Supper) and from the Reformed stress on church discipline and polity.",
+"agree": [
+"Two marks: Word and sacraments.",
+"Hypocrites are mixed in the visible Church.",
+"Ceremonies need not be uniform for unity."
+],
+"differ": [
+"Reformed tradition gives discipline greater structural weight (presbyterian polity, consistory).",
+"Lutherans tie unity to agreement in the Gospel and sacraments — which historically excluded Reformed Supper teaching."
+],
+"table": [
+[
+"Definition",
+"Where Word & sacraments are found",
+"Congregation of saints"
+],
+[
+"Marks",
+"Word, sacraments (+ discipline later)",
+"Gospel, sacraments"
+],
+[
+"Polity",
+"Elders/consistory",
+"Flexible; bishops or consistories"
+]
+]
+}
+},
+{
+"id": "worship-images",
+"title": "Worship, Ceremonies & Images",
+"category": "Worship",
+"keywords": [
+"worship",
+"regulative principle",
+"normative principle",
+"liturgy",
+"ceremonies",
+"adiaphora",
+"images",
+"icons",
+"statues",
+"crucifix",
+"pictures of jesus",
+"art in church",
+"second commandment",
+"idolatry",
+"idols",
+"music",
+"instruments",
+"hymns",
+"psalms only",
+"traditions"
+],
+"questions": [
+"Can we have images of Jesus?",
+"What is the regulative principle of worship?",
+"Are church ceremonies allowed?"
+],
+"summary": "Calvin restricts worship to what God commands and opposes images in worship; Lutherans keep edifying traditions and images as adiaphora.",
+"calvin": {
+"answer": "Calvin sees the human mind as “a perpetual forge of idols” and holds that God must be worshipped only as He has appointed in His Word (an idea later called the regulative principle). Any image of God is forbidden; only visible things may be painted or sculptured, and even those should not be used in worship. Calvin opposed images in churches and stripped worship of human-invented ceremonies.",
+"points": [
+"God must be worshipped only as He commands.",
+"No images of God; images in churches are dangerous.",
+"Simplicity: Word, prayer, psalms, sacraments."
+],
+"quotes": [
+{
+"src": "calvin",
+"text": "Hence we may infer, that the human mind is, so to speak, a perpetual forge of idols.",
+"cite": "Institutes I.11.8",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+},
+{
+"src": "calvin",
+"text": "The only things, therefore, which ought to be painted or sculptured, are things which can be presented to the eye; the majesty of God, which is far beyond the reach of any eye, must not be dishonored by unbecoming representations.",
+"cite": "Institutes I.11.12",
+"work": "Calvin, Institutes of the Christian Religion (Beveridge tr., 1845)"
+}
+],
+"verses": [
+{
+"ref": "Exodus 20:4-5",
+"v": [
+[
+20,
+4,
+"Thou shalt not make unto thee any graven image, or any likeness of any thing that is in heaven above, or that is in the earth beneath, or that is in the water under the earth:"
+],
+[
+20,
+5,
+"Thou shalt not bow down thyself to them, nor serve them: for I the LORD thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me;"
+]
+]
+},
+{
+"ref": "Deuteronomy 4:15-16",
+"v": [
+[
+4,
+15,
+"Take ye therefore good heed unto yourselves; for ye saw no manner of similitude on the day that the LORD spake unto you in Horeb out of the midst of the fire:"
+],
+[
+4,
+16,
+"Lest ye corrupt yourselves , and make you a graven image, the similitude of any figure, the likeness of male or female,"
+]
+]
+},
+{
+"ref": "Deuteronomy 12:32",
+"v": [
+[
+12,
+32,
+"What thing soever I command you, observe to do it: thou shalt not add thereto, nor diminish from it."
+]
+]
+},
+{
+"ref": "John 4:24",
+"v": [
+[
+4,
+24,
+"God is a Spirit: and they that worship him must worship him in spirit and in truth."
+]
+]
+},
+{
+"ref": "Colossians 2:23",
+"v": [
+[
+2,
+23,
+"Which things have indeed a shew of wisdom in will worship, and humility, and neglecting of the body; not in any honour to the satisfying of the flesh."
+]
+]
+}
+]
+},
+"lutheran": {
+"answer": "Lutherans follow a more “normative” approach: what Scripture does not forbid may be retained if it serves the Gospel and good order. AC XV keeps church ceremonies that can be observed without sin and that serve peace. Ceremonies neither commanded nor forbidden are adiaphora (FC X) — but in time of persecution, when a clear confession is required, one must not yield even in such matters. Images, crucifixes, vestments and liturgy were generally retained, not worshipped.",
+"points": [
+"Adiaphora: things neither commanded nor forbidden may be used freely.",
+"Retain traditions that edify; reject those that obscure the Gospel.",
+"In a time of confession nothing is indifferent (FC X)."
+],
+"quotes": [
+{
+"src": "boc",
+"text": "We believe, teach, and confess that in time of persecution, when a plain [and steadfast] confession is required of us, we should not yield to the enemies in regard to such adiaphora",
+"cite": "Formula of Concord, Epitome, X. Church Rites, §6",
+"url": "https://bookofconcord.org/epitome/church-rites/",
+"work": "Book of Concord (Triglot Concordia, Bente & Dau tr., 1921)"
+}
+],
+"verses": [
+{
+"ref": "Galatians 5:1",
+"v": [
+[
+5,
+1,
+"Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage."
+]
+]
+},
+{
+"ref": "1 Corinthians 14:40",
+"v": [
+[
+14,
+40,
+"Let all things be done decently and in order."
+]
+]
+},
+{
+"ref": "Romans 14:5-6",
+"v": [
+[
+14,
+5,
+"One man esteemeth one day above another: another esteemeth every day alike . Let every man be fully persuaded in his own mind."
+],
+[
+14,
+6,
+"He that regardeth the day, regardeth it unto the Lord; and he that regardeth not the day, to the Lord he doth not regard it . He that eateth, eateth to the Lord, for he giveth God thanks; and he that eateth not, to the Lord he eateth not, and giveth God thanks."
+]
+]
+},
+{
+"ref": "Colossians 2:16-17",
+"v": [
+[
+2,
+16,
+"Let no man therefore judge you in meat, or in drink, or in respect of an holyday, or of the new moon, or of the sabbath days :"
+],
+[
+2,
+17,
+"Which are a shadow of things to come; but the body is of Christ."
+]
+]
+},
+{
+"ref": "1 Corinthians 8:9",
+"v": [
+[
+8,
+9,
+"But take heed lest by any means this liberty of yours become a stumblingblock to them that are weak."
+]
+]
+}
+],
+"refs": [
+"Augsburg Confession XV (Of Ecclesiastical Usages): rites that can be observed without sin and serve tranquility and good order are kept; they are not necessary for salvation."
+]
+},
+"compare": {
+"summary": "A visible difference in church life. Calvin’s heirs worship with what God commands (regulative principle) and avoid images; Lutherans retain liturgy, art, and the crucifix as adiaphora that may serve the Gospel, while both condemn worshiping images.",
+"agree": [
+"God must not be pictured as an object of worship.",
+"Human traditions cannot bind consciences or earn grace.",
+"Worship must serve the Word."
+],
+"differ": [
+"Calvin: only what God commands (regulative). Lutheran: what is not forbidden and edifies (normative).",
+"Images in churches: Calvin opposed; Lutherans retained.",
+"Liturgy: Reformed simplicity vs. Lutheran retained historic Mass order (evangelically reformed)."
+],
+"table": [
+[
+"Principle",
+"Regulative — only what is commanded",
+"Normative — free unless forbidden"
+],
+[
+"Images",
+"Not in worship; never of God",
+"Permitted, not worshipped"
+],
+[
+"Ceremonies",
+"Stripped to essentials",
+"Retained if edifying (adiaphora)"
+]
+]
+}
 }
 ]
 }
