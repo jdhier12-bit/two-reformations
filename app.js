@@ -26,13 +26,21 @@ function side(t,k){const S=t[k];const lab=k==='calvin'?'Calvinist (Reformed) ans
   ${S.quotes.length?`<section class="card"><h3>From the sources</h3>${quotes(S.quotes)}</section>`:''}
   ${S.refs&&S.refs.length?`<section class="card"><h3>Further reading (paraphrased, not quoted)</h3><ul class="pts">${S.refs.map(r=>`<li>${esc(r)}</li>`).join('')}</ul></section>`:''}
   <section class="card"><h3>Scriptures cited (KJV)</h3>${verses(S.verses)}</section>`}
-function compare(t){const C=t.compare;return `<section class="card"><h3 class="cmp" style="color:var(--cmp)">In summary</h3><p>${esc(C.summary)}</p></section>
+const isSac=t=>t&&t.category==='Sacraments';
+function srcBlock(t,k){const S=t[k];const lab=k==='calvin'?'Calvinist view':'Lutheran view';const c=k==='calvin'?'cal':'lut';
+  return `<section class="card answer"><h3 class="${c}">${lab}</h3>${S.answer.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}
+  ${S.quotes.length?quotes(S.quotes):''}
+  ${S.refs&&S.refs.length?`<ul class="pts note">${S.refs.map(r=>`<li>${esc(r)} (paraphrased)</li>`).join('')}</ul>`:''}
+  <h3 style="margin-top:14px">Scriptures cited (KJV)</h3>${verses(S.verses)}</section>`}
+function compare(t){const C=t.compare;return `<section class="card"><h3>Side by side</h3><table><tr><th></th><th class="cal">Calvinist</th><th class="lut">Lutheran</th></tr>${C.table.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</table></section>
+  <section class="card"><h3 class="cmp" style="color:var(--cmp)">In summary</h3><p>${esc(C.summary)}</p></section>
   <div class="grid2"><section class="card"><h3>Where they agree</h3><ul class="pts">${C.agree.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
   <section class="card"><h3>Where they differ</h3><ul class="pts">${C.differ.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section></div>
-  <section class="card"><h3>Side by side</h3><table><tr><th></th><th class="cal">Calvinist</th><th class="lut">Lutheran</th></tr>${C.table.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</table></section>`}
+  ${isSac(t)?srcBlock(t,'calvin')+srcBlock(t,'lutheran'):''}`}
 function head(t){return `<section class="card"><p class="kicker">${esc(t.category)}</p><h2 class="topic">${esc(t.title)}</h2><p class="summary">${esc(t.summary)}</p>
   ${alts.length?`<p class="also">Not quite? Also see: ${alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}</section>`}
-function render(){if(!current)return home();out.innerHTML=head(current)+(tab==='compare'?compare(current):side(current,tab));
+function syncTabs(){const sac=isSac(current);document.querySelectorAll('.tabs button').forEach(b=>{if(b.dataset.tab!=='compare')b.hidden=sac});if(sac)tab='compare';else if(tab==='compare'&&window.__forced)tab='calvin';window.__forced=sac;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab===tab));}
+function render(){syncTabs();if(!current)return home();out.innerHTML=head(current)+(tab==='compare'?compare(current):side(current,tab));
   out.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>show(KB.find(x=>x.id===b.dataset.id),[]));}
 function chips(list){return `<div class="chips">${list.map(t=>`<button class="chip" data-q="${esc(t.questions[0])}" data-id="${t.id}">${esc(t.questions[0])}</button>`).join('')}</div>`}
 function home(msg){const pick=['predestination','lords-supper','baptism','justification','free-will','perseverance','law-gospel','christology'].map(id=>KB.find(t=>t.id===id)).filter(Boolean);
