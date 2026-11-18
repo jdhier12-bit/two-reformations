@@ -1,4 +1,4 @@
-// Two Reformations — curated topics + full-text search (rag.js) + optional on-device AI.
+// Reformed Thinking — curated topics + full-text search (rag.js) + optional on-device AI.
 (()=>{
 const $=s=>document.querySelector(s), out=$('#out'), qi=$('#q');
 let KB=[], tab='calvin', current=null, alts=[], lastQ='', curAI=null;
@@ -38,11 +38,12 @@ function compare(t){const C=t.compare;const seg=`<div class="seg" role="group" a
   <section class="card"><h3 class="cmp" style="color:var(--cmp)">In summary</h3><p>${esc(C.summary)}</p></section>
   <div class="grid2"><section class="card"><h3>Where they agree</h3><ul class="pts">${C.agree.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
   <section class="card"><h3>Where they differ</h3><ul class="pts">${C.differ.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section></div>
-  ${isSac(t)?srcBlock(t,'calvin')+srcBlock(t,'lutheran'):''}`}
+`}
 function head(t){return `<section class="card"><p class="kicker">${esc(t.category)}</p><h2 class="topic">${esc(t.title)}</h2><p class="summary">${esc(t.summary)}</p>
   ${alts.length?`<p class="also">Not quite? Also see: ${alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}
   ${lastQ?`<p class="also"><button data-full="1">Search the full texts for “${esc(lastQ)}”</button></p>`:''}</section>`}
-function syncTabs(){const sac=isSac(current);document.querySelectorAll('.tabs button').forEach(b=>{if(b.dataset.tab!=='compare')b.hidden=sac});if(sac)tab='compare';else if(tab==='compare'&&window.__forced)tab='calvin';window.__forced=sac;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab===tab));}
+function syncTabs(){document.querySelectorAll('.tabs button').forEach(b=>{b.hidden=false;b.classList.toggle('on',b.dataset.tab===tab);b.setAttribute('aria-selected',b.dataset.tab===tab)});}
+function sacDefault(t){}
 function render(){syncTabs();if(!current)return home();if(current.src)return renderSrc();const ak=tab==='compare'?(mode==='simple'?'simple':'advanced'):tab;const ac=(curAI&&curAI.t===current)?aiCard(ak,curAI):'';out.innerHTML=(tab==='compare'?(([sg,bd])=>sg+head(current)+bd+ac)(compare(current).split('\u0000')):head(current)+side(current,tab).replace(/(<\/section>)/,'$1'+ac));
   out.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render()});
   out.querySelectorAll('[data-full]').forEach(b=>b.onclick=()=>fullText(lastQ));
@@ -53,7 +54,7 @@ function home(msg){const pick=['predestination','lords-supper','baptism','justif
   `<section class="card"><h3>Try asking</h3>${chips(pick.length?pick:KB.slice(0,8))}</section>
   <section class="card"><h3>All ${KB.length} topics</h3><div class="chips">${KB.map(t=>`<button class="chip" data-id="${t.id}">${esc(t.title)}</button>`).join('')}</div></section>`;
   out.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{if(b.dataset.q)qi.value=b.dataset.q;show(KB.find(x=>x.id===b.dataset.id),[])});}
-function show(t,a){current=t;alts=a||[];curAI=null;const q=lastQ||t.questions[0];RAG.load().then(()=>{if(current!==t)return;curAI={t,q,cal:RAG.search('calvin',q,6),lut:RAG.search('lutheran',q,6)};RAG.enableAI();render()}).catch(()=>{});render();history.replaceState(null,'','#'+t.id);window.scrollTo({top:0,behavior:'smooth'})}
+function show(t,a){current=t;sacDefault(t);alts=a||[];curAI=null;const q=lastQ||t.questions[0];RAG.load().then(()=>{if(current!==t)return;curAI={t,q,cal:RAG.search('calvin',q,6),lut:RAG.search('lutheran',q,6)};RAG.enableAI();render()}).catch(()=>{});render();history.replaceState(null,'','#'+t.id);window.scrollTo({top:0,behavior:'smooth'})}
 function ask(q){q=q.trim();lastQ=q;if(!q){current=null;return home()}const sc=score(q);const r=providers[0](q);const n=toks(q).length;
   const strong=sc[0].s>=4||(n<=1&&sc[0].s>=2);
   if(strong)show(sc[0].t,r.alts.filter(x=>x!==sc[0].t).slice(0,3));
@@ -78,7 +79,7 @@ function renderSrc(){const c=current;let h='';
   else if(tab==='lutheran')h=srcHead()+aiCard('lutheran')+passages(c.lut,'Book of Concord & Luther','lut');
   else{const seg=`<div class="seg" role="group" aria-label="Detail level"><button data-mode="simple" class="${mode==='simple'?'on':''}">Simple</button><button data-mode="advanced" class="${mode==='advanced'?'on':''}">Advanced</button></div>`;
     if(mode==='simple')h=seg+srcHead()+aiCard('simple')+(RAG.AI.state==='ready'?'':`<section class="card simple"><h3 style="color:var(--cmp)">The simple version</h3><p class="note">No curated summary exists for this exact question, so turn on AI answers above for a plain-language comparison, or tap <b>Advanced</b> to read both sides’ best passages.</p></section>`)+`<div class="grid2">${passages(c.cal,'Calvin — top passages','cal',2)}${passages(c.lut,'Lutheran — top passages','lut',2)}</div>`;
-    else h=seg+srcHead()+aiCard('advanced')+`<div class="grid2">${passages(c.cal,'Calvin’s Institutes','cal',c.sac?6:3)}${passages(c.lut,'Book of Concord & Luther','lut',c.sac?6:3)}</div>`}
+    else h=seg+srcHead()+aiCard('advanced')+`<div class="grid2">${passages(c.cal,'Calvin’s Institutes','cal',3)}${passages(c.lut,'Book of Concord & Luther','lut',3)}</div>`}
   out.innerHTML=h;
   out.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render()});
   out.querySelectorAll('[data-ai]').forEach(b=>b.onclick=()=>RAG.enableAI());
@@ -89,7 +90,7 @@ async function fullText(q,relAlts){alts=[];current=null;syncTabs();
   catch(e){out.innerHTML=`<section class="card"><h2 class="topic">Couldn’t load the texts</h2><p class="summary">${esc(e.message)} — check your connection and try again.</p></section>`;return}
   const r=providers[0](q);
   current={src:true,q,sac:SACRX.test(q),cal:RAG.search('calvin',q,6),lut:RAG.search('lutheran',q,6),alts:relAlts||r.alts.slice(0,3)};
-  RAG.enableAI();
+  sacDefault(current);RAG.enableAI();
   history.replaceState(null,'','#q='+encodeURIComponent(q));render();window.scrollTo({top:0,behavior:'smooth'})}
 RAG.AI.listeners.add(()=>{if(current&&!document.querySelector('.aitext.streaming')&&(RAG.AI.state!=='loading'||!document.querySelector('.bar')))render();else if(current){const b=document.querySelector('.bar i');if(b)b.style.width=Math.round((RAG.AI.pct||0)*100)+'%';const pg=document.getElementById('aiprog');if(pg)pg.textContent=(RAG.AI.progress||'').replace(/ It can take a while.*$/,'')}});
 document.addEventListener('kjv-ready',()=>{if(current&&current.src)render()});

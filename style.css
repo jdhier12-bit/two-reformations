@@ -10,7 +10,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
 .search{display:flex;gap:8px;max-width:760px;margin:0 auto}
 .search input{flex:1;min-width:0;font-size:17px;padding:13px 14px;border-radius:12px;border:0;outline:none;background:#fff;color:#1d2433}
 .search button{font:600 16px var(--sans);padding:0 18px;border:0;border-radius:12px;background:var(--gold);color:#1d2433}
-.tabs{position:sticky;top:0;z-index:5;display:flex;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.tabs{position:-webkit-sticky;position:sticky;top:0;z-index:5;display:flex;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .tabs button{flex:1;padding:14px 4px;border:0;background:none;font:600 15px var(--sans);color:var(--muted);border-bottom:3px solid transparent}
 .tabs button.on[data-tab=calvin]{color:var(--cal);border-color:var(--cal)}
 .tabs button.on[data-tab=lutheran]{color:var(--lut);border-color:var(--lut)}
@@ -37,7 +37,7 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute
 .also{font-size:14px;color:var(--muted)}.also button{all:unset;color:var(--lut);text-decoration:underline;cursor:pointer;margin-right:10px}
 .foot{max-width:760px;margin:0 auto;padding:0 16px calc(env(safe-area-inset-bottom) + 28px);color:var(--muted);font-size:12.5px}
 .grid2{display:grid;gap:14px}@media(min-width:700px){.grid2{grid-template-columns:1fr 1fr}}
-.tabs button[hidden]{display:none}
+.tabs button[hidden]{display:block}
 .seg{display:flex;background:var(--line);border-radius:12px;padding:3px;margin:0 0 14px}
 .seg button{flex:1;border:0;background:none;padding:10px;font:600 15px var(--sans);color:var(--muted);border-radius:9px}
 .seg button.on{background:var(--card);color:var(--cmp);box-shadow:0 1px 3px rgba(0,0,0,.15)}
