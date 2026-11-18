@@ -50,15 +50,18 @@ const AI={state:'off',progress:'',engine:null,model:null,busy:Promise.resolve(),
 const emit=()=>AI.listeners.forEach(f=>f());
 async function gpuInfo(){if(!('gpu' in navigator))return {ok:false,why:'This browser does not support WebGPU.'};
   try{const a=await navigator.gpu.requestAdapter();if(!a)return {ok:false,why:'WebGPU is present but no GPU adapter is available.'};return {ok:true,f16:a.features.has('shader-f16')}}catch(e){return {ok:false,why:'WebGPU error: '+e.message}}}
-async function enableAI(){if(AI.state==='ready'||AI.state==='loading')return;
-  const g=await gpuInfo();if(!g.ok){AI.state='unsupported';AI.error=g.why;emit();return}
-  AI.state='loading';AI.progress='Starting…';emit();
-  try{const webllm=await import('https://esm.run/@mlc-ai/web-llm@0.2.88');
-    AI.model=g.f16?MODEL_F16:MODEL_F32;
-    AI.engine=await webllm.CreateMLCEngine(AI.model,{initProgressCallback:p=>{AI.progress=p.text||'';AI.pct=p.progress;emit()}});
-    try{AI.engine.setAppConfig&&0}catch(_){}
-    AI.state='ready';localStorage.setItem('tr_ai','1');emit();
-  }catch(e){AI.state='error';AI.error=String(e&&e.message||e);emit()}}
+// One shared engine; init is memoized so concurrent callers never create a second engine.
+let initP=null;
+function enableAI(){if(initP)return initP;
+  initP=(async()=>{const g=await gpuInfo();if(!g.ok){AI.state='unsupported';AI.error=g.why;emit();return}
+    AI.state='loading';AI.progress='Starting…';emit();
+    try{await createEngine(g);AI.state='ready';localStorage.setItem('tr_ai','1');emit()}
+    catch(e){AI.state='error';AI.error=String(e&&e.message||e);emit()}})();
+  return initP}
+let webllmMod=null,gpuF16=null;
+async function createEngine(g){webllmMod=webllmMod||await import('https://esm.run/@mlc-ai/web-llm@0.2.88');
+  if(g)gpuF16=g.f16;AI.model=gpuF16?MODEL_F16:MODEL_F32;
+  AI.engine=await webllmMod.CreateMLCEngine(AI.model,{initProgressCallback:p=>{AI.progress=p.text||'';AI.pct=p.progress;if(AI.state==='loading')emit()}})}
 function fmtPassages(list,prefix){return list.map((d,i)=>`[${prefix}${i+1}] ${d.t.replace(/\{§\d+\}/g,'').split(' ').slice(0,130).join(' ')}`).join('\n\n')}
 const RULES='Rules: Use ONLY the numbered passages. Do NOT quote; never use quotation marks. Paraphrase in your own plain words. Do not mention book, chapter, section or page numbers; refer to passages only by their bracket number like [1]. Do not add names, groups or ideas that are not in the passages. No introductions, no apologies, no "Sure", no "As an AI". If the passages do not address the question, reply exactly: NOT ADDRESSED';
 function prompts(kind,q,cal,lut,weak){
@@ -97,12 +100,21 @@ function clean(text,P,opts){opts=opts||{};let t=String(text||'').replace(/\r/g,'
     s=s.charAt(0).toUpperCase()+s.slice(1);out.push(s);if(out.length>=max)break}
   return {text:out.join(' '),notAddressed:false}}
 const cache=new Map();
-function generate(kind,q,cal,lut,onText,weak){const key=kind+'|'+q+'|'+(weak?1:0);const c=cache.get(key);if(c&&c.done){onText(c.text,true);return}
-  if(c){c.subs.add(onText);onText(c.text,false);return}
-  const ent={text:'',done:false,subs:new Set([onText])};cache.set(key,ent);
-  AI.busy=AI.busy.then(async()=>{try{const chunks=await AI.engine.chat.completions.create({messages:prompts(kind,q,cal,lut,weak),stream:true,temperature:0.1,top_p:0.8,frequency_penalty:0.5,presence_penalty:0.3,max_tokens:weak?90:(kind==='advanced'?200:140)});
-      for await(const ch of chunks){ent.text+=ch.choices[0]?.delta?.content||'';ent.subs.forEach(f=>f(ent.text,false))}}
-    catch(e){const m=String(e&&e.message||e);ent.text+=`\n[AI stopped: ${m.slice(0,160)}]`;if(/lost|Instance|memory|GPU/i.test(m)){AI.state='error';AI.error='The AI model ran out of GPU memory on this device ('+m.slice(0,80)+').';cache.delete(key);setTimeout(emit,50)}}
-    ent.done=true;ent.subs.forEach(f=>f(ent.text,true))});}
+// Generations run strictly one at a time on the single engine (queue). A disposed/lost engine is rebuilt once and the request retried silently.
+async function runOnce(kind,q,cal,lut,weak,ent){const chunks=await AI.engine.chat.completions.create({messages:prompts(kind,q,cal,lut,weak),stream:true,temperature:0.1,top_p:0.8,max_tokens:weak?90:(kind==='advanced'?200:140)});
+  let txt='';for await(const ch of chunks){txt+=ch.choices[0]?.delta?.content||'';ent.text=txt;ent.subs.forEach(f=>f(ent.text,false,false))}}
+function generate(kind,q,cal,lut,onText,weak){const key=kind+'|'+q+'|'+(weak?1:0);const c=cache.get(key);
+  if(c&&c.done){onText(c.text,true,c.failed);return}
+  if(c){c.subs.add(onText);onText(c.text,false,false);return}
+  const ent={text:'',done:false,failed:false,subs:new Set([onText])};cache.set(key,ent);
+  AI.busy=AI.busy.then(async()=>{
+    if(AI.state!=='ready'||!AI.engine){ent.failed=true}
+    else{try{await runOnce(kind,q,cal,lut,weak,ent)}
+      catch(e){const m=String(e&&e.message||e);console.warn('AI generation failed:',m);ent.text='';
+        if(/dispos|lost|instance|destroy|GPU|device|abort|interrupt/i.test(m)&&!AI.rebuilt){AI.rebuilt=true;
+          try{try{await AI.engine.unload()}catch(_){}AI.engine=null;await createEngine();await runOnce(kind,q,cal,lut,weak,ent)}
+          catch(e2){console.warn('AI retry failed:',String(e2&&e2.message||e2));ent.failed=true;ent.text='';if(/memory|lost|device/i.test(String(e2))){AI.state='error';AI.error='AI unavailable';setTimeout(emit,50)}}}
+        else ent.failed=true}}
+    ent.done=true;if(ent.failed)cache.delete(key);ent.subs.forEach(f=>f(ent.failed?'':ent.text,true,ent.failed))}).catch(()=>{});}
 window.RAG={load,search,relevance,clean,verse,AI,enableAI,gpuInfo,generate,ready:()=>!!corpora,kjvReady:()=>!!kjv};
 })();

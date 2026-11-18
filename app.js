@@ -26,15 +26,15 @@ function quotes(qs){return qs.map(q=>`<blockquote>“${esc(q.text)}”<cite>${q.
 const fold=(label,n,body,open)=>`<details class="fold"${open?' open':''}><summary>${label}${n!=null?` <span class="count">${n}</span>`:''}</summary><div class="fbody">${body}</div></details>`;
 const isSac=t=>!!(t&&(t.category==='Sacraments'||t.sac));
 const SACRX=/\b(sacrament|baptis|lord'?s supper|supper|communion|eucharist)/i;
-let mode='simple';
-const seg=()=>`<div class="seg" role="group" aria-label="Detail level"><button data-mode="simple" class="${mode==='simple'?'on':''}">Simple</button><button data-mode="advanced" class="${mode==='advanced'?'on':''}">Advanced</button></div>`;
+const mode='advanced'; // Compare always shows the in-depth view (Simple option removed)
+const seg=()=>'';
 function more(){return `${alts.length?`<p class="also">Not quite? ${alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}${lastQ?`<p class="also"><button data-full="1">Search the full texts instead</button></p>`:''}`}
 // ---------- AI block ----------
 function linkRefs(t,side){return esc(t).replace(/\[([CL]?)(\d+)\]/g,(m,p,n)=>{const s=p==='C'?'calvin':p==='L'?'lutheran':side;return `<button class="ref" data-ref="p-${s}-${n}" aria-label="Go to source ${n}">${n}</button>`})}
 function aiBlock(kind,ctx,P,weak,side){const A=RAG.AI;const id='ai-'+kind+(weak?'-w':'');if(!ctx||!P||!P.length)return '';
-  if(A.state==='ready'){setTimeout(()=>{if(!document.getElementById(id))return;RAG.generate(kind,ctx.q,ctx.cal,ctx.lut,(txt,done)=>{const e=document.getElementById(id);if(!e)return;
+  if(A.state==='ready'){setTimeout(()=>{if(!document.getElementById(id))return;RAG.generate(kind,ctx.q,ctx.cal,ctx.lut,(txt,done,failed)=>{const e=document.getElementById(id);if(!e)return;
       const c=RAG.clean(txt,P,{max:kind==='advanced'?4:3});
-      if(done&&(c.notAddressed||!c.text)){e.closest('.aibox').innerHTML=weak?'':`<p class="note">No reliable AI summary for this one. The sources are below.</p>`;return}
+      if(done&&(failed||c.notAddressed||!c.text)){const bx=e.closest('.aibox');if(bx){const ld=bx.parentNode&&bx.parentNode.querySelector('.lead[data-alt]');if(ld)ld.textContent=ld.dataset.alt;bx.remove()}return}
       e.innerHTML=c.text?linkRefs(c.text,side):'<span class="note">Writing…</span>';e.classList.toggle('streaming',!done)},weak)},0);
     return `<div class="aibox"><span class="aitag">AI summary</span><p id="${id}" class="aitext streaming"><span class="note">Reading the sources…</span></p></div>`}
   if(A.state==='loading')return `<div class="aibox"><span class="aitag">AI summary loading <b id="aipct">${Math.round((A.pct||0)*100)}%</b></span><div class="bar"><i style="width:${Math.round((A.pct||0)*100)}%"></i></div><p class="note small">First time only: a free AI model downloads to your phone (~0.7 GB, use Wi-Fi).</p></div>`;
@@ -80,13 +80,13 @@ function passages(list,side,openFirst){return list.map((d,i)=>{const vs=RAG.kjvR
 function srcCard(side,list,n,open){if(!list.length)return '';const L=list.slice(0,n);return `<section class="card srcs"><h3 class="${SIDE[side].cls}">Sources · ${SIDE[side].src}</h3>${fold('Show sources',L.length,passages(L,side,false),open)}</section>`}
 function sideAnswer(side){const c=current;const list=side==='calvin'?c.cal:c.lut;const rel=c.rel[side];const P=list.slice(0,4);const aiOK=RAG.AI.state!=='unsupported'&&RAG.AI.state!=='error';
   if(rel.none)return `<section class="card answer"><p class="kicker ${SIDE[side].cls}">${side==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(c.q)}</h2><p>${SIDE[side].none}. Try different wording, or one of the topics below.</p>${more()}</section>`;
-  if(rel.weak)return `<section class="card answer"><p class="kicker ${SIDE[side].cls}">${side==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(c.q)}</h2><p class="lead">${SIDE[side].miss}, but here’s something that could help:</p>${aiOK?aiBlock(side,c,P,true,side):''}<p class="note">The closest passages are below — tap one to read it.</p></section>`;
+  if(rel.weak)return `<section class="card answer"><p class="kicker ${SIDE[side].cls}">${side==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(c.q)}</h2><p class="lead" data-alt="${SIDE[side].miss}. Here are the closest passages:">${aiOK?SIDE[side].miss+', but here’s something that could help:':SIDE[side].miss+'. Here are the closest passages:'}</p>${aiOK?aiBlock(side,c,P,true,side):''}</section>`;
   return `<section class="card answer"><p class="kicker ${SIDE[side].cls}">${side==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(c.q)}</h2>${aiOK?aiBlock(side,c,P,false,side):`<p class="note">Here’s what the sources say — tap a passage to read it.</p>`}</section>`}
 function renderSrc(){const c=current;let h='';
   if(tab!=='compare'){h=sideAnswer(tab)+srcCard(tab,tab==='calvin'?c.cal:c.lut,6,true)}
   else{const bw=c.rel.calvin.weak&&c.rel.lutheran.weak,none=c.rel.calvin.none&&c.rel.lutheran.none;const P=c.cal.slice(0,3).concat(c.lut.slice(0,3));const aiOK=RAG.AI.state!=='unsupported'&&RAG.AI.state!=='error';
     const kind=mode==='simple'?'simple':'advanced';
-    h=seg()+`<section class="card answer"><p class="kicker" style="color:var(--cmp)">${mode==='simple'?'Simple comparison':'Detailed comparison'}</p><h2 class="topic">${esc(c.q)}</h2>${none?`<p>Neither Calvin nor the Lutheran sources discuss this. Try different wording.</p>`:bw?`<p class="lead">Neither Calvin nor the Lutheran confessions address this directly, but here’s something that could help:</p>`:''}${!none&&aiOK?aiBlock(kind,c,P,bw,'calvin'):''}${!none&&!aiOK?`<p class="note">Compare the closest passages from each side below.</p>`:''}</section>`+
+    h=seg()+`<section class="card answer"><p class="kicker" style="color:var(--cmp)">Comparison</p><h2 class="topic">${esc(c.q)}</h2>${none?`<p>Neither Calvin nor the Lutheran sources discuss this. Try different wording.</p>`:bw?`<p class="lead" data-alt="Neither Calvin nor the Lutheran confessions address this directly. Here are the closest passages:">${aiOK?'Neither Calvin nor the Lutheran confessions address this directly, but here’s something that could help:':'Neither Calvin nor the Lutheran confessions address this directly. Here are the closest passages:'}</p>`:''}${!none&&aiOK?aiBlock(kind,c,P,bw,'calvin'):''}${!none&&!aiOK?`<p class="note">Compare the closest passages from each side below.</p>`:''}</section>`+
       srcCard('calvin',c.cal,mode==='simple'?2:4,mode==='advanced')+srcCard('lutheran',c.lut,mode==='simple'?2:4,mode==='advanced')}
   out.innerHTML=h+(current.alts&&current.alts.length?`<p class="also">Related topics: ${current.alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:'');}
 async function fullText(q,relAlts){alts=[];current=null;syncTabs();
@@ -102,7 +102,7 @@ RAG.AI.listeners.add(()=>{if(!current)return;const st=RAG.AI.state;if(st==='load
 document.addEventListener('kjv-ready',()=>{if(current&&current.src){const open=[...document.querySelectorAll('details[open]')].map(d=>d.id).filter(Boolean);render();open.forEach(id=>{const d=document.getElementById(id);if(d)d.open=true})}});
 out.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.ref){const d=document.getElementById(b.dataset.ref);if(d){d.open=true;const f=d.closest('details.fold');if(f)f.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});d.classList.add('flash');setTimeout(()=>d.classList.remove('flash'),1200)}return}
-  if(b.dataset.mode){mode=b.dataset.mode;render();return}
+  
   if(b.dataset.full){fullText(lastQ);return}
   if(b.dataset.clear){localStorage.removeItem('rt_recent');home();return}
   if(b.dataset.q){qi.value=b.dataset.q;syncClear();ask(b.dataset.q);return}
