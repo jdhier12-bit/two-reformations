@@ -1,4 +1,4 @@
-// Reformed Thinking — curated topics + full-text search (rag.js) + optional on-device AI.
+// Reformed Thinking — curated topics + full-text search (rag.js) + on-device AI summaries.
 (()=>{
 const $=s=>document.querySelector(s), out=$('#out'), qi=$('#q');
 let KB=[], tab='calvin', current=null, alts=[], lastQ='', curAI=null;
@@ -16,86 +16,102 @@ function score(q){const ql=' '+q.toLowerCase().replace(/[’]/g,"'")+' ';const q
     return {t,s}}).sort((a,b)=>b.s-a.s);}
 const providers=[q=>{const r=score(q);return {best:r[0].s>=2?r[0].t:null,alts:r.filter(x=>x.s>0&&x.s>=r[0].s*0.4).slice(0,5).map(x=>x.t)}}];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function verses(vs){return vs.map(v=>`<div class="verse"><b>${esc(v.ref)}</b> <span class="note">KJV</span><p>${v.v.map(x=>(v.v.length>1?`<sup>${x[1]}</sup>`:'')+esc(x[2])).join(' ')}</p></div>`).join('')}
-function quotes(qs){return qs.map(q=>`<blockquote>“${esc(q.text)}”<cite>${q.url?`<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.cite)}</a>`:esc(q.cite)} — <span>${esc(q.work)}</span></cite></blockquote>`).join('')}
-function side(t,k){const S=t[k];const lab=k==='calvin'?'Calvinist (Reformed) answer':'Lutheran answer';
-  return `<section class="card answer"><h3 class="${k==='calvin'?'cal':'lut'}">${lab}</h3>${S.answer.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}
-  ${S.points.length?`<ul class="pts">${S.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}</section>
-  ${S.quotes.length?`<section class="card"><h3>From the sources</h3>${quotes(S.quotes)}</section>`:''}
-  ${S.refs&&S.refs.length?`<section class="card"><h3>Further reading (paraphrased, not quoted)</h3><ul class="pts">${S.refs.map(r=>`<li>${esc(r)}</li>`).join('')}</ul></section>`:''}
-  <section class="card"><h3>Scriptures cited (KJV)</h3>${verses(S.verses)}</section>`}
+const SUGGEST=['Does God choose who will be saved?','Is Christ really present in the Lord’s Supper?','Should infants be baptized?','Can a true believer lose salvation?','What is justification by faith?','Should Christians swear oaths?','Is it wrong to charge interest?','What is the role of the Holy Spirit?'];
+const getRecent=()=>{try{return JSON.parse(localStorage.getItem('rt_recent')||'[]')}catch(_){return []}};
+function addRecent(q){const r=getRecent().filter(x=>x.toLowerCase()!==q.toLowerCase());r.unshift(q);localStorage.setItem('rt_recent',JSON.stringify(r.slice(0,6)))}
+const SIDE={calvin:{name:'Calvin',src:'Calvin’s Institutes',cls:'cal',miss:'Calvin doesn’t address this directly',none:'Calvin’s Institutes don’t discuss this'},lutheran:{name:'Lutheran',src:'Book of Concord & Luther',cls:'lut',miss:'The Book of Concord and Luther don’t address this directly',none:'The Book of Concord and Luther don’t discuss this'}};
+function vchips(vs){if(!vs||!vs.length)return '';return `<div class="vchips">${vs.map(v=>`<details class="vd"><summary>${esc(v.ref)}</summary><p>${v.vs.map(x=>(v.vs.length>1?`<sup>${x[0]}</sup>`:'')+esc(x[1])).join(' ')}</p></details>`).join('')}</div>`}
+const curVerses=S=>(S.verses||[]).map(v=>({ref:v.ref,vs:v.v.map(x=>[x[1],x[2]])}));
+function quotes(qs){return qs.map(q=>`<blockquote>“${esc(q.text)}”<cite>${q.url?`<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.cite)}</a>`:esc(q.cite)}</cite></blockquote>`).join('')}
+const fold=(label,n,body,open)=>`<details class="fold"${open?' open':''}><summary>${label}${n!=null?` <span class="count">${n}</span>`:''}</summary><div class="fbody">${body}</div></details>`;
 const isSac=t=>!!(t&&(t.category==='Sacraments'||t.sac));
-const SACRX=/\b(sacrament|baptis|lord'?s supper|supper|communion|eucharist|real presence|bread and wine|transubstantiation|consubstantiation)/i;
-function srcBlock(t,k){const S=t[k];const lab=k==='calvin'?'Calvinist view':'Lutheran view';const c=k==='calvin'?'cal':'lut';
-  return `<section class="card answer"><h3 class="${c}">${lab}</h3>${S.answer.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}
-  ${S.quotes.length?quotes(S.quotes):''}
-  ${S.refs&&S.refs.length?`<ul class="pts note">${S.refs.map(r=>`<li>${esc(r)} (paraphrased)</li>`).join('')}</ul>`:''}
-  <h3 style="margin-top:14px">Scriptures cited (KJV)</h3>${verses(S.verses)}</section>`}
+const SACRX=/\b(sacrament|baptis|lord'?s supper|supper|communion|eucharist)/i;
 let mode='simple';
-function compare(t){const C=t.compare;const seg=`<div class="seg" role="group" aria-label="Detail level"><button data-mode="simple" class="${mode==='simple'?'on':''}">Simple</button><button data-mode="advanced" class="${mode==='advanced'?'on':''}">Advanced</button></div>`;
-  if(mode==='simple')return seg+'\u0000'+`<section class="card simple"><h3 style="color:var(--cmp)">The simple version</h3><ul class="pts">${C.simple.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="note">Tap <b>Advanced</b> for the side-by-side table, details, quotes and Bible verses.</p></section>`;
-  return seg+'\u0000'+`<section class="card"><h3>Side by side</h3><table><tr><th></th><th class="cal">Calvinist</th><th class="lut">Lutheran</th></tr>${C.table.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</table></section>
-  <section class="card"><h3 class="cmp" style="color:var(--cmp)">In summary</h3><p>${esc(C.summary)}</p></section>
-  <div class="grid2"><section class="card"><h3>Where they agree</h3><ul class="pts">${C.agree.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
-  <section class="card"><h3>Where they differ</h3><ul class="pts">${C.differ.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section></div>
-`}
-function head(t){return `<section class="card"><p class="kicker">${esc(t.category)}</p><h2 class="topic">${esc(t.title)}</h2><p class="summary">${esc(t.summary)}</p>
-  ${alts.length?`<p class="also">Not quite? Also see: ${alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}
-  ${lastQ?`<p class="also"><button data-full="1">Search the full texts for “${esc(lastQ)}”</button></p>`:''}</section>`}
+const seg=()=>`<div class="seg" role="group" aria-label="Detail level"><button data-mode="simple" class="${mode==='simple'?'on':''}">Simple</button><button data-mode="advanced" class="${mode==='advanced'?'on':''}">Advanced</button></div>`;
+function more(){return `${alts.length?`<p class="also">Not quite? ${alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}${lastQ?`<p class="also"><button data-full="1">Search the full texts instead</button></p>`:''}`}
+// ---------- AI block ----------
+function linkRefs(t,side){return esc(t).replace(/\[([CL]?)(\d+)\]/g,(m,p,n)=>{const s=p==='C'?'calvin':p==='L'?'lutheran':side;return `<button class="ref" data-ref="p-${s}-${n}" aria-label="Go to source ${n}">${n}</button>`})}
+function aiBlock(kind,ctx,P,weak,side){const A=RAG.AI;const id='ai-'+kind+(weak?'-w':'');if(!ctx||!P||!P.length)return '';
+  if(A.state==='ready'){setTimeout(()=>{if(!document.getElementById(id))return;RAG.generate(kind,ctx.q,ctx.cal,ctx.lut,(txt,done)=>{const e=document.getElementById(id);if(!e)return;
+      const c=RAG.clean(txt,P,{max:kind==='advanced'?4:3});
+      if(done&&(c.notAddressed||!c.text)){e.closest('.aibox').innerHTML=weak?'':`<p class="note">No reliable AI summary for this one. The sources are below.</p>`;return}
+      e.innerHTML=c.text?linkRefs(c.text,side):'<span class="note">Writing…</span>';e.classList.toggle('streaming',!done)},weak)},0);
+    return `<div class="aibox"><span class="aitag">AI summary</span><p id="${id}" class="aitext streaming"><span class="note">Reading the sources…</span></p></div>`}
+  if(A.state==='loading')return `<div class="aibox"><span class="aitag">AI summary loading <b id="aipct">${Math.round((A.pct||0)*100)}%</b></span><div class="bar"><i style="width:${Math.round((A.pct||0)*100)}%"></i></div><p class="note small">First time only: a free AI model downloads to your phone (~0.7 GB, use Wi-Fi).</p></div>`;
+  if(A.state==='unsupported'||A.state==='error')return '';
+  return `<div class="aibox"><span class="aitag">AI summary starting…</span><div class="bar"><i style="width:0%"></i></div></div>`}
+// ---------- Curated topics ----------
+function curatedSide(t,k){const S=t[k];const ctx=curAI&&curAI.t===t?curAI:null;const P=ctx&&ctx[k==='calvin'?'cal':'lut'];const weak=ctx&&ctx.w[k];
+  const vs=curVerses(S);
+  return `<section class="card answer"><p class="kicker ${SIDE[k].cls}">${k==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(t.title)}</h2>${S.answer.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}
+   ${S.points&&S.points.length?`<ul class="pts">${S.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
+   ${ctx&&!weak?aiBlock(k,ctx,P,false,k):''}</section>
+   ${S.quotes.length?fold('Quotes from '+(k==='calvin'?'Calvin':'the Lutheran sources'),S.quotes.length,quotes(S.quotes)+(S.refs&&S.refs.length?`<ul class="pts note">${S.refs.map(r=>`<li>${esc(r)} (paraphrased)</li>`).join('')}</ul>`:'')):''}
+   ${vs.length?fold('Bible verses (KJV)',vs.length,vchips(vs)):''}
+   ${ctx&&P&&P.length&&!weak?fold('More from the full texts',Math.min(P.length,6),passages(P,k)):''}
+   ${more()}`}
+function curatedCompare(t){const C=t.compare;const ctx=curAI&&curAI.t===t?curAI:null;const weak=ctx&&ctx.w.calvin&&ctx.w.lutheran;const P=ctx?ctx.cal.slice(0,3).concat(ctx.lut.slice(0,3)):null;
+  if(mode==='simple')return seg()+`<section class="card answer"><p class="kicker" style="color:var(--cmp)">Simple comparison</p><h2 class="topic">${esc(t.title)}</h2><ul class="pts big">${C.simple.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${ctx&&!weak?aiBlock('simple',ctx,P,false,'calvin'):''}</section>`+more();
+  return seg()+`<section class="card"><p class="kicker" style="color:var(--cmp)">Side by side</p><h2 class="topic">${esc(t.title)}</h2><table><tr><th></th><th class="cal">Calvinist</th><th class="lut">Lutheran</th></tr>${C.table.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</table></section>
+  <section class="card"><h3 style="color:var(--cmp)">In summary</h3><p>${esc(C.summary)}</p>${ctx&&!weak?aiBlock('advanced',ctx,P,false,'calvin'):''}</section>
+  ${fold('Where they agree',C.agree.length,`<ul class="pts">${C.agree.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`,true)}
+  ${fold('Where they differ',C.differ.length,`<ul class="pts">${C.differ.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`,true)}`+more()}
 function syncTabs(){document.querySelectorAll('.tabs button').forEach(b=>{b.hidden=false;b.classList.toggle('on',b.dataset.tab===tab);b.setAttribute('aria-selected',b.dataset.tab===tab)});}
-function sacDefault(t){}
-function render(){syncTabs();if(!current)return home();if(current.src)return renderSrc();const ak=tab==='compare'?(mode==='simple'?'simple':'advanced'):tab;const ac=(curAI&&curAI.t===current)?aiCard(ak,curAI):'';out.innerHTML=(tab==='compare'?(([sg,bd])=>sg+head(current)+bd+ac)(compare(current).split('\u0000')):head(current)+side(current,tab).replace(/(<\/section>)/,'$1'+ac));
-  out.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render()});
-  out.querySelectorAll('[data-full]').forEach(b=>b.onclick=()=>fullText(lastQ));
-  out.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>show(KB.find(x=>x.id===b.dataset.id),[]));}
-function chips(list){return `<div class="chips">${list.map(t=>`<button class="chip" data-q="${esc(t.questions[0])}" data-id="${t.id}">${esc(t.questions[0])}</button>`).join('')}</div>`}
-function home(msg){const pick=['predestination','lords-supper','baptism','justification','free-will','perseverance','law-gospel','christology'].map(id=>KB.find(t=>t.id===id)).filter(Boolean);
-  out.innerHTML=(msg||`<section class="card"><h2 class="topic">Ask a question</h2><p class="summary">Type any theological question. You’ll get the Calvinist answer from Calvin’s <i>Institutes</i>, the Lutheran answer from the Book of Concord and Luther, the KJV verses each tradition uses, and a side-by-side comparison.</p></section>`)+
-  `<section class="card"><h3>Try asking</h3>${chips(pick.length?pick:KB.slice(0,8))}</section>
-  <section class="card"><h3>All ${KB.length} topics</h3><div class="chips">${KB.map(t=>`<button class="chip" data-id="${t.id}">${esc(t.title)}</button>`).join('')}</div></section>`;
-  out.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{if(b.dataset.q)qi.value=b.dataset.q;show(KB.find(x=>x.id===b.dataset.id),[])});}
-function show(t,a){current=t;sacDefault(t);alts=a||[];curAI=null;const q=lastQ||t.questions[0];RAG.load().then(()=>{if(current!==t)return;curAI={t,q,cal:RAG.search('calvin',q,6),lut:RAG.search('lutheran',q,6)};RAG.enableAI();render()}).catch(()=>{});render();history.replaceState(null,'','#'+t.id);window.scrollTo({top:0,behavior:'smooth'})}
-function ask(q){q=q.trim();lastQ=q;if(!q){current=null;return home()}const sc=score(q);const r=providers[0](q);const n=toks(q).length;
+function render(){syncTabs();if(!current)return home();if(current.src)return renderSrc();
+  out.innerHTML=tab==='compare'?curatedCompare(current):curatedSide(current,tab);}
+function home(){const pick=SUGGEST;const rec=getRecent();syncTabs();
+  out.innerHTML=`<section class="card intro"><h2 class="topic">Ask anything</h2><p class="summary">Get Calvin’s answer, the Lutheran answer, and how they compare — straight from the sources, with the KJV verses behind them.</p></section>
+  ${rec.length?`<section class="card"><h3>Recent <button class="linkbtn" data-clear="1">Clear</button></h3><div class="chips">${rec.map(q=>`<button class="chip" data-q="${esc(q)}">↺ ${esc(q)}</button>`).join('')}</div></section>`:''}
+  <section class="card"><h3>Try asking</h3><div class="chips">${pick.map(q=>`<button class="chip" data-q="${esc(q)}">${esc(q)}</button>`).join('')}</div></section>
+  ${fold('Browse all '+KB.length+' topics',null,`<div class="chips">${KB.map(t=>`<button class="chip" data-id="${t.id}">${esc(t.title)}</button>`).join('')}</div>`)}`;}
+function show(t,a){current=t;alts=a||[];curAI=null;const q=lastQ||t.questions[0];
+  RAG.load().then(()=>{if(current!==t)return;const cal=RAG.search('calvin',q,6),lut=RAG.search('lutheran',q,6);curAI={t,q,cal,lut,w:{calvin:RAG.relevance('calvin',q,cal).weak,lutheran:RAG.relevance('lutheran',q,lut).weak}};RAG.enableAI();render()}).catch(()=>{});
+  render();history.replaceState(null,'','#'+t.id);window.scrollTo({top:0,behavior:'smooth'})}
+function ask(q){q=q.trim();lastQ=q;if(!q){current=null;return home()}addRecent(q);const sc=score(q);const r=providers[0](q);const n=toks(q).length;
   const strong=sc[0].s>=4||(n<=1&&sc[0].s>=2);
   if(strong)show(sc[0].t,r.alts.filter(x=>x!==sc[0].t).slice(0,3));
   else fullText(q,r.alts.filter(a=>a).slice(0,3));}
-// ---------- Full-text mode (any question) ----------
-const AIL='AI summary from the sources — check the cited passages';
+// ---------- Full-text mode ----------
 function ptext(t){return esc(t).replace(/\{§(\d+)\}/g,'<sup>§$1</sup>')}
-function vlist(d){if(!d.r||!d.r.length)return '';if(!RAG.kjvReady())return `<p class="note">Loading KJV verses…</p>`;
-  return `<div class="pverses">${d.r.map(r=>RAG.verse(r)).filter(Boolean).map(v=>`<div class="verse"><b>${esc(v.ref)}</b> <span class="note">KJV</span><p>${v.vs.map(x=>(v.vs.length>1?`<sup>${x[0]}</sup>`:'')+esc(x[1])).join(' ')}</p></div>`).join('')}</div>`}
-function passages(list,label,cls,n){if(!list.length)return `<section class="card"><h3 class="${cls}">${label}</h3><p class="note">No relevant passages found. Try different wording.</p></section>`;
-  return `<section class="card"><h3 class="${cls}">${label}</h3><p class="note">Exact text, ranked by relevance to your question. Each passage is followed by the KJV verses it cites.</p>${list.slice(0,n||list.length).map((d,i)=>`<div class="passage"><blockquote><span class="pn">${i+1}</span> ${ptext(d.t)}<cite>${d.u?`<a href="${esc(d.u)}" target="_blank" rel="noopener">${esc(d.c)}</a>`:esc(d.c)} — ${esc(d.w||'')}</cite></blockquote>${vlist(d)}</div>`).join('')}</section>`}
-function aiCard(kind,ctx){ctx=ctx||current;const A=RAG.AI;const id='ai-'+kind;if(!ctx||!ctx.cal)return '';
-  if(A.state==='ready'){setTimeout(()=>{const el=document.getElementById(id);if(!el)return;RAG.generate(kind,ctx.q,ctx.cal,ctx.lut,(txt,done)=>{const e=document.getElementById(id);if(!e)return;e.textContent=txt||'Thinking…';e.classList.toggle('streaming',!done)})},0);
-    return `<section class="card ai"><h3>✦ ${AIL}</h3><div id="${id}" class="aitext streaming">Reading the passages…</div><p class="note">Generated on your device by ${esc(A.model||'')} from the numbered passages below. Small models can misread; the passages are the authority. On phones the first answer can take a minute or more.</p></section>`}
-  if(A.state==='loading')return `<section class="card ai"><h3>✦ Loading the AI model…</h3><div class="bar"><i style="width:${Math.round((A.pct||0)*100)}%"></i></div><p class="note" id="aiprog">${esc(A.progress||'')}</p><p class="note">One-time download (~0.7 GB, use Wi-Fi); it’s cached so it only happens once. The source passages are below meanwhile.</p></section>`;
-  if(A.state==='unsupported'||A.state==='error')return `<p class="note ainote">AI summary isn’t available on this device (${esc(A.error)}). Showing the exact source passages instead.</p>`;
-  return `<section class="card ai"><h3>✦ Loading the AI model…</h3><div class="bar"><i style="width:0%"></i></div><p class="note" id="aiprog">Starting…</p><p class="note">Preparing a free open-source AI (Llama 3.2 1B) that runs on your device. The source passages are below meanwhile.</p></section>`}
-function srcHead(){const c=current;return `<section class="card"><p class="kicker">Searched the full texts</p><h2 class="topic">${esc(c.q)}</h2><p class="summary">Searched every section of Calvin’s <i>Institutes</i>, the Book of Concord, and Luther’s public-domain works for your question.</p>
-  ${c.alts&&c.alts.length?`<p class="also">Related curated topics: ${c.alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:''}</section>`}
+function snippet(t){const w=t.replace(/\{§\d+\}/g,'').split(/\s+/);return esc(w.slice(0,16).join(' '))+(w.length>16?'…':'')}
+function passages(list,side,openFirst){return list.map((d,i)=>{const vs=RAG.kjvReady()?(d.r||[]).map(r=>RAG.verse(r)).filter(Boolean):[];
+  return `<details class="passage" id="p-${side}-${i+1}"${openFirst&&i===0?' open':''}><summary><span class="pn">${i+1}</span><span class="pc">${esc(d.c)}</span><span class="ps">${snippet(d.t)}</span></summary>
+  <blockquote>${ptext(d.t)}<cite>${d.u?`<a href="${esc(d.u)}" target="_blank" rel="noopener">${esc(d.c)}</a>`:esc(d.c)}${d.w?' — '+esc(d.w):''}</cite></blockquote>${vs.length?`<p class="kicker vlabel">Verses cited (KJV)</p>${vchips(vs)}`:(d.r&&d.r.length&&!RAG.kjvReady()?'<p class="note">Loading verses…</p>':'')}</details>`}).join('')}
+function srcCard(side,list,n,open){if(!list.length)return '';const L=list.slice(0,n);return `<section class="card srcs"><h3 class="${SIDE[side].cls}">Sources · ${SIDE[side].src}</h3>${fold('Show sources',L.length,passages(L,side,false),open)}</section>`}
+function sideAnswer(side){const c=current;const list=side==='calvin'?c.cal:c.lut;const rel=c.rel[side];const P=list.slice(0,4);const aiOK=RAG.AI.state!=='unsupported'&&RAG.AI.state!=='error';
+  if(rel.none)return `<section class="card answer"><p class="kicker ${SIDE[side].cls}">${side==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(c.q)}</h2><p>${SIDE[side].none}. Try different wording, or one of the topics below.</p>${more()}</section>`;
+  if(rel.weak)return `<section class="card answer"><p class="kicker ${SIDE[side].cls}">${side==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(c.q)}</h2><p class="lead">${SIDE[side].miss}, but here’s something that could help:</p>${aiOK?aiBlock(side,c,P,true,side):''}<p class="note">The closest passages are below — tap one to read it.</p></section>`;
+  return `<section class="card answer"><p class="kicker ${SIDE[side].cls}">${side==='calvin'?'Calvinist answer':'Lutheran answer'}</p><h2 class="topic">${esc(c.q)}</h2>${aiOK?aiBlock(side,c,P,false,side):`<p class="note">Here’s what the sources say — tap a passage to read it.</p>`}</section>`}
 function renderSrc(){const c=current;let h='';
-  if(tab==='calvin')h=srcHead()+aiCard('calvin')+passages(c.cal,'Calvin’s Institutes','cal');
-  else if(tab==='lutheran')h=srcHead()+aiCard('lutheran')+passages(c.lut,'Book of Concord & Luther','lut');
-  else{const seg=`<div class="seg" role="group" aria-label="Detail level"><button data-mode="simple" class="${mode==='simple'?'on':''}">Simple</button><button data-mode="advanced" class="${mode==='advanced'?'on':''}">Advanced</button></div>`;
-    if(mode==='simple')h=seg+srcHead()+aiCard('simple')+(RAG.AI.state==='ready'?'':`<section class="card simple"><h3 style="color:var(--cmp)">The simple version</h3><p class="note">No curated summary exists for this exact question, so turn on AI answers above for a plain-language comparison, or tap <b>Advanced</b> to read both sides’ best passages.</p></section>`)+`<div class="grid2">${passages(c.cal,'Calvin — top passages','cal',2)}${passages(c.lut,'Lutheran — top passages','lut',2)}</div>`;
-    else h=seg+srcHead()+aiCard('advanced')+`<div class="grid2">${passages(c.cal,'Calvin’s Institutes','cal',3)}${passages(c.lut,'Book of Concord & Luther','lut',3)}</div>`}
-  out.innerHTML=h;
-  out.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render()});
-  out.querySelectorAll('[data-ai]').forEach(b=>b.onclick=()=>RAG.enableAI());
-  out.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>show(KB.find(x=>x.id===b.dataset.id),[]));}
+  if(tab!=='compare'){h=sideAnswer(tab)+srcCard(tab,tab==='calvin'?c.cal:c.lut,6,true)}
+  else{const bw=c.rel.calvin.weak&&c.rel.lutheran.weak,none=c.rel.calvin.none&&c.rel.lutheran.none;const P=c.cal.slice(0,3).concat(c.lut.slice(0,3));const aiOK=RAG.AI.state!=='unsupported'&&RAG.AI.state!=='error';
+    const kind=mode==='simple'?'simple':'advanced';
+    h=seg()+`<section class="card answer"><p class="kicker" style="color:var(--cmp)">${mode==='simple'?'Simple comparison':'Detailed comparison'}</p><h2 class="topic">${esc(c.q)}</h2>${none?`<p>Neither Calvin nor the Lutheran sources discuss this. Try different wording.</p>`:bw?`<p class="lead">Neither Calvin nor the Lutheran confessions address this directly, but here’s something that could help:</p>`:''}${!none&&aiOK?aiBlock(kind,c,P,bw,'calvin'):''}${!none&&!aiOK?`<p class="note">Compare the closest passages from each side below.</p>`:''}</section>`+
+      srcCard('calvin',c.cal,mode==='simple'?2:4,mode==='advanced')+srcCard('lutheran',c.lut,mode==='simple'?2:4,mode==='advanced')}
+  out.innerHTML=h+(current.alts&&current.alts.length?`<p class="also">Related topics: ${current.alts.map(a=>`<button data-id="${a.id}">${esc(a.title)}</button>`).join('')}</p>`:'');}
 async function fullText(q,relAlts){alts=[];current=null;syncTabs();
-  out.innerHTML=`<section class="card"><p class="kicker">Searching the full texts</p><h2 class="topic">${esc(q)}</h2><p class="summary" id="st">Loading…</p></section>`;
+  out.innerHTML=`<section class="card"><p class="kicker">Searching</p><h2 class="topic">${esc(q)}</h2><p class="summary" id="st">Loading the texts…</p></section>`;
   try{await RAG.load(s=>{const e=document.getElementById('st');if(e)e.textContent=s});}
   catch(e){out.innerHTML=`<section class="card"><h2 class="topic">Couldn’t load the texts</h2><p class="summary">${esc(e.message)} — check your connection and try again.</p></section>`;return}
-  const r=providers[0](q);
-  current={src:true,q,sac:SACRX.test(q),cal:RAG.search('calvin',q,6),lut:RAG.search('lutheran',q,6),alts:relAlts||r.alts.slice(0,3)};
-  sacDefault(current);RAG.enableAI();
-  history.replaceState(null,'','#q='+encodeURIComponent(q));render();window.scrollTo({top:0,behavior:'smooth'})}
-RAG.AI.listeners.add(()=>{if(current&&!document.querySelector('.aitext.streaming')&&(RAG.AI.state!=='loading'||!document.querySelector('.bar')))render();else if(current){const b=document.querySelector('.bar i');if(b)b.style.width=Math.round((RAG.AI.pct||0)*100)+'%';const pg=document.getElementById('aiprog');if(pg)pg.textContent=(RAG.AI.progress||'').replace(/ It can take a while.*$/,'')}});
-document.addEventListener('kjv-ready',()=>{if(current&&current.src)render()});
-
+  const r=providers[0](q);const cal=RAG.search('calvin',q,6),lut=RAG.search('lutheran',q,6);
+  current={src:true,q,cal,lut,rel:{calvin:RAG.relevance('calvin',q,cal),lutheran:RAG.relevance('lutheran',q,lut)},alts:relAlts||r.alts.slice(0,3)};
+  RAG.enableAI();history.replaceState(null,'','#q='+encodeURIComponent(q));render();window.scrollTo({top:0,behavior:'smooth'})}
+// ---------- events ----------
+RAG.AI.listeners.add(()=>{if(!current)return;const st=RAG.AI.state;if(st==='loading'&&document.querySelector('.aibox .bar')){const p=Math.round((RAG.AI.pct||0)*100);document.querySelectorAll('.aibox .bar i').forEach(b=>b.style.width=p+'%');const e=document.getElementById('aipct');if(e)e.textContent=p+'%';else render();return}
+  if(!document.querySelector('.aitext.streaming:not(:empty)')||st!=='ready')render();});
+document.addEventListener('kjv-ready',()=>{if(current&&current.src){const open=[...document.querySelectorAll('details[open]')].map(d=>d.id).filter(Boolean);render();open.forEach(id=>{const d=document.getElementById(id);if(d)d.open=true})}});
+out.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.ref){const d=document.getElementById(b.dataset.ref);if(d){d.open=true;const f=d.closest('details.fold');if(f)f.open=true;d.scrollIntoView({behavior:'smooth',block:'start'});d.classList.add('flash');setTimeout(()=>d.classList.remove('flash'),1200)}return}
+  if(b.dataset.mode){mode=b.dataset.mode;render();return}
+  if(b.dataset.full){fullText(lastQ);return}
+  if(b.dataset.clear){localStorage.removeItem('rt_recent');home();return}
+  if(b.dataset.q){qi.value=b.dataset.q;syncClear();ask(b.dataset.q);return}
+  if(b.dataset.id){const t=KB.find(x=>x.id===b.dataset.id);if(t){if(!b.dataset.q){lastQ='';}show(t,[])}}});
+const clr=$('#clr');function syncClear(){clr.hidden=!qi.value}
+qi.addEventListener('input',syncClear);
+clr.onclick=()=>{qi.value='';syncClear();qi.focus();current=null;lastQ='';history.replaceState(null,'',location.pathname);home()};
 $('#f').onsubmit=e=>{e.preventDefault();qi.blur();ask(qi.value)};
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));render()});
-fetch('data/topics.json').then(r=>r.json()).then(d=>{KB=d.topics;index();window.__kb={KB,score,ask};const h=location.hash.slice(1);if(h.startsWith('q=')){const q=decodeURIComponent(h.slice(2));qi.value=q;lastQ=q;fullText(q);return}const t=KB.find(x=>x.id===h);t?show(t,[]):home();if(localStorage.getItem('tr_ai')==='1')RAG.enableAI();});
+qi.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.isComposing){e.preventDefault();qi.blur();ask(qi.value)}});
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render();const tb=$('.tabs');if(tb.getBoundingClientRect().top<=0)window.scrollTo({top:tb.offsetTop,behavior:'smooth'})});
+fetch('data/topics.json').then(r=>r.json()).then(d=>{KB=d.topics;index();window.__kb={KB,score,ask};const h=location.hash.slice(1);if(h.startsWith('q=')){const q=decodeURIComponent(h.slice(2));qi.value=q;lastQ=q;syncClear();fullText(q);return}const t=KB.find(x=>x.id===h);t?show(t,[]):home();if(localStorage.getItem('tr_ai')==='1')RAG.enableAI();});
 })();

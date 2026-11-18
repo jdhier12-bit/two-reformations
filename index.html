@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache">
 <meta name="theme-color" content="#1f2a44">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Reformed Thinking">
@@ -13,13 +14,13 @@
 <title>Reformed Thinking — Calvin &amp; Luther side by side</title>
 <meta name="description" content="Ask a theological question. See the Calvinist answer from Calvin's Institutes, the Lutheran answer from the Book of Concord and Luther, the KJV scriptures behind each, and a comparison.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✠</text></svg>">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=rt3">
 </head>
 <body>
 <header class="hero">
   <div class="brand"><span class="mark">✠</span><div><h1>Reformed Thinking</h1><p>Calvin &amp; Luther, side by side</p></div></div>
   <form id="f" class="search" role="search" autocomplete="off">
-    <input id="q" type="search" placeholder="Ask any theological question…" aria-label="Theological question" enterkeyhint="search">
+    <div class="qwrap"><input id="q" type="search" placeholder="Ask any theological question…" aria-label="Theological question" enterkeyhint="search" autocapitalize="sentences"><button type="button" id="clr" class="clr" aria-label="Clear search" hidden>×</button></div>
     <button type="submit" aria-label="Search">Ask</button>
   </form>
 </header>
@@ -31,9 +32,9 @@
 <main id="out"></main>
 <footer class="foot">
   <p>Sources (public domain): Calvin, <i>Institutes of the Christian Religion</i>, tr. Henry Beveridge (1845), via CCEL · <i>Triglot Concordia: The Book of Concord</i>, tr. Bente &amp; Dau (1921), via BookOfConcord.org · Luther, <i>The Bondage of the Will</i>, tr. Henry Cole · Luther, <i>First Principles of the Reformation</i>, tr. Wace &amp; Buchheim (1883) · King James Version.</p>
-  <p>Curated-topic quotations are machine-checked word-for-word against those texts. For other questions the app searches the full texts on your device and shows the exact passages; optional AI summaries run locally with an open-source model (Llama 3.2 1B via WebLLM). Answers summarize each tradition’s confessional teaching; they are a study aid, not a substitute for reading the sources.</p>
+  <p>AI summaries only paraphrase the retrieved passages; quotations and citations not found in the sources are removed automatically. Curated-topic quotations are machine-checked word-for-word against those texts. For other questions the app searches the full texts on your device and shows the exact passages; AI summaries run locally with an open-source model (Llama 3.2 1B via WebLLM). Answers summarize each tradition’s confessional teaching; they are a study aid, not a substitute for reading the sources.</p>
 </footer>
-<script src="rag.js"></script>
-<script src="app.js"></script>
+<script src="rag.js?v=rt3"></script>
+<script src="app.js?v=rt3"></script>
 </body>
 </html>
